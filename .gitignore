@@ -30,3 +30,6 @@ hs_err_pid*
 # Maven Files
 /target/
 /log/
+
+# Personal info files
+JDBCConnection.java
