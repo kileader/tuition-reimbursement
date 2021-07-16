@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres
+		</property>
+		
+		<property name="hibernate.connection.username">
+			kevin
+		</property>
+		
+		<property name="hibernate.connection.password">
+			password
+		</property>
+		
+		<!-- Optional Properties -->
+		<property name="show_sql">
+			true
+		</property>
+		
+		<property name="hbm2ddl.auto">
+			update
+		</property>
+		
+		<!-- Class Mappings -->
+		<mapping class="com.kevin_leader.models.employees.Employee"/>
+		<mapping class="com.kevin_leader.models.employees.BenefitsCoordinator"/>
+		<mapping class="com.kevin_leader.models.employees.Supervisor"/>
+		<mapping class="com.kevin_leader.models.Department"/>
+
+	</session-factory>
+</hibernate-configuration>
