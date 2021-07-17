@@ -1,7 +1,6 @@
 
 alter table if exists employees drop constraint employees_department_id_fkey;
-drop table if exists approver_requests;
-drop table if exists rejections;
+drop table if exists messages;
 drop table if exists attachments;
 drop table if exists reimbursements;
 drop table if exists events;
@@ -16,7 +15,6 @@ create table employees (
 	last_name				varchar(30),
 	email					varchar(50) unique,
 	password				varchar(30),
-	available_reimbursement	numeric(6,2),
 	supervisor_emp_id		integer null references employees(id) on delete set null,
 	department_id			integer null,
 	ben_co_emp_id			integer null references employees(id) on delete set null,
@@ -35,13 +33,13 @@ alter table employees add constraint employees_department_id_fkey
 
 create table event_types (
 	id					serial primary key,
-	event_type_name		varchar(50),
+	type_name			varchar(50),
 	percent_coverage	numeric(3)
 );
 
 create table grading_formats (
 	id						serial primary key,
-	grading_format			varchar(30),
+	format_name				varchar(30),
 	description				varchar(200) null,
 	passing_grade_cutoff	varchar(30) null
 );
@@ -50,24 +48,22 @@ create table events (
 	id					serial primary key,
 	event_name			varchar(50),
 	start_time			bigint,
-	end_time			bigint,
-	location			varchar(100),
+	location			varchar(200),
 	tuition				numeric(7,2),
 	event_type_id		integer references event_types(id) on delete restrict,
-	grading_format_id	integer references grading_formats(id) on delete set null
+	grading_format_id	integer references grading_formats(id) on delete restrict,
+	end_time			bigint null
 );
 
 create table reimbursements (
-	id							serial primary key,
-	employee_id					integer references employees(id) on delete restrict,
-	event_id					integer references events(id) on delete restrict,
-	description					varchar(200),
-	submission_time				bigint,
-	supervisor_approval_time 	bigint null,
-	dep_head_approval_time		bigint null,
-	ben_co_approval_time		bigint null,
-	hours_missed				numeric(6,2) null,
-	final_grade					varchar(50) null
+	id					serial primary key,
+	employee_id			integer references employees(id) on delete restrict,
+	event_id			integer references events(id) on delete restrict,
+	description			varchar(200),
+	submission_time		bigint,
+	hours_missed		numeric(6,2) null,
+	final_grade			varchar(50) null,
+	actual_claim		numeric(6,2) null
 );
 
 create table attachments (
@@ -77,21 +73,16 @@ create table attachments (
 	description			varchar(100)
 );
 
-create table rejections (
+create table messages (
 	id					serial primary key,
 	reimbursement_id	integer references reimbursements(id) on delete cascade,
-	rejector_emp_id		integer references employees(id) on delete restrict,
-	rejection_message	varchar(200)
+	approver_type		varchar(10),
+	message_type		varchar(10),
+	time_sent			bigint,
+	message				varchar(200)
 );
 
-create table approver_requests (
-	id					serial primary key,
-	reimbursement_id	integer references reimbursements(id) on delete cascade,
-	approver_emp_id		integer references employees(id) on delete restrict,
-	request_message		varchar(200)
-);
-
-insert into event_types (event_type_name, percent_coverage) values 
+insert into event_types (type_name, percent_coverage) values 
 	('university course', 80),
 	('seminar', 60),
 	('certification preparation class', 75),

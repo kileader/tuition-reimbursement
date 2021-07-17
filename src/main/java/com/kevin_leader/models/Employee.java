@@ -1,17 +1,19 @@
-package com.kevin_leader.models.employees;
+package com.kevin_leader.models;
+
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.kevin_leader.models.Department;
+import com.kevin_leader.models.reimbursement.Reimbursement;
 
 @Entity
 @Table(name = "employees")
@@ -31,43 +33,33 @@ public class Employee {
 	
 	protected String password;
 	
-	@Column(name = "available_reimbursement")
-	protected double availableReimbursement;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "supervisor_emp_id")
+	protected Employee supervisor;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "supervisor")
+	private Set<Employee> subordinates;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "supervisor_id")
-	protected Supervisor supervisor;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "department_id", foreignKey =
-			@ForeignKey(name = "employees_department_id_fkey"))
+	@JoinColumn(name = "department_id")
 	protected Department department;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "ben_co_emp_id")
-	protected BenefitsCoordinator benefitsCoordinator;
+	protected Employee benefitsCoordinator;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "benefitsCoordinator")
+	private Set<Employee> benefitors;
 	
 	@Column(name = "termination_time")
 	protected long terminationTime;
+	
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "reimbursee")
+	protected Set<Reimbursement> reimbursements;
 
 	// No-args constructor
 	public Employee() {
 		super();
-	}
-	
-	// Constructor for a new employee all set up to receive a reimbursement
-	public Employee(String firstName, String lastName, String email,
-			String password, Supervisor supervisor, Department department,
-			BenefitsCoordinator benefitsCoordinator) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-		this.availableReimbursement = 1000;
-		this.supervisor = supervisor;
-		this.department = department;
-		this.benefitsCoordinator = benefitsCoordinator;
 	}
 	
 	// Constructor for a new employee not assigned with anyone
@@ -78,7 +70,6 @@ public class Employee {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.availableReimbursement = 1000;
 	}
 
 	public int getId() {
@@ -121,19 +112,11 @@ public class Employee {
 		this.password = password;
 	}
 
-	public double getAvailableReimbursement() {
-		return availableReimbursement;
-	}
-
-	public void setAvailableReimbursement(double availableReimbursement) {
-		this.availableReimbursement = availableReimbursement;
-	}
-
-	public Supervisor getSupervisor() {
+	public Employee getSupervisor() {
 		return supervisor;
 	}
 
-	public void setSupervisor(Supervisor supervisor) {
+	public void setSupervisor(Employee supervisor) {
 		this.supervisor = supervisor;
 	}
 
@@ -145,12 +128,12 @@ public class Employee {
 		this.department = department;
 	}
 
-	public BenefitsCoordinator getBenefitsCoordinator() {
+	public Employee getBenefitsCoordinator() {
 		return benefitsCoordinator;
 	}
 
 	public void setBenefitsCoordinator(
-			BenefitsCoordinator benefitsCoordinator) {
+			Employee benefitsCoordinator) {
 		this.benefitsCoordinator = benefitsCoordinator;
 	}
 
@@ -162,12 +145,20 @@ public class Employee {
 		this.terminationTime = terminationTime;
 	}
 
+	public Set<Reimbursement> getReimbursements() {
+		return reimbursements;
+	}
+
+	public void setReimbursements(Set<Reimbursement> reimbursements) {
+		this.reimbursements = reimbursements;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + ", availableReimbursement=" + availableReimbursement + ", supervisor="
-				+ supervisor + ", department=" + department + ", benefitsCoordinator=" + benefitsCoordinator
-				+ ", terminationTime=" + terminationTime + "]";
+				+ ", password=" + password + ", supervisor=" + supervisor + ", department=" + department
+				+ ", benefitsCoordinator=" + benefitsCoordinator + ", terminationTime=" + terminationTime
+				+ ", reimbursements=" + reimbursements + "]";
 	}
 	
 }

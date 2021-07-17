@@ -12,8 +12,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.kevin_leader.models.employees.Employee;
-
 @Entity
 @Table(name = "departments")
 public class Department {
