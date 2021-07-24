@@ -1,17 +1,14 @@
-package com.kevin_leader.models.reimbursement;
+package com.kevin_leader.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.kevin_leader.models.Employee;
-import com.kevin_leader.models.event.Event;
 
 @Entity
 @Table(name = "reimbursements")
@@ -21,11 +18,11 @@ public class Reimbursement {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "employee_id")
 	private Employee reimbursee;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "event_id")
 	private Event event;
 	
@@ -35,25 +32,43 @@ public class Reimbursement {
 	private long submissionTime;
 	
 	@Column(name = "hours_missed")
-	private double hoursMissed;
+	private Double hoursMissed;
 	
 	@Column(name = "final_grade")
 	private String finalGrade;
 	
 	@Column(name = "actual_claim")
-	private double actualClaim;
+	private Double actualClaim;
 
 	public Reimbursement() {
 		super();
 	}
 
 	public Reimbursement(Employee reimbursee, Event event, String description,
-			long submissionTime) {
+			long submissionTime, Double hoursMissed,
+			String finalGrade, Double actualClaim) {
 		super();
 		this.reimbursee = reimbursee;
 		this.event = event;
 		this.description = description;
 		this.submissionTime = submissionTime;
+		this.hoursMissed = hoursMissed;
+		this.finalGrade = finalGrade;
+		this.actualClaim = actualClaim;
+	}
+
+	public Reimbursement(int id, Employee reimbursee, Event event,
+			String description, long submissionTime,
+			Double hoursMissed, String finalGrade, Double actualClaim) {
+		super();
+		this.id = id;
+		this.reimbursee = reimbursee;
+		this.event = event;
+		this.description = description;
+		this.submissionTime = submissionTime;
+		this.hoursMissed = hoursMissed;
+		this.finalGrade = finalGrade;
+		this.actualClaim = actualClaim;
 	}
 
 	public int getId() {
@@ -96,11 +111,11 @@ public class Reimbursement {
 		this.submissionTime = submissionTime;
 	}
 
-	public double getHoursMissed() {
+	public Double getHoursMissed() {
 		return hoursMissed;
 	}
 
-	public void setHoursMissed(double hoursMissed) {
+	public void setHoursMissed(Double hoursMissed) {
 		this.hoursMissed = hoursMissed;
 	}
 
@@ -112,18 +127,24 @@ public class Reimbursement {
 		this.finalGrade = finalGrade;
 	}
 
-	public double getActualClaim() {
+	public Double getActualClaim() {
 		return actualClaim;
 	}
 
-	public void setActualClaim(double actualClaim) {
+	public void setActualClaim(Double actualClaim) {
 		this.actualClaim = actualClaim;
 	}
 
 	@Override
 	public String toString() {
-		return "Reimbursements [id=" + id + ", reimbursee=" + reimbursee + ", event=" + event + ", description="
-				+ description + ", submissionTime=" + submissionTime + ", hoursMissed=" + hoursMissed + ", finalGrade="
+		String employeeId = (reimbursee != null) ? 
+				String.valueOf(reimbursee.getId()) : "";
+		String eventId = (event != null) ?
+				String.valueOf(event.getId()) : "";
+		return "Reimbursement [id=" + id + ", employeeId=" +
+				employeeId + ", eventId=" + eventId + ", description="
+				+ description + ", submissionTime=" + submissionTime +
+				", hoursMissed=" + hoursMissed + ", finalGrade="
 				+ finalGrade + ", actualClaim=" + actualClaim + "]";
 	}
 	

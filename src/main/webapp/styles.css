@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+main {
+    background-color: antiquewhite;
+    margin: auto;
+    width: 60%;
+}
+
+header {
+    margin: 1em;
+}
+
+h1 {
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+div.form {
+    padding: 1em;
+    text-align: center;
+}
+
+table.table {
+    width: 70%;
+    margin: auto;
+}
+
+h1.jumbotron {
+    width: 30%;
+}
+
+label {
+    font-weight: bold;
+}

@@ -2,6 +2,7 @@ package com.kevin_leader.models;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,69 +14,86 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.kevin_leader.models.reimbursement.Reimbursement;
-
 @Entity
 @Table(name = "employees")
 public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected int id;
+	private int id;
 	
 	@Column(name = "first_name")
-	protected String firstName;
+	private String firstName;
 	
 	@Column(name = "last_name")
-	protected String lastName;
+	private String lastName;
 	
-	protected String email;
+	private String email;
 	
-	protected String password;
+	private String password;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "supervisor_emp_id")
-	protected Employee supervisor;
+	private Employee supervisor;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "supervisor")
+	@OneToMany(mappedBy = "supervisor")
 	private Set<Employee> subordinates;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "department_id")
-	protected Department department;
+	private Department department;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "ben_co_emp_id")
-	protected Employee benefitsCoordinator;
+	private Employee benefitsCoordinator;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "benefitsCoordinator")
+	@OneToMany(mappedBy = "benefitsCoordinator")
 	private Set<Employee> benefitors;
 	
 	@Column(name = "termination_time")
-	protected long terminationTime;
+	private Long terminationTime;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "reimbursee")
-	protected Set<Reimbursement> reimbursements;
+	@OneToMany(mappedBy = "reimbursee")
+	private Set<Reimbursement> reimbursements;
 
 	// No-args constructor
 	public Employee() {
 		super();
 	}
 	
-	// Constructor for a new employee not assigned with anyone
-	public Employee(String firstName, String lastName, String email,
-			String password) {
+	// Id-less Constructor
+	public Employee(String firstName, String lastName, String email, String password, Employee supervisor,
+			Department department, Employee benefitsCoordinator, Long terminationTime) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.supervisor = supervisor;
+		this.department = department;
+		this.benefitsCoordinator = benefitsCoordinator;
+		this.terminationTime = terminationTime;
+	}
+	
+	// Full Constructor
+	public Employee(int id, String firstName, String lastName, String email, String password, Employee supervisor,
+			Department department, Employee benefitsCoordinator, Long terminationTime) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.supervisor = supervisor;
+		this.department = department;
+		this.benefitsCoordinator = benefitsCoordinator;
+		this.terminationTime = terminationTime;
 	}
 
 	public int getId() {
 		return id;
 	}
-
+	
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -137,11 +155,11 @@ public class Employee {
 		this.benefitsCoordinator = benefitsCoordinator;
 	}
 
-	public long getTerminationTime() {
+	public Long getTerminationTime() {
 		return terminationTime;
 	}
 
-	public void setTerminationTime(long terminationTime) {
+	public void setTerminationTime(Long terminationTime) {
 		this.terminationTime = terminationTime;
 	}
 
@@ -155,10 +173,15 @@ public class Employee {
 
 	@Override
 	public String toString() {
+		String supervisorEmpId = (supervisor != null) ?
+				String.valueOf(supervisor.getId()) : "";
+		String departmentId = (department != null) ?
+				String.valueOf(department.getId()) : "";
+		String benCoEmpId = (benefitsCoordinator != null) ?
+				String.valueOf(benefitsCoordinator.getId()) : "";
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + ", supervisor=" + supervisor + ", department=" + department
-				+ ", benefitsCoordinator=" + benefitsCoordinator + ", terminationTime=" + terminationTime
-				+ ", reimbursements=" + reimbursements + "]";
+				+ ", password=" + password + ", supervisorEmpId=" + supervisorEmpId + ", departmentId=" + departmentId
+				+ ", benCoEmpId=" + benCoEmpId + ", terminationTime=" + terminationTime + "]";
 	}
 	
 }

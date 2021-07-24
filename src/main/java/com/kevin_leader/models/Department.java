@@ -2,8 +2,8 @@ package com.kevin_leader.models;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,11 +24,11 @@ public class Department {
 	
 	private String description;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "dep_head_emp_id")
 	private Employee departmentHead;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
+	@OneToMany(mappedBy = "department")
 	private Set<Employee> employeesInDepartment;
 
 	// No-args constructor
@@ -36,10 +36,19 @@ public class Department {
 		super();
 	}
 	
-	// Constructor for a new department with department head filled
+	// Id-less constructor
 	public Department(String name, String description, Employee departmentHead)
 	{
 		super();
+		this.name = name;
+		this.description = description;
+		this.departmentHead = departmentHead;
+	}
+	
+	// Full constructor
+	public Department(int id, String name, String description, Employee departmentHead) {
+		super();
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.departmentHead = departmentHead;
@@ -87,7 +96,9 @@ public class Department {
 
 	@Override
 	public String toString() {
-		return "Department [id=" + id + ", name=" + name + ", description=" + description + ", departmentHead="
-				+ departmentHead + ", employeesInDepartment=" + employeesInDepartment + "]";
+		String depHeadEmpId = (departmentHead != null) ?
+				String.valueOf(departmentHead.getId()) : "";
+		return "Department [id=" + id + ", name=" + name + ", description=" + 
+				description + ", depHeadEmpId=" + depHeadEmpId + "]";
 	}
 }

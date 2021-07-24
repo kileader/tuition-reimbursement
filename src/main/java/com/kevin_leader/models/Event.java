@@ -1,10 +1,10 @@
-package com.kevin_leader.models.event;
+package com.kevin_leader.models;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,8 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.kevin_leader.models.reimbursement.Reimbursement;
 
 @Entity
 @Table(name = "events")
@@ -33,18 +31,18 @@ public class Event {
 	
 	private double tuition;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "event_type_id")
 	private EventType eventType;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "grading_format_id")
 	private GradingFormat gradingFormat;
 	
 	@Column(name = "end_time")
-	private long endTime;
+	private Long endTime;
 	
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany
 	private Set<Reimbursement> reimbursements;
 	
 	// No-arg
@@ -52,9 +50,10 @@ public class Event {
 		super();
 	}
 	
-	// Id-less with unknown end time
+	// Id-less with end time
 	public Event(String eventName, long startTime, String location,
-			double tuition, EventType eventType, GradingFormat gradingFormat) {
+			double tuition, EventType eventType, GradingFormat gradingFormat,
+			Long endTime) {
 		super();
 		this.eventName = eventName;
 		this.startTime = startTime;
@@ -62,13 +61,15 @@ public class Event {
 		this.tuition = tuition;
 		this.eventType = eventType;
 		this.gradingFormat = gradingFormat;
+		this.endTime = endTime;
 	}
-	
-	// Id-less with end time
-	public Event(String eventName, long startTime, String location,
+
+	// Full constructor
+	public Event(int id, String eventName, long startTime, String location,
 			double tuition, EventType eventType, GradingFormat gradingFormat,
-			long endTime) {
+			Long endTime) {
 		super();
+		this.id = id;
 		this.eventName = eventName;
 		this.startTime = startTime;
 		this.location = location;
@@ -134,11 +135,11 @@ public class Event {
 		this.gradingFormat = gradingFormat;
 	}
 
-	public long getEndTime() {
+	public Long getEndTime() {
 		return endTime;
 	}
 
-	public void setEndTime(long endTime) {
+	public void setEndTime(Long endTime) {
 		this.endTime = endTime;
 	}
 
@@ -152,9 +153,13 @@ public class Event {
 
 	@Override
 	public String toString() {
+		String gradingFormatId = (gradingFormat != null) ?
+				String.valueOf(gradingFormat.getId()) : "";
+		String eventTypeId = (eventType != null) ?
+				String.valueOf(eventType.getId()) : "";
 		return "Event [id=" + id + ", eventName=" + eventName + ", startTime=" + startTime + ", location=" + location
-				+ ", tuition=" + tuition + ", eventType=" + eventType + ", gradingFormat=" + gradingFormat
-				+ ", endTime=" + endTime + ", reimbursements=" + reimbursements + "]";
+				+ ", tuition=" + tuition + ", eventTypeId=" + eventTypeId + ", gradingFormatId=" + gradingFormatId
+				+ ", endTime=" + endTime + "]";
 	}
 	
 }

@@ -1,10 +1,9 @@
-package com.kevin_leader.models.event;
+package com.kevin_leader.models;
 
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,7 +26,7 @@ public class GradingFormat {
 	@Column(name = "passing_grade_cutoff")
 	private String passingGradeCutoff;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "gradingFormat")
+	@OneToMany(mappedBy = "gradingFormat")
 	private Set<Event> eventsWithFormat;
 
 	public GradingFormat() {
@@ -36,6 +35,15 @@ public class GradingFormat {
 
 	public GradingFormat(String formatName, String description, String passingGradeCutoff) {
 		super();
+		this.formatName = formatName;
+		this.description = description;
+		this.passingGradeCutoff = passingGradeCutoff;
+	}
+
+	public GradingFormat(int id, String formatName, String description,
+			String passingGradeCutoff) {
+		super();
+		this.id = id;
 		this.formatName = formatName;
 		this.description = description;
 		this.passingGradeCutoff = passingGradeCutoff;
@@ -84,6 +92,6 @@ public class GradingFormat {
 	@Override
 	public String toString() {
 		return "GradingFormat [id=" + id + ", formatName=" + formatName + ", description=" + description
-				+ ", passingGradeCutoff=" + passingGradeCutoff + ", eventsWithFormat=" + eventsWithFormat + "]";
+				+ ", passingGradeCutoff=" + passingGradeCutoff + "]";
 	}
 }

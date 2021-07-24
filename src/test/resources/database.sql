@@ -61,8 +61,8 @@ create table events (
 
 create table reimbursements (
 	id					serial primary key,
-	employee_id			integer references employees(id) on delete set null,
-	event_id			integer references events(id) on delete set null,
+	employee_id			integer references employees(id) on delete restrict,
+	event_id			integer references events(id) on delete restrict,
 	description			varchar(200),
 	submission_time		bigint,
 	hours_missed		numeric(6,2) null,
@@ -72,14 +72,14 @@ create table reimbursements (
 
 create table attachments (
 	id					serial primary key,
-	reimbursement_id	integer references reimbursements(id) on delete set null,
+	reimbursement_id	integer references reimbursements(id) on delete cascade,
 	attachment_url		varchar(100),
 	description			varchar(100)
 );
 
 create table messages (
 	id					serial primary key,
-	reimbursement_id	integer references reimbursements(id) on delete set null,
+	reimbursement_id	integer references reimbursements(id) on delete cascade,
 	approver_type		varchar(10),
 	message_type		varchar(10),
 	time_sent			bigint,
@@ -169,9 +169,3 @@ insert into attachments values (3, 3, 'fakedatabucket.com/3u4i508sdj204', 'This 
 alter sequence grading_formats_id_seq restart with 4;
 alter sequence event_types_id_seq restart with 7;
 alter sequence events_id_seq restart with 6;
-alter sequence reimbursements_id_seq restart with 6;
-alter sequence employees_id_seq restart with 31;
-alter sequence departments_id_seq restart with 4;
-alter sequence messages_id_seq restart with 12;
-alter sequence attachments_id_seq restart with 4;
-

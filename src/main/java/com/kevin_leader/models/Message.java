@@ -1,8 +1,8 @@
-package com.kevin_leader.models.reimbursement;
+package com.kevin_leader.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +18,7 @@ public class Message {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "reimbursement_id")
 	private Reimbursement reimbursement;
 	
@@ -40,6 +40,17 @@ public class Message {
 	public Message(Reimbursement reimbursement, String approverType, String messageType, long timeSent,
 			String message) {
 		super();
+		this.reimbursement = reimbursement;
+		this.approverType = approverType;
+		this.messageType = messageType;
+		this.timeSent = timeSent;
+		this.message = message;
+	}
+
+	public Message(int id, Reimbursement reimbursement, String approverType, String messageType, long timeSent,
+			String message) {
+		super();
+		this.id = id;
 		this.reimbursement = reimbursement;
 		this.approverType = approverType;
 		this.messageType = messageType;
@@ -97,8 +108,11 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "Message [id=" + id + ", reimbursement=" + reimbursement + ", approverType=" + approverType
-				+ ", messageType=" + messageType + ", timeSent=" + timeSent + ", message=" + message + "]";
+		String reimbursementId = (reimbursement != null) ?
+				String.valueOf(reimbursement.getId()) : "";
+		return "Message [id=" + id + ", reimbursementId=" + reimbursementId
+				+ ", approverType=" + approverType + ", messageType=" +
+				messageType + ", timeSent=" + timeSent + ", message=" + message + "]";
 	}
 	
 }

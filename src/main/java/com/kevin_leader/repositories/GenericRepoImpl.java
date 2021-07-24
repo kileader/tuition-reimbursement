@@ -17,17 +17,18 @@ import com.kevin_leader.util.SessionFactoryProvider;
  * @author Kevin Leader
  * @param <T> the type parameter
  */
-public class GenericDao<T> {
+public class GenericRepoImpl<T> implements GenericRepo<T> {
 	
 	private Class<T> type;
-	private static final Logger log = Logger.getLogger(GenericDao.class);
+	private static final Logger log = Logger.getLogger(GenericRepoImpl.class);
 	
 	/**
 	 * Instantiate a new GenericDao
 	 * @param type the type of entity
 	 */
-	public GenericDao(Class<T> type) {
+	public GenericRepoImpl(Class<T> type) {
 		this.type = type;
+		log.info("Instantiate GenericDaoImpl<" + type + ">");
 	}
 	
 	/**
@@ -45,20 +46,19 @@ public class GenericDao<T> {
      * @return the id of the inserted entity
      */
 	public int add(T entity) {
-		log.debug("Run add(entity)");
+		log.info("Run add(" + entity + ")");
 		
 		Session session = getSession();
 		Transaction transaction = null;
 		
-		int id;
+		int id = -1;
 		try {
 			transaction = session.beginTransaction();
 			// Change returned serializable id to int 
 			id = Integer.valueOf(String.valueOf(session.save(entity)));
 			transaction.commit();
 		} catch (HibernateException e) {
-			log.debug("Exception: ", e);
-			return -1;
+			log.warn("Exception: ", e);
 		} finally {
 			session.close();
 		}
@@ -70,7 +70,7 @@ public class GenericDao<T> {
 	 * @return list of all entities
 	 */
 	public List<T> getAll() {
-		log.debug("Run getAll()");
+		log.info("Run getAll()");
 		
 		Session session = getSession();
 		CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -82,7 +82,7 @@ public class GenericDao<T> {
 		try {
 			list = session.createQuery(query).getResultList();
 		} catch (HibernateException e) {
-			log.debug("Exception : ", e);
+			log.warn("Exception : ", e);
 		} finally {
 			session.close();
 		}
@@ -96,7 +96,7 @@ public class GenericDao<T> {
 	 * @return the retreived entity
 	 */
 	public <T>T getById(int id) {
-		log.debug("Run get(id)");
+		log.info("Run get(" + id + ")");
 		
 		Session session = getSession();
 		T entity = null;
@@ -104,7 +104,7 @@ public class GenericDao<T> {
 		try {
 			entity = (T) session.get(type, id);
 		} catch (HibernateException e) {
-			log.debug("Exception: ", e);
+			log.warn("Exception: ", e);
 		} finally {
 			session.close();
 		}
@@ -118,7 +118,7 @@ public class GenericDao<T> {
 	 * @return the updated entity
 	 */
 	public <T>T update(T entity) {
-		log.debug("Run update(entity)");
+		log.info("Run update(" + entity + ")");
 		
 		Session session = getSession();
 		Transaction transaction = null;
@@ -128,7 +128,7 @@ public class GenericDao<T> {
 			session.update(entity);
 			transaction.commit();
 		} catch (HibernateException e) {
-			log.debug("Exception: ", e);
+			log.warn("Exception: ", e);
 			transaction.rollback();
 			return null;
 		} finally {
@@ -144,7 +144,7 @@ public class GenericDao<T> {
 	 * @return the entity deleted
 	 */
 	public <T>T delete(T entity) {
-		log.debug("Run delete(entity)");
+		log.info("Run delete(" + entity + ")");
 		
 		Session session = getSession();
 		Transaction transaction = null;
@@ -154,7 +154,7 @@ public class GenericDao<T> {
 			session.delete(entity);
 			transaction.commit();
 		} catch(HibernateException e) {
-			log.debug("Exception: ", e);
+			log.warn("Exception: ", e);
 			transaction.rollback();
 			return null;
 		} finally {

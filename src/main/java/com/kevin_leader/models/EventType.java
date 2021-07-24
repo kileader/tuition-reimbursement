@@ -1,10 +1,9 @@
-package com.kevin_leader.models.event;
+package com.kevin_leader.models;
 
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "event_types")
 public class EventType {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -25,19 +24,24 @@ public class EventType {
 	@Column(name = "percent_coverage")
 	private double percentCoverage;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "eventType")
+	@OneToMany(mappedBy = "eventType")
 	private Set<Event> eventsWithType;
 
 	public EventType() {
 		super();
 	}
 
-	public EventType(String typeName, double percentCoverage,
-			Set<Event> eventsWithType) {
+	public EventType(String typeName, double percentCoverage) {
 		super();
 		this.typeName = typeName;
 		this.percentCoverage = percentCoverage;
-		this.eventsWithType = eventsWithType;
+	}
+
+	public EventType(int id, String typeName, double percentCoverage) {
+		super();
+		this.id = id;
+		this.typeName = typeName;
+		this.percentCoverage = percentCoverage;
 	}
 
 	public int getId() {
@@ -74,8 +78,8 @@ public class EventType {
 
 	@Override
 	public String toString() {
-		return "EventType [id=" + id + ", typeName=" + typeName + ", percentCoverage=" + percentCoverage
-				+ ", eventsWithType=" + eventsWithType + "]";
+		return "EventType [id=" + id + ", typeName=" + typeName +
+				", percentCoverage=" + percentCoverage + "]";
 	}
 	
 }

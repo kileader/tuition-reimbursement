@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Reimbursement Request</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<h1 class="jumbotron">Reimbursement Request</h1>
+		</header>
+		<main>
+			<div class="form">
+				
+				<label for="email">Email: </label>
+				<input type="email" id="email"/>
+
+				<label for="password">Password: </label>
+				<input type="password" id="password"/>
+
+				<label for="choose-event">Choose: </label>
+				<input type="radio" id="choose-event" name="choose-or-create-event">
+				
+				<label for="create-event">Create: </label>
+				<input type="radio" id="create-event" name="choose-or-create-event">
+
+				<label for="events">Event Name: </label>
+				<select id="events" name="eventlist">
+					<option>Hi</option>
+					<!-- TODO: Make javascript list of options to choose from-->
+				</select>
+				
+				<label for="event-name">Event Name: </label>
+				<input type="text" id="event-name">
+
+				<label for="location">Address: </label>
+				<textarea id="location" rows="2" cols="40"></textarea>
+
+				<br>
+
+				<label for="start-date">Start Date: </label>
+				<input type="date" id="start-date"> 
+				
+				<!-- TODO: Add verification for if start-date and start-time is too soon -->
+				<label for="start-time">Start Time (EST): </label>
+				<input type="time" id="start-time">
+				
+				<br>
+
+				<label for="choose-format">Choose: </label>
+				<input type="radio" id="choose-format" name="choose-or-create-format">
+				
+				<label for="create-format">Create: </label>
+				<input type="radio" id="create-format" name="choose-or-create-format">
+
+				<label for="grading-formats">Choose the format: </label>
+				<select id="grading-formats" name="grading-formats">
+					<!-- TODO: Make javascript list of options to choose from-->
+				</select>
+
+				<label for="event-types">Choose the event type: </label>
+				<select id="event-types" name="event-types">
+					<!-- TODO: Make javascript list of options to choose from-->
+				</select>
+
+				<label for="justification">Justification: </label>
+				<textarea id="justification" rows="1" cols="50"></textarea>
+
+				<label for="attachments">Attachments: </label>
+				<!-- Figure this out -->
+
+			</div>
+		</main>
+	</div>
+</body>
+</html>

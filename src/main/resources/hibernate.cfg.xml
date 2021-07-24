@@ -34,10 +34,14 @@
 		</property>
 		
 		<!-- Class Mappings -->
-		<mapping class="com.kevin_leader.models.employees.Employee"/>
-		<mapping class="com.kevin_leader.models.employees.BenefitsCoordinator"/>
-		<mapping class="com.kevin_leader.models.employees.Supervisor"/>
+		<mapping class="com.kevin_leader.models.Employee"/>
 		<mapping class="com.kevin_leader.models.Department"/>
+		<mapping class="com.kevin_leader.models.Event"/>
+		<mapping class="com.kevin_leader.models.EventType"/>
+		<mapping class="com.kevin_leader.models.GradingFormat"/>
+		<mapping class="com.kevin_leader.models.Attachment"/>
+		<mapping class="com.kevin_leader.models.Message"/>
+		<mapping class="com.kevin_leader.models.Reimbursement"/>
 
 	</session-factory>
 </hibernate-configuration>
