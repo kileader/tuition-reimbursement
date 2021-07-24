@@ -102,7 +102,7 @@ insert into employees values (2, 'Pippa', 'Tasseler', 'ptasseler1@technorati.com
 insert into employees values (3, 'Rozalin', 'Golson', 'rgolson2@dropbox.com', 'Ke4GS5qop7WH', 				null, 2, 1, null); -- 	3 IT head
 insert into employees values (4, 'Hoyt', 'Donovan', 'hdonovan3@businessinsider.com', 'rWUM01OQX', 			3, 2, 1, null); -- 		4 IT supervisor
 insert into employees values (5, 'Meara', 'Quenell', 'mquenell4@simplemachines.org', 'SY7hSLJb', 			null, 1, 1, null); --	5 services head
-insert into employees values (6, 'Benny', 'Barnewell', 'bbarnewell5@yandex.ru', 'aA8vR7c', 					3, 2, 1, 1443888000); --6 terminated IT
+insert into employees values (6, 'Benny', 'Barnewell', 'bbarnewell5@yandex.ru', 'aA8vR7c', 					3, 2, 1, 1443888000000); --6 terminated IT
 insert into employees values (7, 'Grethel', 'Valois', 'gvalois6@technorati.com', 'YVkWvB51', 				3, 2, 1, null); --		7 IT supervisor
 insert into employees values (8, 'Devi', 'Eglise', 'deglise7@ebay.co.uk', 'fbSH2AC', 						5, 1, 1, null);
 insert into employees values (9, 'Tracee', 'Baumler', 'tbaumler8@amazon.co.uk', '7Fw892E5lED', 				4, 2, 2, null);
@@ -111,7 +111,7 @@ insert into employees values (11, 'Donavon', 'Aireton', 'dairetona@msu.edu', 'rm
 insert into employees values (12, 'Joleen', 'Rope', 'jropeb@nba.com', 'zhS2BRgKK', 							7, 2, 1, null);
 insert into employees values (13, 'Julita', 'Turle', 'jturlec@nydailynews.com', '1O1MAihozv', 				5, 1, 2, null);
 insert into employees values (14, 'Marni', 'Chesterman', 'mchestermand@phoca.cz', 'VAqvZNUMB', 				3, 2, 1, null);
-insert into employees values (15, 'Donnell', 'Aristide', 'daristidee@is.gd', 'VNXIx0qgIjd5', 				4, 2, 2, 1473001260);
+insert into employees values (15, 'Donnell', 'Aristide', 'daristidee@is.gd', 'VNXIx0qgIjd5', 				4, 2, 2, 1473001260000);
 insert into employees values (16, 'Dorise', 'Baskeyfied', 'dbaskeyfiedf@cargocollective.com', '3zhvDCkI', 	4, 2, 1, null);
 insert into employees values (17, 'Mar', 'Sawdy', 'msawdyg@epa.gov', 'wYisOoyeFO', 							7, 2, 2, null);
 insert into employees values (18, 'Rubie', 'Beacham', 'rbeachamh@blogs.com', '21A3avc', 					3, 2, 1, null);
@@ -125,7 +125,7 @@ insert into employees values (25, 'Dory', 'Gossan', 'dgossano@cdbaby.com', 'C6cm
 insert into employees values (26, 'Templeton', 'Aslin', 'taslinp@arizona.edu', 'hHGPKaMll5Ab', 				4, 2, 2, null);
 insert into employees values (27, 'Dolli', 'Jelley', 'djelleyq@typepad.com', 'hAQcZt0o', 					5, 1, 1, null);
 insert into employees values (28, 'Carmita', 'Joutapavicius', 'cjoutapaviciusr@microsoft.com', 'qKilbOgK', 	7, 2, 2, null);
-insert into employees values (29, 'Tiffi', 'Hambleton', 'thambletons@dot.gov', 'k6HlzCEK0', 				3, 2, 2, 1555076237);
+insert into employees values (29, 'Tiffi', 'Hambleton', 'thambletons@dot.gov', 'k6HlzCEK0', 				3, 2, 2, 1555076237000);
 insert into employees values (30, 'Granville', 'Sharland', 'gsharlandt@nationalgeographic.com', '5nXC26', 	4, 2, 2, null);
 
 update employees set ben_co_emp_id = 2 where id = 1;
@@ -138,29 +138,29 @@ insert into grading_formats values (1, 'Typical Letter Grade', 'Grades are A, B,
 insert into grading_formats values (2, 'Typical Numeric Grade', 'Grades are from 0 to 100. Less than 60 is fail.', '60');
 insert into grading_formats values (3, 'Pass or Fail', 'Grades are either Pass or Fail', 'Pass');
 
-insert into events values (1, 'Be a Benefits Coordinator', 1443892000, '1234 Under a Rock Somewhere Dr. Phoenix, AZ 85282', 1100.55, 4, 1, 1446520000);
-insert into events values (2, 'All About Supervising', 1443892000, '4321 Be Cool Guys Rd. Honolulu, HI 96795', 999.11, 5, 2, null);
-insert into events values (3, 'Public Speaking', 1456673400, '1337 Road Street Ln. Litte Rock, AR 72002', 200, 1, 3, null);
-insert into events values (4, 'How to Eat Pie', 1555076237, '911 Real Street Name Blv. Tokyo, JP', 9999.99, 2, 2, null);
-insert into events values (5, 'Prepare for getting that certification', 1632063600, '5134 Certification Place Atlanta, GA 12345', 200, 3, 3, 1632085200);
+insert into events values (1, 'Be a Benefits Coordinator', 1443892000000, '1234 Under a Rock Somewhere Dr. Phoenix, AZ 85282', 1100.55, 4, 1, 1446520000000);
+insert into events values (2, 'All About Supervising', 1443892000000, '4321 Be Cool Guys Rd. Honolulu, HI 96795', 999.11, 5, 2, null);
+insert into events values (3, 'Public Speaking', 1456673400000, '1337 Road Street Ln. Litte Rock, AR 72002', 200, 1, 3, null);
+insert into events values (4, 'How to Eat Pie', 1555076237000, '911 Real Street Name Blv. Tokyo, JP', 9999.99, 2, 2, null);
+insert into events values (5, 'Prepare for getting that certification', 1632063600000, '5134 Certification Place Atlanta, GA 12345', 200, 3, 3, 1632085200000);
 
-insert into reimbursements values (1, 2, 1, 'I would like reimbursement for my benefits coordinator certification.', 1442682000, null, 'B', 1000);
-insert into reimbursements values (2, 4, 2, 'I am getting some supervisoral training.', 1442682000, 40, '91', 899.20);
-insert into reimbursements values (3, 10, 3, 'My public speaking needs improvement. I hope I can get reimbursed.', 1454859400, null, 'pass', 160);
-insert into reimbursements values (4, 7, 2, 'I heard I need to take this class to be a supervisor.', 1443892100, null, null, null); -- submitted late so rejected
-insert into reimbursements values (5, 29, 4, 'This is seminar is very important for my hard work here.', 1558193400, 200, null, null); -- submitted by terminated
+insert into reimbursements values (1, 2, 1, 'I would like reimbursement for my benefits coordinator certification.', 1442682000000, null, 'B', 1000);
+insert into reimbursements values (2, 4, 2, 'I am getting some supervisoral training.', 1442682000000, 40, '91', 899.20);
+insert into reimbursements values (3, 10, 3, 'My public speaking needs improvement. I hope I can get reimbursed.', 1454859400000, null, 'pass', 160);
+insert into reimbursements values (4, 7, 2, 'I heard I need to take this class to be a supervisor.', 1443892100000, null, null, null); -- submitted late so rejected
+insert into reimbursements values (5, 29, 4, 'This is seminar is very important for my hard work here.', 1558193400000, 200, null, null); -- submitted by terminated
 
-insert into messages values (1, 1, 'supervisor', 'approval', 1442768400, 'Sure thing Pippa, have fun. -Melvyn');
-insert into messages values (2, 1, 'ben co', 'approval', 1442768420, 'Approving again as a ben co. -Melvyn');
-insert into messages values (3, 2, 'supervisor', 'approval', 1442768400, 'Break a leg. -Rozalin');
-insert into messages values (4, 2, 'ben co', 'approval', 1442854800, 'Everything looks good. -Melvyn');
-insert into messages values (5, 3, 'supervisor', 'request', 1454945800, 'Looks like you forgot to fill out something. -Hoyt');
-insert into messages values (6, 3, 'supervisor', 'approval', 1455032200, 'Approved! Thank you. -Hoyt');
-insert into messages values (7, 3, 'dep head', 'approval', 1455118600, 'Good -Rozalin');
-insert into messages values (8, 3, 'ben co', 'approval', 1455205000, 'Hope you do well! -Pippa');
-insert into messages values (9, 4, 'supervisor', 'approval', 1443978500, 'Good -Rozalin');
-insert into messages values (10, 4, 'ben co', 'denial', 1444064900, 'Rozalin must have missed that the class ended already! -Melvyn');
-insert into messages values (11, 5, 'supervisor', 'denial', 1558279800, 'Did you forget you were fired? Go away. -Rozalin');
+insert into messages values (1, 1, 'supervisor', 'approval', 1442768400000, 'Sure thing Pippa, have fun. -Melvyn');
+insert into messages values (2, 1, 'ben co', 'approval', 1442768420000, 'Approving again as a ben co. -Melvyn');
+insert into messages values (3, 2, 'supervisor', 'approval', 1442768400000, 'Break a leg. -Rozalin');
+insert into messages values (4, 2, 'ben co', 'approval', 1442854800000, 'Everything looks good. -Melvyn');
+insert into messages values (5, 3, 'supervisor', 'request', 1454945800000, 'Looks like you forgot to fill out something. -Hoyt');
+insert into messages values (6, 3, 'supervisor', 'approval', 1455032200000, 'Approved! Thank you. -Hoyt');
+insert into messages values (7, 3, 'dep head', 'approval', 1455118600000, 'Good -Rozalin');
+insert into messages values (8, 3, 'ben co', 'approval', 1455205000000, 'Hope you do well! -Pippa');
+insert into messages values (9, 4, 'supervisor', 'approval', 1443978500000, 'Good -Rozalin');
+insert into messages values (10, 4, 'ben co', 'denial', 1444064900000, 'Rozalin must have missed that the class ended already! -Melvyn');
+insert into messages values (11, 5, 'supervisor', 'denial', 1558279800000, 'Did you forget you were fired? Go away. -Rozalin');
 
 insert into attachments values (1, 1, 'fakedatabucket.com/ai3214ijojdv2', 'Here is my grade.');
 insert into attachments values (2, 2, 'fakedatabucket.com/fatij124314ij', 'Here is my presentation');
@@ -174,4 +174,6 @@ alter sequence employees_id_seq restart with 31;
 alter sequence departments_id_seq restart with 4;
 alter sequence messages_id_seq restart with 12;
 alter sequence attachments_id_seq restart with 4;
+
+
 

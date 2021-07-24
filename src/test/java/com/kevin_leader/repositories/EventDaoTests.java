@@ -27,7 +27,7 @@ public class EventDaoTests {
 		EventType newType = new EventType("Battle Arena", 33);
 		GradingFormat newFormat = new GradingFormat("Rock Paper Scissors",
 				"Best two out of three", "2 wins");
-		Event newEvent = new Event("Gettin Jiggy Wit It", 1626824924,
+		Event newEvent = new Event("Gettin Jiggy Wit It", 1626824924000L,
 				"Yo Momma's House", 3.50, newType, newFormat, null);
 		int id = evDao.add(newEvent);
 		assertNotEquals(0, id);
@@ -45,9 +45,9 @@ public class EventDaoTests {
 		EventType expectedType = new EventType(5, "technical training", 90);
 		GradingFormat expectedFormat = new GradingFormat(2, "Typical Numeric Grade",
 				"Grades are from 0 to 100. Less than 60 is fail.", "60");
-		Event expectedEvent = new Event(2, "All About Supervising", 1443892000,
-				"4321 Be Cool Guys Rd. Honolulu, HI 96795", 999.11,
-				expectedType, expectedFormat, null);
+		Event expectedEvent = new Event(2, "All About Supervising",
+				1443892000000L, "4321 Be Cool Guys Rd. Honolulu, HI 96795",
+				999.11, expectedType, expectedFormat, null);
 		Event event = evDao.getById(2);
 		assertEquals(expectedEvent.toString(), event.toString());
 	}
@@ -57,7 +57,7 @@ public class EventDaoTests {
 		EventType newType = new EventType("Battle Arena", 33);
 		GradingFormat newFormat = new GradingFormat("Rock Paper Scissors",
 				"Best two out of three", "2 wins");
-		Event newEvent = new Event(3, "Gettin Jiggy Wit It", 1626824924,
+		Event newEvent = new Event(3, "Gettin Jiggy Wit It", 1626824924000L,
 				"Yo Momma's House", 3.50, newType, newFormat, null);
 		Event updatedEvent = evDao.update(newEvent);
 		assertEquals(newEvent.toString(), updatedEvent.toString());

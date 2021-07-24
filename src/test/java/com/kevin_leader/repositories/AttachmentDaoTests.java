@@ -32,11 +32,11 @@ public class AttachmentDaoTests {
 				"Best two out of three", "2 wins");
 		Employee reimbursee = new Employee("Super", "Saiyan",
 				"sugar@gohan.com", "3j1o5ino1!", null, null, null, null);
-		Event event = new Event("Doesn't Matter", 1632063600L,
+		Event event = new Event("Doesn't Matter", 1632063600000L,
 				"180 Semi Circle Hell, MI", 100.0, newType, newFormat, null);
 		Reimbursement reimbursement = new Reimbursement(
 				reimbursee, event, "I want to be reimbursed for a rock paper"
-				+ " scissors death match.", 1558193400, 8.0, null, null);
+				+ " scissors death match.", 1558193400000L, 8.0, null, null);
 		Attachment attachment = new Attachment(reimbursement,
 				"fakedatabucket.com/jfgiouhj234ijo", "Here's my scorecard.");
 		int id = aDao.add(attachment);
@@ -66,11 +66,11 @@ public class AttachmentDaoTests {
 				"Best two out of three", "2 wins");
 		Employee reimbursee = new Employee("Super", "Saiyan",
 				"attachment@vegeta.com", "3j1o5ino1!", null, null, null, null);
-		Event event = new Event("Doesn't Matter", 1632063600L,
+		Event event = new Event("Doesn't Matter", 1632063600000L,
 				"180 Semi Circle Hell, MI", 100.0, newType, newFormat, null);
 		Reimbursement reimbursement = new Reimbursement(
 				reimbursee, event, "I want to be reimbursed for a rock paper"
-				+ " scissors death match.", 1558193400, 8.0, null, null);
+				+ " scissors death match.", 1558193400000L, 8.0, null, null);
 		Attachment attachment = new Attachment(4, reimbursement,
 				"fakedatabucket.com/jfgiouhj234ijo", "Here's my scorecard.");
 		Attachment updatedAttachment = aDao.update(attachment);

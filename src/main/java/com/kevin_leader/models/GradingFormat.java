@@ -33,7 +33,8 @@ public class GradingFormat {
 		super();
 	}
 
-	public GradingFormat(String formatName, String description, String passingGradeCutoff) {
+	public GradingFormat(String formatName, String description,
+			String passingGradeCutoff) {
 		super();
 		this.formatName = formatName;
 		this.description = description;

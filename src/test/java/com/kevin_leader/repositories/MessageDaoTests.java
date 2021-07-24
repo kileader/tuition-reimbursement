@@ -32,13 +32,13 @@ public class MessageDaoTests {
 				"Best two out of three", "2 wins");
 		Employee reimbursee = new Employee("Super", "Saiyan",
 				"riperino@gohan.com", "3j1o5ino1!", null, null, null, null);
-		Event event = new Event("Doesn't Matter", 1632063600L,
+		Event event = new Event("Doesn't Matter", 1632063600000L,
 				"180 Semi Circle Hell, MI", 100.0, newType, newFormat, null);
 		Reimbursement reimbursement = new Reimbursement(
 				reimbursee, event, "I want to be reimbursed for a rock paper"
-				+ " scissors death match.", 1558193400, 8.0, null, null);
+				+ " scissors death match.", 1558193400000L, 8.0, null, null);
 		Message message = new Message(reimbursement, "supervisor", "request",
-				1626909805, "You need assignments before you can get a reimbursement.");
+				1626909805000L, "You need assignments before you can get a reimbursement.");
 		int id = mDao.add(message);
 		assertNotEquals(0, id);
 		assertNotEquals(-1, id);
@@ -53,7 +53,7 @@ public class MessageDaoTests {
 	@Test
 	public void getByIdSuccess() {
 		String expected = "Message [id=10, reimbursementId=4, approverType=ben co, mess"
-				+ "ageType=denial, timeSent=1444064900, message=Rozalin must ha"
+				+ "ageType=denial, timeSent=1444064900000, message=Rozalin must ha"
 				+ "ve missed that the class ended already! -Melvyn]";
 		Message message = mDao.getById(10);
 		assertEquals(expected, message.toString());
@@ -66,13 +66,13 @@ public class MessageDaoTests {
 				"Best two out of three", "2 wins");
 		Employee reimbursee = new Employee("Super", "Saiyan",
 				"cucumber@vegeta.com", "3j1o5ino1!", null, null, null, null);
-		Event event = new Event("Doesn't Matter", 1632063600L,
+		Event event = new Event("Doesn't Matter", 1632063600000L,
 				"180 Semi Circle Hell, MI", 100.0, newType, newFormat, null);
 		Reimbursement reimbursement = new Reimbursement(
 				reimbursee, event, "I want to be reimbursed for a rock paper"
-				+ " scissors death match.", 1558193400, 8.0, null, null);
+				+ " scissors death match.", 1558193400000L, 8.0, null, null);
 		Message message = new Message(7, reimbursement, "supervisor", "request",
-				1626909805, "You need assignments before you can get a reimbursement.");
+				1626909805000L, "You need assignments before you can get a reimbursement.");
 		Message updatedMessage = mDao.update(message);
 		assertEquals(message.toString(), updatedMessage.toString());
 	}

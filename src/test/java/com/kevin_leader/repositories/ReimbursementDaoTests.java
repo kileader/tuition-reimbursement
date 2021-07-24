@@ -31,11 +31,11 @@ public class ReimbursementDaoTests {
 				"Best two out of three", "2 wins");
 		Employee reimbursee = new Employee("Super", "Saiyan",
 				"somethingelse@gohan.com", "3j1o5ino1!", null, null, null, null);
-		Event event = new Event("Doesn't Matter", 1632063600L,
+		Event event = new Event("Doesn't Matter", 1632063600000L,
 				"180 Semi Circle Hell, MI", 100.0, newType, newFormat, null);
 		Reimbursement reimbursement = new Reimbursement(
 				reimbursee, event, "I want to be reimbursed for a rock paper"
-				+ " scissors death match.", 1558193400, 8.0, null, null);
+				+ " scissors death match.", 1558193400000L, 8.0, null, null);
 		int id = rDao.add(reimbursement);
 		assertNotEquals(0, id);
 		assertNotEquals(-1, id);
@@ -52,7 +52,7 @@ public class ReimbursementDaoTests {
 		Reimbursement actualReimbursement = rDao.getById(2);
 		String expected = "Reimbursement [id=2, employeeId=4, eventId=2, de"
 				+ "scription=I am getting some supervisoral training., submissi"
-				+ "onTime=1442682000, hoursMissed=40.0, finalGrade=91, actualCl"
+				+ "onTime=1442682000000, hoursMissed=40.0, finalGrade=91, actualCl"
 				+ "aim=899.2]";
 		assertEquals(expected, actualReimbursement.toString());
 	}
@@ -64,11 +64,11 @@ public class ReimbursementDaoTests {
 				"Best two out of three", "2 wins");
 		Employee reimbursee = new Employee("Super", "Saiyan",
 				"ultrasaiyan@vegeta.com", "3j1o5ino1!", null, null, null, null);
-		Event event = new Event("Doesn't Matter", 1632063600L,
+		Event event = new Event("Doesn't Matter", 1632063600000L,
 				"180 Semi Circle Hell, MI", 100.0, newType, newFormat, null);
 		Reimbursement reimbursement = new Reimbursement(3, 
 				reimbursee, event, "I want to be reimbursed for a rock paper"
-				+ " scissors death match.", 1558193400, 8.0, null, null);
+				+ " scissors death match.", 1558193400000L, 8.0, null, null);
 		Reimbursement updatedReimbursement = rDao.update(reimbursement);
 		assertEquals(reimbursement.toString(), updatedReimbursement.toString());
 	}
