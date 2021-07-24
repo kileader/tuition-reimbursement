@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import com.kevin_leader.models.Department;
 import com.kevin_leader.models.Employee;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class DepartmentServiceImpl implements DepartmentService {
 	
@@ -15,9 +14,9 @@ public class DepartmentServiceImpl implements DepartmentService {
 			Logger.getLogger(DepartmentServiceImpl.class);
 	private GenericRepo<Department> dDao;
 	
-	public DepartmentServiceImpl() {
+	public DepartmentServiceImpl(GenericRepo<Department> dDao) {
 		log.info("Instantiate DepartmentSericeImpl");
-		dDao = new GenericRepoImpl<>(Department.class);
+		this.dDao = dDao;
 	}
 	
 	@Override

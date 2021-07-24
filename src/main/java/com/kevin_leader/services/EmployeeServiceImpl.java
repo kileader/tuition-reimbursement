@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import com.kevin_leader.models.Department;
 import com.kevin_leader.models.Employee;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -15,9 +14,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 			Logger.getLogger(EmployeeServiceImpl.class);
 	private GenericRepo<Employee> empDao;
 	
-	public EmployeeServiceImpl() {
+	public EmployeeServiceImpl(GenericRepo<Employee> empDao) {
 		log.info("Instantiate EmployeeServiceImpl");
-		empDao = new GenericRepoImpl<>(Employee.class);
+		this.empDao = empDao;
 	}
 
 	@Override

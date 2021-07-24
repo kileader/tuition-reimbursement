@@ -8,7 +8,6 @@ import com.kevin_leader.models.Event;
 import com.kevin_leader.models.EventType;
 import com.kevin_leader.models.GradingFormat;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class EventServiceImpl implements EventService {
 	
@@ -16,9 +15,9 @@ public class EventServiceImpl implements EventService {
 			Logger.getLogger(EventServiceImpl.class);
 	private GenericRepo<Event> evDao;
 	
-	public EventServiceImpl() {
+	public EventServiceImpl(GenericRepo<Event> evDao) {
 		log.info("Instantiate EventServiceImpl");
-		evDao = new GenericRepoImpl<>(Event.class);
+		this.evDao = evDao;
 	}
 	
 	@Override

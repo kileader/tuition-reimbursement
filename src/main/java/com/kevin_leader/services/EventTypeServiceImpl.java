@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 
 import com.kevin_leader.models.EventType;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class EventTypeServiceImpl implements EventTypeService {
 	
@@ -14,9 +13,9 @@ public class EventTypeServiceImpl implements EventTypeService {
 			Logger.getLogger(EventTypeServiceImpl.class);
 	private GenericRepo<EventType> etDao;
 	
-	public EventTypeServiceImpl() {
+	public EventTypeServiceImpl(GenericRepo<EventType> etDao) {
 		log.info("Instantiate EventTypeServiceImpl");
-		etDao = new GenericRepoImpl<>(EventType.class);
+		this.etDao = etDao;
 	}
 	
 	@Override

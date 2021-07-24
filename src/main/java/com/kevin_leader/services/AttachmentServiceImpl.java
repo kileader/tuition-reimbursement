@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import com.kevin_leader.models.Attachment;
 import com.kevin_leader.models.Reimbursement;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class AttachmentServiceImpl implements AttachmentService {
 
@@ -15,9 +14,9 @@ public class AttachmentServiceImpl implements AttachmentService {
 			Logger.getLogger(AttachmentServiceImpl.class);
 	private GenericRepo<Attachment> aDao;
 	
-	public AttachmentServiceImpl() {
+	public AttachmentServiceImpl(GenericRepo<Attachment> aDao) {
 		log.info("Instantiate AttachmentServiceImpl");
-		aDao = new GenericRepoImpl<>(Attachment.class);
+		this.aDao = aDao;
 	}
 	
 	@Override

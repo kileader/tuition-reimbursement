@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 
 import com.kevin_leader.models.GradingFormat;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class GradingFormatServiceImpl implements GradingFormatService {
 	
@@ -14,9 +13,9 @@ public class GradingFormatServiceImpl implements GradingFormatService {
 			Logger.getLogger(GradingFormatServiceImpl.class);
 	private GenericRepo<GradingFormat> gfDao;
 	
-	public GradingFormatServiceImpl() {
+	public GradingFormatServiceImpl(GenericRepo<GradingFormat> gfDao) {
 		log.info("Instantiate GradingFormatServiceImpl");
-		gfDao = new GenericRepoImpl<>(GradingFormat.class);
+		this.gfDao = gfDao;
 	}
 	
 	@Override

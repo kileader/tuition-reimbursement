@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import com.kevin_leader.models.Message;
 import com.kevin_leader.models.Reimbursement;
 import com.kevin_leader.repositories.GenericRepo;
-import com.kevin_leader.repositories.GenericRepoImpl;
 
 public class MessageServiceImpl implements MessageService {
 	
@@ -15,9 +14,9 @@ public class MessageServiceImpl implements MessageService {
 			Logger.getLogger(EventServiceImpl.class);
 	private GenericRepo<Message> mDao;
 	
-	public MessageServiceImpl() {
+	public MessageServiceImpl(GenericRepo<Message> mDao) {
 		log.info("Instantiate MessageServiceImpl");
-		mDao = new GenericRepoImpl<>(Message.class);
+		this.mDao = mDao;
 	}
 
 	@Override

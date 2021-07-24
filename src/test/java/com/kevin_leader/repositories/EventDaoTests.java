@@ -15,11 +15,11 @@ import com.kevin_leader.models.GradingFormat;
 
 public class EventDaoTests {
 	
-	private static GenericRepo<Event> eDao;
+	private static GenericRepo<Event> evDao;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
-		eDao = new GenericRepoImpl<>(Event.class);
+		evDao = new GenericRepoImpl<>(Event.class);
 	}
 	
 	@Test
@@ -29,14 +29,14 @@ public class EventDaoTests {
 				"Best two out of three", "2 wins");
 		Event newEvent = new Event("Gettin Jiggy Wit It", 1626824924,
 				"Yo Momma's House", 3.50, newType, newFormat, null);
-		int id = eDao.add(newEvent);
+		int id = evDao.add(newEvent);
 		assertNotEquals(0, id);
 		assertNotEquals(-1, id);
 	}
 	
 	@Test
 	public void getAllSuccess() {
-		List<Event> events = eDao.getAll();
+		List<Event> events = evDao.getAll();
 		assertTrue(3 < events.size());
 	}
 	
@@ -48,7 +48,7 @@ public class EventDaoTests {
 		Event expectedEvent = new Event(2, "All About Supervising", 1443892000,
 				"4321 Be Cool Guys Rd. Honolulu, HI 96795", 999.11,
 				expectedType, expectedFormat, null);
-		Event event = eDao.getById(2);
+		Event event = evDao.getById(2);
 		assertEquals(expectedEvent.toString(), event.toString());
 	}
 	
@@ -59,18 +59,18 @@ public class EventDaoTests {
 				"Best two out of three", "2 wins");
 		Event newEvent = new Event(3, "Gettin Jiggy Wit It", 1626824924,
 				"Yo Momma's House", 3.50, newType, newFormat, null);
-		Event updatedEvent = eDao.update(newEvent);
+		Event updatedEvent = evDao.update(newEvent);
 		assertEquals(newEvent.toString(), updatedEvent.toString());
 	}
 
 	@Test
 	public void deleteSuccess() {
-		Event eventToDelete = eDao.getById(4);
+		Event eventToDelete = evDao.getById(4);
 		Event nulledEvent = new Event(4, eventToDelete.getEventName(),
 				eventToDelete.getStartTime(), eventToDelete.getLocation(),
 				eventToDelete.getTuition(), null, null, null);
-		Event updatedEvent = eDao.update(nulledEvent);
-		Event deletedEvent = eDao.delete(updatedEvent);
+		Event updatedEvent = evDao.update(nulledEvent);
+		Event deletedEvent = evDao.delete(updatedEvent);
 		assertEquals(updatedEvent.toString(), deletedEvent.toString());
 	}
 	
