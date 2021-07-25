@@ -40,21 +40,20 @@ public class App {
 		GenericRepo<Message> mDao = new GenericRepoImpl<>(Message.class);
 		GenericRepo<Reimbursement> rDao = new GenericRepoImpl<>(Reimbursement.class);
 		
-		RequestFormService rfServ = 
-				new RequestFormServiceImpl(empDao, evDao, etDao, gfDao, rDao);
+		RequestFormService rfServ = new RequestFormServiceImpl(
+				empDao, evDao, etDao, gfDao, rDao, aDao);
+		
+		etDao.getById(0);
 		
 		RequestFormController rfCon = new RequestFormController(rfServ);
 		
-		app.get("/", (ctx) -> ctx.result("This is the App Home Page!"));
 		app.get("/hello", (ctx) -> ctx.result("Hello World!"));
 		
 		app.get("/events", rfCon.getAllEvents);
-		
 		app.get("/grading_formats", rfCon.getAllGradingFormats);
-		
 		app.get("/event_types", rfCon.getAllEventTypes);
 		
-		app.post("/reimbursement_request", rfCon.processReimbursementRequest);
+		app.post("/reimbursements", rfCon.processReimbursementRequest);
 	}
 	
 }

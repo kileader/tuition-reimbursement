@@ -3,7 +3,6 @@ package com.kevin_leader.models;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,22 +10,24 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "attachments")
 public class Attachment {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Expose private int id;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "reimbursement_id")
-	private Reimbursement reimbursement;
+	@Expose private Reimbursement reimbursement;
 	
 	@Column(name = "attachment_url")
-	private String attachmentUrl;
+	@Expose private String attachmentUrl;
 	
-	private String description;
+	@Expose private String description;
 
 	public Attachment() {
 		super();

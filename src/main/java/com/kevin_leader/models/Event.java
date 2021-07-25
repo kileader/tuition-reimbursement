@@ -13,37 +13,39 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "events")
 public class Event {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Expose private int id;
 	
 	@Column(name = "event_name")
-	private String eventName;
+	@Expose private String eventName;
 	
 	@Column(name = "start_time")
-	private long startTime;
+	@Expose private long startTime;
 	
-	private String location;
+	@Expose private String location;
 	
-	private double tuition;
+	@Expose private double tuition;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "event_type_id")
-	private EventType eventType;
+	@Expose private EventType eventType;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "grading_format_id")
-	private GradingFormat gradingFormat;
+	@Expose private GradingFormat gradingFormat;
 	
 	@Column(name = "end_time")
-	private Long endTime;
+	@Expose private Long endTime;
 	
 	@OneToMany
-	private Set<Reimbursement> reimbursements;
+	private transient Set<Reimbursement> reimbursements;
 	
 	// No-arg
 	public Event() {

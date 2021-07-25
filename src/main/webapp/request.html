@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Reimbursement Request</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<h1 class="jumbotron">Request a Reimbursement</h1>
+		</header>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="navbar-brand" href="index.html">Tuition Reimbursement Management System</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Request a Reimbursement</a></li>
+        <li class="nav-item"><a class="nav-link" href="update.html">Update Your Requests</a></li>
+        <li class="nav-item"><a class="nav-link" href="review.html">Review Others' Requests</a></li>
+      </ul>
+		</nav>
+		<main>
+			<div class="form">
+
+				<h2>Employee Credentials</h2>
+				
+				<div class="row">
+					<div class="form-group col-md">
+						<label for="email">Email: </label>
+						<input type="email" class="form-control" id="email" placeholder="name@example.com"/>
+					</div>
+	
+					<div class="form-group col-md">
+						<label for="password">Password: </label>
+						<input type="password" class="form-control" id="password" placeholder="Password"/>
+					</div>
+				</div>
+				
+				<hr>
+
+				<h2>Event</h2>
+
+				<div class="form-group center">
+					<button id="choose-event" onclick="showChooseEvent()">Choose from Events</button>
+					<button id="create-event" onclick="showCreateEvent()">Create a New Event</button>
+				</div>
+
+				<div id="choose-from-events" class="form-group">
+
+					<label for="event-select">Choose Your Event: </label>
+					<select id="event-select" class="form-control" onchange="chooseEvent()">
+						<option>Choose an Upcoming Event</option>
+						<!-- TODO: Make javascript list of options to choose from-->
+					</select>
+
+				</div>
+
+				<div id="create-new-event">
+
+					<div class="row">
+						<div class="form-group col-md">
+							<label for="event-name">Event Name: </label>
+							<input type="text" id="event-name" class="form-control" placeholder="Event Name">
+						</div>
+	
+						<div class="form-group col-md">
+							<label for="tuition">Cost in USD: </label>
+							<input type="number" id="tuition" class="form-control" placeholder="000.00">
+						</div>
+					</div>
+					
+					<row class="row">
+						<div class="form-group col-md">
+							<label for="start-date">Start Date: </label>
+							<input type="date" id="start-date" class="form-control"> 
+						</div>
+						
+						<div class="form-group col-md">
+							<label for="start-time">Start Time (EST): </label>
+							<input type="time" id="start-time" class="form-control">
+						</div>
+					</row>
+
+					<row class="row">
+						<div class="form-group col-md">
+							<label for="end-date">End Date (optional): </label>
+							<input type="date" id="end-date" class="form-control">
+						</div>
+
+						<div class="form-group col-md">
+							<label for="end-time">End Time (EST, optional): </label>
+							<input type="time" id="end-time" class="form-control">
+						</div>
+					</row>
+
+					<div class="form-group">
+						<label for="location">Location: </label>
+						<textarea id="location" class="form-control" placeholder="1234 Real Rd. Albuquerque, NM 12345"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="event-type">Event Type: </label>
+						<select id="event-type" class="form-control" onchange="chooseEventType()">
+							<option>Choose an Event Type</option>
+							<!-- TODO: Make javascript list of options to choose from-->
+						</select>
+					</div>
+
+					<hr>
+
+					<h2>Grading Format</h2>
+
+					<div class="form-group center">
+						<button id="choose-format" onclick="showChooseFormat()">Choose from Grading Formats</button>
+						<button id="create-format" onclick="showCreateFormat()">Create a New Grading Format</button>
+					</div>
+
+					<div class="form-group" id="choose-from-formats">
+						<label for="grading-formats">Choose the Grading Format: </label>
+						<select id="grading-formats" class="form-control" onchange="chooseFormat()">
+							<option>Choose a Grading Format</option>
+							<!-- TODO: Make javascript list of options to choose from-->
+						</select>
+					</div>
+
+					<div id="create-new-format">
+						<div class="row">
+							<div class="form-group col-md">
+								<label for="format-name">Grading Format Name: </label>
+								<input type="text" id="format-name" class="form-control" placeholder="Grading Format Name">
+							</div>
+
+							<div class="form-group col-md">
+								<label for="passing-grade-cutoff">Passing Grade Cutoff: </label>
+								<input type="text" id="passing-grade-cutoff" class="form-control" placeholder="Enter the lowest passing grade possible.">
+							</div>
+						</div>
+				
+						<div class="form-group">
+							<label for="format-description">Grading Format Description: </label>
+							<textarea id="format-description" class="form-control" placeholder="Describe your event's grading scale."></textarea>
+						</div>
+
+					</div>
+					
+				</div>
+				
+				<hr>
+
+				<h2>Reimbursement Justification</h2>
+
+				<div class="form-group">
+					<label for="description">Reimbursement Justification: </label>
+					<textarea id="description" class="form-control" placeholder="Justify why you should receive this reimbursement."></textarea>
+				</div>
+
+				<hr>
+
+				<h2>Add Attachments (optional)</h2>
+
+				<div class="form-group">	
+					<label for="attachment-url">Attachment URL (optional): </label>
+					<input type="url" id="attachment-url" class="form-control" placeholder="https://www.yourdatabucket.com/data.msg">
+				</div>
+				<div class="form-group">
+					<label for="attachment-description">Attachment Description (optional): </label>
+					<input type="text" id="attachment-description" class="form-control" placeholder="Describe the attachment.">
+				</div>
+				
+				<button id="add-attachment" class="center" onclick="addAttachment()">Add Attachment</button>
+
+				<label>Attachments: </label>
+				<ul id="attachment-list"></ul>
+				<!-- TODO: Make javascript list to add attachment values to -->
+				
+			</div>
+		</main>
+	</div>
+</body>
+</html>

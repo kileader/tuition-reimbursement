@@ -47,7 +47,7 @@ public class AttachmentDaoTests {
 	@Test
 	public void getAllSuccess() {
 		List<Attachment> attachments = aDao.getAll();
-		assertTrue(1 < attachments.size() && attachments.size() < 5);
+		assertTrue(1 < attachments.size());
 	}
 	
 	@Test

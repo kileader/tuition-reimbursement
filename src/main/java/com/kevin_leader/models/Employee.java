@@ -14,47 +14,49 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "employees")
 public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Expose private int id;
 	
 	@Column(name = "first_name")
-	private String firstName;
+	@Expose private String firstName;
 	
 	@Column(name = "last_name")
-	private String lastName;
+	@Expose private String lastName;
 	
-	private String email;
+	@Expose private String email;
 	
-	private String password;
+	@Expose private String password;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "supervisor_emp_id")
 	private Employee supervisor;
 	
 	@OneToMany(mappedBy = "supervisor")
-	private Set<Employee> subordinates;
+	private transient Set<Employee> subordinates;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "department_id")
-	private Department department;
+	@Expose private Department department;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "ben_co_emp_id")
 	private Employee benefitsCoordinator;
 	
 	@OneToMany(mappedBy = "benefitsCoordinator")
-	private Set<Employee> benefitors;
+	private transient Set<Employee> benefitors;
 	
 	@Column(name = "termination_time")
-	private Long terminationTime;
+	@Expose private Long terminationTime;
 	
 	@OneToMany(mappedBy = "reimbursee")
-	private Set<Reimbursement> reimbursements;
+	private transient Set<Reimbursement> reimbursements;
 
 	// No-args constructor
 	public Employee() {

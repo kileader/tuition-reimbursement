@@ -10,24 +10,26 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "grading_formats")
 public class GradingFormat {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Expose private int id;
 	
 	@Column(name = "format_name")
-	private String formatName;
+	@Expose private String formatName;
 	
-	private String description;
+	@Expose private String description;
 	
 	@Column(name = "passing_grade_cutoff")
-	private String passingGradeCutoff;
+	@Expose private String passingGradeCutoff;
 	
 	@OneToMany(mappedBy = "gradingFormat")
-	private Set<Event> eventsWithFormat;
+	private transient Set<Event> eventsWithFormat;
 
 	public GradingFormat() {
 		super();

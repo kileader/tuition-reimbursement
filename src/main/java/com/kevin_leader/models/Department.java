@@ -12,24 +12,26 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "departments")
 public class Department {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Expose private int id;
 	
-	private String name;
+	@Expose private String name;
 	
-	private String description;
+	@Expose private String description;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "dep_head_emp_id")
-	private Employee departmentHead;
+	@Expose private Employee departmentHead;
 	
 	@OneToMany(mappedBy = "department")
-	private Set<Employee> employeesInDepartment;
+	private transient Set<Employee> employeesInDepartment;
 
 	// No-args constructor
 	public Department() {

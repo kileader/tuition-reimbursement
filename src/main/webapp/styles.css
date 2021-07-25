@@ -1,39 +1,76 @@
 * {
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(17, 140, 79);
 }
 
 main {
     background-color: antiquewhite;
     margin: auto;
-    width: 60%;
+    max-width: fit-content;
+    min-width: 75%;
+}
+
+article {
+    padding: 1em;
+    margin: 1em;
+}
+
+h1.jumbotron {
+    max-width: fit-content;
+    margin: auto;
+}
+
+p {
+    margin: 1em;
+}
+
+a.navbar-brand {
+    margin: auto;
+    padding: 8px;
+}
+
+nav {
+    width: max-content;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    margin: 0.5em 0.5em;
+}
+
+ul {
+    margin: auto;
+}
+
+li {
+    margin: auto;
 }
 
 header {
     margin: 1em;
 }
 
-h1 {
-    margin: auto;
-    width: 60%;
+h1, h2 {
     text-align: center;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    margin: 12px auto;
 }
 
 div.form {
     padding: 1em;
-    text-align: center;
-}
-
-table.table {
-    width: 70%;
-    margin: auto;
-}
-
-h1.jumbotron {
-    width: 30%;
+    margin: 1em;
 }
 
 label {

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.kevin_leader.models.Event;
 import com.kevin_leader.models.EventType;
 import com.kevin_leader.models.GradingFormat;
@@ -23,19 +24,23 @@ public class RequestFormController {
 	
 	public RequestFormController(RequestFormService rfServ) {
 		this.rfServ = rfServ;
-		gson = new Gson();
+		gson = new GsonBuilder()
+				.excludeFieldsWithoutExposeAnnotation()
+//				.excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.STATIC)
+				.create();
 	}
 	
 	public Handler getAllEvents = (context) -> {
 		log.info("Start Handler getAllEvents");
-
+		
 		List<Event> events = rfServ.getAllEvents();
+		
 		if (events != null) {
 			context.result(gson.toJson(events));
 			context.status(200);
 		} else {
-			context.result("[]");
-			context.status(404);
+			context.result("{}");
+			context.status(500);
 		}
 
 	};
@@ -48,8 +53,8 @@ public class RequestFormController {
 			context.result(gson.toJson(types));
 			context.status(200);
 		} else {
-			context.result("[]");
-			context.status(404);
+			context.result("{}");
+			context.status(500);
 		}
 	};
 	
@@ -61,8 +66,8 @@ public class RequestFormController {
 			context.result(gson.toJson(formats));
 			context.status(200);
 		} else {
-			context.result("[]");
-			context.status(404);
+			context.result("{}");
+			context.status(500);
 		}
 	};
 	

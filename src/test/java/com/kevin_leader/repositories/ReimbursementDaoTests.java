@@ -44,7 +44,7 @@ public class ReimbursementDaoTests {
 	@Test
 	public void getAllSuccess() {
 		List<Reimbursement> reimbursements = rDao.getAll();
-		assertTrue(3 < reimbursements.size() && reimbursements.size() < 7);
+		assertTrue(3 < reimbursements.size());
 	}
 	
 	@Test

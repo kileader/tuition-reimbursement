@@ -10,28 +10,30 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "messages")
 public class Message {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Expose private int id;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "reimbursement_id")
-	private Reimbursement reimbursement;
+	@Expose private Reimbursement reimbursement;
 	
 	@Column(name = "approver_type")
-	private String approverType;
+	@Expose private String approverType;
 	
 	@Column(name = "message_type")
-	private String messageType;
+	@Expose private String messageType;
 	
 	@Column(name = "time_sent")
-	private long timeSent;
+	@Expose private long timeSent;
 	
-	private String message;
+	@Expose private String message;
 
 	public Message() {
 		super();
