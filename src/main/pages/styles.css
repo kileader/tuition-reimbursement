@@ -8,9 +8,7 @@ body {
 }
 
 main {
-    background-color: antiquewhite;
-    margin: auto;
-    max-width: fit-content;
+    background-color: rgb(231, 207, 138);
     min-width: 75%;
 }
 
@@ -22,6 +20,7 @@ article {
 h1.jumbotron {
     max-width: fit-content;
     margin: auto;
+    border: 5px double black;
 }
 
 p {
@@ -32,18 +31,18 @@ a.navbar-brand {
     margin: auto;
     padding: 8px;
 }
+button {
+    margin: 0.4em 0.7em;
+}
 
 nav {
     width: max-content;
     margin: auto;
+    border: 5px double black;
 }
 
 .center {
     text-align: center;
-}
-
-button {
-    margin: 0.5em 0.5em;
 }
 
 ul {
@@ -68,9 +67,16 @@ h2 {
     margin: 12px auto;
 }
 
-div.form {
+h2#success {
+    margin: 0.5em auto;
     padding: 1em;
-    margin: 1em;
+    width: max-content;
+}
+
+form {
+    padding: 1em 2em;
+    margin: 1em 0;
+    border: 5px double black;
 }
 
 label {

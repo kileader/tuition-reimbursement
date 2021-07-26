@@ -41,7 +41,7 @@ public class App {
 		GenericRepo<Reimbursement> rDao = new GenericRepoImpl<>(Reimbursement.class);
 		
 		RequestFormService rfServ = new RequestFormServiceImpl(
-				empDao, evDao, etDao, gfDao, rDao, aDao);
+				empDao, evDao, etDao, gfDao, rDao);
 		
 		etDao.getById(0);
 		
@@ -49,7 +49,7 @@ public class App {
 		
 		app.get("/hello", (ctx) -> ctx.result("Hello World!"));
 		
-		app.get("/events", rfCon.getAllEvents);
+		app.get("/future_events", rfCon.getFutureEvents);
 		app.get("/grading_formats", rfCon.getAllGradingFormats);
 		app.get("/event_types", rfCon.getAllEventTypes);
 		

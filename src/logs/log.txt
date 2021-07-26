@@ -23168,3 +23168,713 @@ Process 27243 waits for AccessExclusiveLock on relation 46399 of database 14314;
 2021-07-25 01:27:40 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=15, eventId=6, description=I want to be reimbursed please., submissionTime=1627190845385, hoursMissed=172.52, finalGrade=null, actualClaim=null])
 2021-07-25 01:27:58 INFO  GenericRepoImpl:49 - Run add(Attachment [id=0, reimbursementId=7, attachmentUrl=https://revatureprojects.s3.us-east-2.amazonaws.com/doge.jpg, description=Doge believes in me. Do you?])
 2021-07-25 01:28:18 INFO  GenericRepoImpl:49 - Run add(Attachment [id=0, reimbursementId=7, attachmentUrl=https://imgur.com/gallery/fie0qlx, description=If I can't go, these pictures will be me.])
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-25 18:12:22 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 18:12:22 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-07-25 18:12:22 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-25 18:12:22 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 18:12:22 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 18:12:23 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 18:12:23 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 18:12:23 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 18:12:23 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 18:12:23 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 18:12:33 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-25 18:12:38 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-25 18:13:07 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 18:13:07 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-07-25 18:13:07 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-25 18:13:07 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 18:13:08 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 18:13:08 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 18:13:08 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 18:13:08 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 18:13:08 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 18:13:08 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 18:13:16 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-25 18:13:21 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1d34b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-25 18:14:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 18:14:24 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-07-25 18:14:24 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-25 18:14:24 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 18:14:24 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 18:14:25 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 18:14:25 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 18:14:25 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 18:14:25 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 18:14:25 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 18:14:35 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-25 18:14:39 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-25 18:15:36 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-25 18:17:45 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:17:45 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:18:48 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:18:48 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:21:38 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:21:38 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:22:02 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:22:02 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:22:42 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:22:42 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:22:57 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:22:57 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:23:45 INFO  RequestFormController:34 - Start Handler getAllEvents
+2021-07-25 18:23:45 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:47:18 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 18:47:18 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-25 18:47:19 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 18:47:19 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 18:47:20 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 18:47:20 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 18:47:20 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 18:47:20 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 18:47:20 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 18:47:29 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-25 18:47:33 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@119c877] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-25 18:48:30 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-25 18:48:32 INFO  GenericRepoImpl:121 - Run update(Employee [id=1, firstName=Melvyn, lastName=Tippetts, email=mtippetts0@gmpg.org, password=6GEXmZSP, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-25 18:48:34 INFO  GenericRepoImpl:147 - Run delete(Employee [id=1, firstName=Melvyn, lastName=Tippetts, email=mtippetts0@gmpg.org, password=6GEXmZSP, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-25 18:48:37 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:48:41 INFO  GenericRepoImpl:49 - Run add(Employee [id=0, firstName=Super, lastName=Saiyan, email=kamehameha@gohan.com, password=3j1o5ino1!, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-25 18:48:43 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:48:50 INFO  GenericRepoImpl:121 - Run update(Employee [id=3, firstName=Super, lastName=Saiyan, email=finalflash@vegeta.com, password=3j1o5ino1!, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-25 18:48:52 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 18:48:52 INFO  GenericRepoImpl:99 - Run get(4)
+2021-07-25 18:48:55 INFO  GenericRepoImpl:147 - Run delete(EventType [id=4, typeName=certification, percentCoverage=100.0])
+2021-07-25 18:48:57 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:48:59 INFO  GenericRepoImpl:49 - Run add(EventType [id=0, typeName=Corporate Party, percentCoverage=95.0])
+2021-07-25 18:49:02 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:49:05 INFO  GenericRepoImpl:121 - Run update(EventType [id=3, typeName=dragon training, percentCoverage=10.0])
+2021-07-25 18:49:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 18:49:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 18:49:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 18:49:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 18:49:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 18:49:08 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-25 18:49:08 INFO  RequestForm:55 - Create RequestForm full object
+2021-07-25 18:49:08 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:49:11 INFO  GenericRepoImpl:49 - Run add(GradingFormat [id=0, formatName=Smile or Fail, description=All you have to do is smile., passingGradeCutoff=Smile])
+2021-07-25 18:49:13 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-25 18:49:15 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=4, endTime=1640511000000])
+2021-07-25 18:49:21 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=6, description=I would like reimbursement for this., submissionTime=1627253351294, hoursMissed=8.5, finalGrade=null, actualClaim=null])
+2021-07-25 18:49:34 INFO  GenericRepoImpl:99 - Run get(6)
+2021-07-25 18:49:41 INFO  GenericRepoImpl:99 - Run get(6)
+2021-07-25 18:49:44 INFO  GenericRepoImpl:99 - Run get(4)
+2021-07-25 18:49:47 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:49:49 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:49:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:50:09 INFO  RequestForm:55 - Create RequestForm full object
+2021-07-25 18:50:09 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-25 18:50:11 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-25 18:50:13 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=3, endTime=1640511000000])
+2021-07-25 18:50:19 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=7, description=I would like reimbursement for this., submissionTime=1627253409024, hoursMissed=8.5, finalGrade=null, actualClaim=null])
+2021-07-25 18:50:31 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-25 18:50:34 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-25 18:50:37 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=3, endTime=1640511000000])
+2021-07-25 18:50:43 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=8, description=I would like reimbursement for this., submissionTime=1627253431596, hoursMissed=8.5, finalGrade=null, actualClaim=null])
+2021-07-25 18:50:56 INFO  GenericRepoImpl:99 - Run get(8)
+2021-07-25 18:51:00 INFO  GenericRepoImpl:99 - Run get(8)
+2021-07-25 18:51:03 INFO  RequestForm:40 - Create RequestForm with chosen event
+2021-07-25 18:51:03 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:51:05 INFO  RequestForm:40 - Create RequestForm with chosen event
+2021-07-25 18:51:05 INFO  GenericRepoImpl:99 - Run get(5)
+2021-07-25 18:51:09 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=5, description=I would like reimbursement for this., submissionTime=1627253465817, hoursMissed=7.5, finalGrade=null, actualClaim=null])
+2021-07-25 18:51:19 INFO  GenericRepoImpl:99 - Run get(9)
+2021-07-25 18:51:23 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 18:51:23 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-25 18:51:27 INFO  GenericRepoImpl:121 - Run update(Reimbursement [id=1, employeeId=, eventId=, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, finalGrade=null, actualClaim=null])
+2021-07-25 18:51:32 INFO  GenericRepoImpl:147 - Run delete(Reimbursement [id=1, employeeId=, eventId=, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, finalGrade=null, actualClaim=null])
+2021-07-25 18:51:35 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:51:58 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=0, eventId=0, description=I want to be reimbursed for a rock paper scissors death match., submissionTime=1558193400000, hoursMissed=8.0, finalGrade=null, actualClaim=null])
+2021-07-25 18:52:07 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:52:09 INFO  GenericRepoImpl:121 - Run update(Reimbursement [id=3, employeeId=0, eventId=0, description=I want to be reimbursed for a rock paper scissors death match., submissionTime=1558193400000, hoursMissed=8.0, finalGrade=null, actualClaim=null])
+2021-07-25 18:52:19 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-25 18:52:19 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-25 18:52:22 INFO  GenericRepoImpl:147 - Run delete(Attachment [id=1, reimbursementId=, attachmentUrl=fakedatabucket.com/ai3214ijojdv2, description=Here is my grade.])
+2021-07-25 18:52:24 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:52:28 INFO  GenericRepoImpl:49 - Run add(Attachment [id=0, reimbursementId=0, attachmentUrl=fakedatabucket.com/jfgiouhj234ijo, description=Here's my scorecard.])
+2021-07-25 18:52:37 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:52:42 INFO  GenericRepoImpl:121 - Run update(Attachment [id=4, reimbursementId=0, attachmentUrl=fakedatabucket.com/jfgiouhj234ijo, description=Here's my scorecard.])
+2021-07-25 18:52:54 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 18:52:54 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-25 18:52:57 INFO  GenericRepoImpl:147 - Run delete(GradingFormat [id=1, formatName=Typical Letter Grade, description=Grades are A, B, C, D, and F. F is fail, D is lowest passing, A is highest passing, passingGradeCutoff=D])
+2021-07-25 18:53:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:53:05 INFO  GenericRepoImpl:49 - Run add(GradingFormat [id=0, formatName=No Ds, description=Grades that are typically Ds are Fs, passingGradeCutoff=C])
+2021-07-25 18:53:06 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:53:08 INFO  GenericRepoImpl:121 - Run update(GradingFormat [id=3, formatName=You Lose, description=Good day sir!, passingGradeCutoff=not possible])
+2021-07-25 18:53:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-25 18:53:13 INFO  GenericRepoImpl:99 - Run get(4)
+2021-07-25 18:53:17 INFO  GenericRepoImpl:121 - Run update(Message [id=4, reimbursementId=, approverType=ben co, messageType=approval, timeSent=1442854800000, message=Everything looks good. -Melvyn])
+2021-07-25 18:53:22 INFO  GenericRepoImpl:147 - Run delete(Message [id=4, reimbursementId=, approverType=ben co, messageType=approval, timeSent=1442854800000, message=Everything looks good. -Melvyn])
+2021-07-25 18:53:24 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:53:34 INFO  GenericRepoImpl:49 - Run add(Message [id=0, reimbursementId=0, approverType=supervisor, messageType=request, timeSent=1626909805000, message=You need assignments before you can get a reimbursement.])
+2021-07-25 18:53:49 INFO  GenericRepoImpl:99 - Run get(10)
+2021-07-25 18:53:55 INFO  GenericRepoImpl:121 - Run update(Message [id=7, reimbursementId=0, approverType=supervisor, messageType=request, timeSent=1626909805000, message=You need assignments before you can get a reimbursement.])
+2021-07-25 18:54:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-25 18:54:08 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-25 18:54:12 INFO  GenericRepoImpl:121 - Run update(Department [id=1, name=Services, description=null, depHeadEmpId=])
+2021-07-25 18:54:15 INFO  GenericRepoImpl:147 - Run delete(Department [id=1, name=Services, description=null, depHeadEmpId=])
+2021-07-25 18:54:18 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:54:22 INFO  GenericRepoImpl:49 - Run add(Department [id=0, name=Underwater Basket Weaving, description=The most honorable department in the galaxy., depHeadEmpId=0])
+2021-07-25 18:54:28 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:54:33 INFO  GenericRepoImpl:121 - Run update(Department [id=3, name=Underwater Basket Weaving, description=The most honorable department in the galaxy., depHeadEmpId=0])
+2021-07-25 18:54:41 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 18:54:41 INFO  GenericRepoImpl:99 - Run get(4)
+2021-07-25 18:54:44 INFO  GenericRepoImpl:121 - Run update(Event [id=4, eventName=How to Eat Pie, startTime=1555076237000, location=911 Real Street Name Blv. Tokyo, JP, tuition=9999.99, eventTypeId=, gradingFormatId=, endTime=null])
+2021-07-25 18:54:46 INFO  GenericRepoImpl:147 - Run delete(Event [id=4, eventName=How to Eat Pie, startTime=1555076237000, location=911 Real Street Name Blv. Tokyo, JP, tuition=9999.99, eventTypeId=, gradingFormatId=, endTime=null])
+2021-07-25 18:54:51 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 18:55:31 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=Gettin Jiggy Wit It, startTime=1626824924000, location=Yo Momma's House, tuition=3.5, eventTypeId=0, gradingFormatId=0, endTime=null])
+2021-07-25 18:55:39 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-25 18:55:43 INFO  GenericRepoImpl:121 - Run update(Event [id=3, eventName=Gettin Jiggy Wit It, startTime=1626824924000, location=Yo Momma's House, tuition=3.5, eventTypeId=0, gradingFormatId=0, endTime=null])
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-25 19:47:13 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 19:47:13 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-25 19:47:13 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-25 19:47:13 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 19:47:13 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 19:47:14 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 19:47:14 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 19:47:14 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 19:47:14 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 19:47:14 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 19:47:25 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-25 19:47:30 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-25 19:48:35 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-25 19:48:54 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:48:54 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:50:43 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:50:43 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:51:16 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:51:16 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:51:39 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:51:39 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:54:08 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:54:08 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:57:52 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:57:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:58:25 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:58:25 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 19:59:32 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 19:59:32 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:00:11 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:00:11 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:00:17 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:00:17 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:01:38 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:01:38 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:05:18 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:05:18 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:06:05 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:06:05 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:11:02 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:11:02 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:12:13 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:12:13 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:29:08 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:29:08 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 20:32:37 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 20:32:37 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:08:07 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:08:07 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:16:07 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:16:07 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:20:46 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:20:46 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:22:08 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:22:08 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:23:20 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:23:20 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:25:41 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:25:41 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:26:40 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:26:40 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 21:32:42 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 21:32:42 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:05:34 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:05:34 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:06:37 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:06:37 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:07:20 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 22:07:20 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 22:07:20 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 22:07:20 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 22:07:20 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 22:07:20 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-25 22:07:20 INFO  RequestForm:55 - Create RequestForm full object
+2021-07-25 22:07:20 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:07:21 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 22:07:21 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 22:07:21 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 22:07:21 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 22:07:21 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 22:07:21 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 22:07:21 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-25 22:07:43 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-25 22:07:43 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-25 22:07:43 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-25 22:07:43 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-25 22:07:43 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-25 22:07:43 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-25 22:07:43 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-25 22:07:43 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-25 22:07:43 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-25 22:07:43 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-25 22:07:53 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-25 22:07:57 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-25 22:09:05 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-25 22:09:16 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:09:16 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:09:16 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:09:16 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:21:25 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:21:25 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:21:25 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:21:25 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:21:25 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:21:25 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:26:49 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:26:49 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:26:49 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:26:49 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:26:49 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:33:09 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:33:09 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:33:09 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:33:09 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:33:09 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:38:14 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:38:14 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:38:14 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:38:14 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:38:14 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:40:27 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:40:27 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:40:27 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:40:27 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:40:27 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:40:48 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:40:48 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:40:48 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:40:48 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:40:48 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:42:36 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:42:36 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:42:36 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:42:36 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:42:36 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:47:13 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:47:13 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:47:13 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:47:13 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:47:13 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:48:03 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 22:48:03 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 22:48:03 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 22:48:03 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 22:48:03 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 23:55:52 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-25 23:55:52 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-25 23:55:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-25 23:55:52 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-25 23:55:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:11:52 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:11:52 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:11:52 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:11:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:11:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:28:00 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:28:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:28:00 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:28:00 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:28:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:28:53 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:28:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:32:16 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:32:16 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:32:16 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:32:16 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:32:16 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:32:22 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:33:41 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:33:41 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:33:41 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:33:41 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:33:41 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:33:43 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:35:27 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:35:27 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:35:27 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:35:27 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:35:27 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:35:28 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:35:52 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:35:52 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:35:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:35:52 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:35:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:35:53 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:36:32 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:36:32 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:36:32 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:36:32 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:36:32 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:36:41 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:37:00 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:37:00 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:37:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:37:00 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:37:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:37:01 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:39:52 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:39:52 WARN  RequestFormServiceImpl:156 - java.text.ParseException: Unparseable date: "  EST"
+2021-07-26 00:39:52 INFO  GenericRepoImpl:49 - Run add(GradingFormat [id=0, formatName=Super, description=You better by Super!, passingGradeCutoff=Super])
+2021-07-26 00:39:54 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-26 00:39:57 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=Hiya, startTime=1609051080000, location=123 Figjaoj Rd.
+Arizona, PH 37850, tuition=2.22, eventTypeId=2, gradingFormatId=4, endTime=null])
+2021-07-26 00:40:02 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=12, eventId=6, description=I NEEED it., submissionTime=1627274392418, hoursMissed=99999.99, finalGrade=null, actualClaim=null])
+2021-07-26 00:40:04 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 22003
+2021-07-26 00:40:04 ERROR SqlExceptionHelper:142 - ERROR: numeric field overflow
+  Detail: A field with precision 6, scale 2 must round to an absolute value less than 10^4.
+2021-07-26 00:40:04 WARN  GenericRepoImpl:61 - Exception: 
+org.hibernate.exception.DataException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:115)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3277)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3883)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:194)
+	at org.hibernate.event.internal.DefaultSaveEventListener.saveWithGeneratedOrRequestedId(DefaultSaveEventListener.java:38)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:179)
+	at org.hibernate.event.internal.DefaultSaveEventListener.performSaveOrUpdate(DefaultSaveEventListener.java:32)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:75)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.fireSave(SessionImpl.java:665)
+	at org.hibernate.internal.SessionImpl.save(SessionImpl.java:658)
+	at org.hibernate.internal.SessionImpl.save(SessionImpl.java:653)
+	at com.kevin_leader.repositories.GenericRepoImpl.add(GenericRepoImpl.java:58)
+	at com.kevin_leader.services.RequestFormServiceImpl.processRequestForm(RequestFormServiceImpl.java:140)
+	at com.kevin_leader.controllers.RequestFormController.lambda$3(RequestFormController.java:78)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:791)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1350)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:279)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:383)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:882)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1036)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: numeric field overflow
+  Detail: A field with precision 6, scale 2 must round to an absolute value less than 10^4.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 65 more
+2021-07-26 00:50:21 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:50:21 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:50:21 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:50:21 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:50:21 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:50:23 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 0A000
+2021-07-26 00:50:23 ERROR SqlExceptionHelper:142 - ERROR: cached plan must not change result type
+2021-07-26 00:51:31 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-26 00:52:24 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-26 00:52:24 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-26 00:52:24 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-26 00:52:24 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-26 00:52:25 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-26 00:52:25 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-26 00:52:25 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-26 00:52:25 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-26 00:52:25 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-26 00:52:25 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-26 00:52:35 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-26 00:52:39 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-26 00:53:40 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-26 00:54:38 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:54:38 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:54:38 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:54:38 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:54:38 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:54:38 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:59:00 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 00:59:00 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 00:59:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 00:59:00 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 00:59:00 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:08:53 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:08:53 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:08:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:08:53 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:08:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:10:32 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:10:32 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:10:32 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:10:32 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:10:32 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:10:44 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:11:12 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:11:12 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:11:12 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:11:12 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:11:12 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:11:15 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:11:41 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:11:47 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:11:54 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:11:54 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:12:02 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:08 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:36 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:42 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:42 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:43 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:44 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:45 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:46 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:12:49 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:15:44 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:15:44 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:15:44 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:15:44 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:15:44 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:15:47 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:15:56 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:15:56 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:15:56 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:15:56 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:15:56 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:15:57 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:16:05 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:17:23 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:17:23 INFO  GenericRepoImpl:49 - Run add(GradingFormat [id=0, formatName=fafadfa, description=13 cva, passingGradeCutoff=1231faf])
+2021-07-26 01:17:24 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 01:17:26 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=afdafda, startTime=1609060740000, location=123 F3r dfa, tuition=213.0, eventTypeId=3, gradingFormatId=4, endTime=1609064460000])
+2021-07-26 01:17:29 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=25, eventId=6, description=adf, submissionTime=1627276643314, hoursMissed=123.0, finalGrade=null, actualClaim=null])
+2021-07-26 01:20:37 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:20:37 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:20:37 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:20:37 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:20:37 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:20:53 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:20:53 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:20:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:20:53 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:20:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:20:55 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:26:52 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:26:52 INFO  GenericRepoImpl:99 - Run get(5)
+2021-07-26 01:26:55 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=14, eventId=5, description=I NEEED it, submissionTime=1627277212631, hoursMissed=1.0, finalGrade=null, actualClaim=null])
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Department>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Message>
+2021-07-26 01:35:08 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-26 01:35:08 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-26 01:35:08 INFO  GenericRepoImpl:99 - Run get(0)
+2021-07-26 01:35:08 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-26 01:35:08 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-26 01:35:09 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-26 01:35:09 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-26 01:35:09 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-26 01:35:09 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-26 01:35:09 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-26 01:35:20 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-26 01:35:25 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-26 01:36:36 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-26 01:36:48 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:36:48 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:36:48 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:36:48 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:36:48 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:36:48 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:38:17 INFO  RequestFormController:75 - Start Handler processReimbursementRequest
+2021-07-26 01:38:17 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:38:19 INFO  GenericRepoImpl:49 - Run add(GradingFormat [id=0, formatName=fda 2 vdsa, description=dsaf 21 sad , passingGradeCutoff=daf 2dfsa ])
+2021-07-26 01:38:21 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 01:38:25 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=fadsafe, startTime=1609058340000, location=afdsf3 fad21 fdsa, tuition=231.0, eventTypeId=3, gradingFormatId=4, endTime=1609051200000])
+2021-07-26 01:38:31 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=22, eventId=6, description=fa 21 dsaf , submissionTime=1627277899001, hoursMissed=213.0, finalGrade=null, actualClaim=null])
+2021-07-26 01:41:59 INFO  RequestFormController:49 - Start Handler getAllEventTypes
+2021-07-26 01:41:59 INFO  RequestFormController:62 - Start Handler getAllGradingFormats
+2021-07-26 01:41:59 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 01:41:59 INFO  RequestFormController:34 - Start Handler getFutureEvents
+2021-07-26 01:41:59 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 03:56:39 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-26 03:56:39 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-26 03:56:39 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-26 03:56:39 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-26 03:56:40 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-26 03:56:40 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-26 03:56:40 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-26 03:56:40 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-26 03:56:40 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-26 03:56:49 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-26 04:20:16 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-26 04:20:16 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-26 04:20:16 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-26 04:20:17 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-26 04:20:17 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-26 04:20:17 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-07-26 04:20:17 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-07-26 04:20:17 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-26 04:20:17 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-26 04:20:25 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-26 04:20:29 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2f9a77] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-26 04:21:02 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-26 04:21:06 INFO  GenericRepoImpl:121 - Run update(Employee [id=1, firstName=Melvyn, lastName=Tippetts, email=mtippetts0@gmpg.org, password=6GEXmZSP, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-26 04:21:07 INFO  GenericRepoImpl:147 - Run delete(Employee [id=1, firstName=Melvyn, lastName=Tippetts, email=mtippetts0@gmpg.org, password=6GEXmZSP, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-26 04:21:09 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:21:13 INFO  GenericRepoImpl:49 - Run add(Employee [id=0, firstName=Super, lastName=Saiyan, email=kamehameha@gohan.com, password=3j1o5ino1!, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-26 04:21:14 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-26 04:21:16 INFO  GenericRepoImpl:121 - Run update(Employee [id=3, firstName=Super, lastName=Saiyan, email=finalflash@vegeta.com, password=3j1o5ino1!, supervisorEmpId=, departmentId=, benCoEmpId=, terminationTime=null])
+2021-07-26 04:21:18 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-26 04:21:18 INFO  GenericRepoImpl:99 - Run get(4)
+2021-07-26 04:21:20 INFO  GenericRepoImpl:147 - Run delete(EventType [id=4, typeName=certification, percentCoverage=100.0])
+2021-07-26 04:21:22 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:21:23 INFO  GenericRepoImpl:49 - Run add(EventType [id=0, typeName=Corporate Party, percentCoverage=95.0])
+2021-07-26 04:21:25 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-26 04:21:27 INFO  GenericRepoImpl:121 - Run update(EventType [id=3, typeName=dragon training, percentCoverage=10.0])
+2021-07-26 04:21:30 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Employee>
+2021-07-26 04:21:30 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Event>
+2021-07-26 04:21:30 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.EventType>
+2021-07-26 04:21:30 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-26 04:21:30 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-26 04:21:30 INFO  RequestFormServiceImpl:34 - Instantiate RequestFormServiceImpl
+2021-07-26 04:21:30 INFO  RequestForm:55 - Create RequestForm full object
+2021-07-26 04:21:30 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:21:32 INFO  GenericRepoImpl:49 - Run add(GradingFormat [id=0, formatName=Smile or Fail, description=All you have to do is smile., passingGradeCutoff=Smile])
+2021-07-26 04:21:34 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 04:21:36 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=4, endTime=1640511000000])
+2021-07-26 04:21:40 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=6, description=I would like reimbursement for this., submissionTime=1627287692428, hoursMissed=8.5, finalGrade=null, actualClaim=null])
+2021-07-26 04:21:48 INFO  GenericRepoImpl:99 - Run get(6)
+2021-07-26 04:21:50 INFO  GenericRepoImpl:99 - Run get(6)
+2021-07-26 04:21:52 INFO  GenericRepoImpl:99 - Run get(4)
+2021-07-26 04:21:54 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:21:56 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-26 04:21:58 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:22:08 INFO  RequestForm:55 - Create RequestForm full object
+2021-07-26 04:22:08 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 04:22:10 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 04:22:12 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=3, endTime=1640511000000])
+2021-07-26 04:22:16 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=7, description=I would like reimbursement for this., submissionTime=1627287728961, hoursMissed=8.5, finalGrade=null, actualClaim=null])
+2021-07-26 04:22:23 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 04:22:25 INFO  GenericRepoImpl:99 - Run get(3)
+2021-07-26 04:22:27 INFO  GenericRepoImpl:49 - Run add(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=3, endTime=1640511000000])
+2021-07-26 04:22:30 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=8, description=I would like reimbursement for this., submissionTime=1627287743625, hoursMissed=8.5, finalGrade=null, actualClaim=null])
+2021-07-26 04:22:38 INFO  GenericRepoImpl:99 - Run get(8)
+2021-07-26 04:22:40 INFO  GenericRepoImpl:99 - Run get(8)
+2021-07-26 04:22:41 INFO  RequestForm:40 - Create RequestForm with chosen event
+2021-07-26 04:22:41 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:22:53 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:22:57 INFO  RequestForm:40 - Create RequestForm with chosen event
+2021-07-26 04:22:57 INFO  GenericRepoImpl:99 - Run get(5)
+2021-07-26 04:22:59 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=16, eventId=5, description=I would like reimbursement for this., submissionTime=1627287777273, hoursMissed=7.5, finalGrade=null, actualClaim=null])
+2021-07-26 04:23:07 INFO  GenericRepoImpl:99 - Run get(9)
+2021-07-26 04:23:10 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Reimbursement>
+2021-07-26 04:23:10 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-26 04:23:12 INFO  GenericRepoImpl:121 - Run update(Reimbursement [id=1, employeeId=, eventId=, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, finalGrade=null, actualClaim=null])
+2021-07-26 04:23:14 INFO  GenericRepoImpl:147 - Run delete(Reimbursement [id=1, employeeId=, eventId=, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, finalGrade=null, actualClaim=null])
+2021-07-26 04:23:16 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:23:29 INFO  GenericRepoImpl:49 - Run add(Reimbursement [id=0, employeeId=0, eventId=0, description=I want to be reimbursed for a rock paper scissors death match., submissionTime=1558193400000, hoursMissed=8.0, finalGrade=null, actualClaim=null])
+2021-07-26 04:23:35 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-26 04:23:36 INFO  GenericRepoImpl:121 - Run update(Reimbursement [id=3, employeeId=0, eventId=0, description=I want to be reimbursed for a rock paper scissors death match., submissionTime=1558193400000, hoursMissed=8.0, finalGrade=null, actualClaim=null])
+2021-07-26 04:23:48 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.Attachment>
+2021-07-26 04:23:48 INFO  GenericRepoImpl:99 - Run get(1)
+2021-07-26 04:23:50 INFO  GenericRepoImpl:147 - Run delete(Attachment [id=1, reimbursementId=, attachmentUrl=fakedatabucket.com/ai3214ijojdv2, description=Here is my grade.])
+2021-07-26 04:23:52 INFO  GenericRepoImpl:73 - Run getAll()
+2021-07-26 04:23:55 INFO  GenericRepoImpl:49 - Run add(Attachment [id=0, reimbursementId=0, attachmentUrl=fakedatabucket.com/jfgiouhj234ijo, description=Here's my scorecard.])
+2021-07-26 04:24:03 INFO  GenericRepoImpl:99 - Run get(2)
+2021-07-26 04:24:05 INFO  GenericRepoImpl:121 - Run update(Attachment [id=4, reimbursementId=0, attachmentUrl=fakedatabucket.com/jfgiouhj234ijo, description=Here's my scorecard.])
+2021-07-26 04:24:11 INFO  GenericRepoImpl:31 - Instantiate GenericDaoImpl<class com.kevin_leader.models.GradingFormat>
+2021-07-26 04:24:11 INFO  GenericRepoImpl:99 - Run get(1)

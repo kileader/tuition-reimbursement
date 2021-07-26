@@ -30,10 +30,10 @@ public class RequestFormController {
 				.create();
 	}
 	
-	public Handler getAllEvents = (context) -> {
-		log.info("Start Handler getAllEvents");
+	public Handler getFutureEvents = (context) -> {
+		log.info("Start Handler getFutureEvents");
 		
-		List<Event> events = rfServ.getAllEvents();
+		List<Event> events = rfServ.getFutureEvents();
 		
 		if (events != null) {
 			context.result(gson.toJson(events));
@@ -74,7 +74,13 @@ public class RequestFormController {
 	public Handler processReimbursementRequest = (context) -> {
 		log.info("Start Handler processReimbursementRequest");
 		
-		RequestForm reqForm = gson.fromJson(context.body(), RequestForm.class);
+		RequestForm reqForm = null;
+		try {
+			reqForm = gson.fromJson(context.body(), RequestForm.class);
+		} catch (NumberFormatException e) {
+			log.warn(e);
+		}
+		
 		Reimbursement reimbursement = rfServ.processRequestForm(reqForm);
 		
 		if (reimbursement != null) {

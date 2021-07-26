@@ -1,7 +1,5 @@
 package com.kevin_leader.models;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 
 import com.google.gson.annotations.Expose;
@@ -30,17 +28,16 @@ public class RequestForm {
 	@Expose private String endTime;
 	@Expose private String description;
 	@Expose private Double hoursMissed;
-	@Expose private List<Attachment> attachments;
 	
 	// No-args
 	public RequestForm() {
-		super();
+		
 	}
 	
 	// Event chosen
 	public RequestForm(String email, String password, Integer eventId,
 			String description, Double hoursMissed) {
-		log.info("Create RequestForm with chosen event");
+	 	log.info("Create RequestForm with chosen event");
 		this.email = email;
 		this.password = password;
 		this.eventId = eventId;
@@ -54,7 +51,7 @@ public class RequestForm {
 			String location, Double tuition, Integer typeId, Integer formatId,
 			String formatName, String formatDescription, String 
 			passingGradeCutoff, String endDate, String endTime,
-			String description, Double hoursMissed, List<Attachment> attachments) {
+			String description, Double hoursMissed) {
 		log.info("Create RequestForm full object");
 		this.email = email;
 		this.password = password;
@@ -73,7 +70,6 @@ public class RequestForm {
 		this.endTime = endTime;
 		this.description = description;
 		this.hoursMissed = hoursMissed;
-		this.attachments = attachments;
 	}
 
 	public String getEmail() {
@@ -142,10 +138,6 @@ public class RequestForm {
 	
 	public Double getHoursMissed() {
 		return hoursMissed;
-	}
-	
-	public List<Attachment> getAttachments() {
-		return attachments;
 	}
 	
 }

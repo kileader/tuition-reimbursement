@@ -3,23 +3,24 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="styles.css">
-	<title>Reimbursement Request</title>
+	<title>Request a Reimbursement</title>
+	<script src="request.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container">
 		<header>
-			<h1 class="jumbotron">Request a Reimbursement</h1>
+			<h1 class="jumbotron bg-info">Request a Reimbursement</h1>
 		</header>
-		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+		<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="navbar-brand" href="index.html">Tuition Reimbursement Management System</a></li>
         <li class="nav-item"><a class="nav-link" href="request.html">Request a Reimbursement</a></li>
         <li class="nav-item"><a class="nav-link" href="update.html">Update Your Requests</a></li>
-        <li class="nav-item"><a class="nav-link" href="review.html">Review Others' Requests</a></li>
+        <li class="nav-item"><a class="nav-link" href="review.html">Review Others Requests</a></li>
       </ul>
 		</nav>
 		<main>
-			<div class="form">
+			<form>
 
 				<h2>Employee Credentials</h2>
 				
@@ -40,21 +41,18 @@
 				<h2>Event</h2>
 
 				<div class="form-group center">
-					<button id="choose-event" onclick="showChooseEvent()">Choose from Events</button>
-					<button id="create-event" onclick="showCreateEvent()">Create a New Event</button>
+					<button type="button" id="choose-event" class="btn btn-secondary" onclick="showChooseEvent()">Choose from Events</button>
+					<button type="button" id="create-event" class="btn btn-secondary" onclick="showCreateEvent()">Create a New Event</button>
 				</div>
 
-				<div id="choose-from-events" class="form-group">
-
-					<label for="event-select">Choose Your Event: </label>
-					<select id="event-select" class="form-control" onchange="chooseEvent()">
+				<div id="choose-from-events" class="form-group" hidden>
+					<label for="event-select">Choose Your Event: <span id="future-events-loading" class="text-danger">(loading)</span></label>
+					<select id="event-select" class="form-control" disabled>
 						<option>Choose an Upcoming Event</option>
-						<!-- TODO: Make javascript list of options to choose from-->
 					</select>
-
 				</div>
 
-				<div id="create-new-event">
+				<div id="create-new-event" hidden>
 
 					<div class="row">
 						<div class="form-group col-md">
@@ -98,10 +96,9 @@
 					</div>
 
 					<div class="form-group">
-						<label for="event-type">Event Type: </label>
-						<select id="event-type" class="form-control" onchange="chooseEventType()">
+						<label for="event-type">Event Type: <span id="event-types-loading" class="text-danger">(loading)</span></label>
+						<select id="event-type" class="form-control" disabled>
 							<option>Choose an Event Type</option>
-							<!-- TODO: Make javascript list of options to choose from-->
 						</select>
 					</div>
 
@@ -110,19 +107,18 @@
 					<h2>Grading Format</h2>
 
 					<div class="form-group center">
-						<button id="choose-format" onclick="showChooseFormat()">Choose from Grading Formats</button>
-						<button id="create-format" onclick="showCreateFormat()">Create a New Grading Format</button>
+						<button type="button" id="choose-format" class="btn btn-secondary" onclick="showChooseFormat()">Choose from Grading Formats</button>
+						<button type="button" id="create-format" class="btn btn-secondary" onclick="showCreateFormat()">Create a New Grading Format</button>
 					</div>
 
-					<div class="form-group" id="choose-from-formats">
-						<label for="grading-formats">Choose the Grading Format: </label>
-						<select id="grading-formats" class="form-control" onchange="chooseFormat()">
+					<div class="form-group" id="choose-from-formats" hidden>
+						<label for="format-select">Choose the Grading Format: <span id="grading-formats-loading" class="text-danger">(loading)</span></label>
+						<select id="format-select" class="form-control" disabled>
 							<option>Choose a Grading Format</option>
-							<!-- TODO: Make javascript list of options to choose from-->
 						</select>
 					</div>
 
-					<div id="create-new-format">
+					<div id="create-new-format" hidden>
 						<div class="row">
 							<div class="form-group col-md">
 								<label for="format-name">Grading Format Name: </label>
@@ -146,34 +142,29 @@
 				
 				<hr>
 
-				<h2>Reimbursement Justification</h2>
+				<h2>Reimbursement Details</h2>
 
 				<div class="form-group">
 					<label for="description">Reimbursement Justification: </label>
 					<textarea id="description" class="form-control" placeholder="Justify why you should receive this reimbursement."></textarea>
 				</div>
 
-				<hr>
-
-				<h2>Add Attachments (optional)</h2>
-
-				<div class="form-group">	
-					<label for="attachment-url">Attachment URL (optional): </label>
-					<input type="url" id="attachment-url" class="form-control" placeholder="https://www.yourdatabucket.com/data.msg">
-				</div>
 				<div class="form-group">
-					<label for="attachment-description">Attachment Description (optional): </label>
-					<input type="text" id="attachment-description" class="form-control" placeholder="Describe the attachment.">
+					<label for="hours-missed">Hours of Work Missed (optional): </label>
+					<input type="number" id="hours-missed" class="form-control" placeholder="000.00">
 				</div>
-				
-				<button id="add-attachment" class="center" onclick="addAttachment()">Add Attachment</button>
 
-				<label>Attachments: </label>
-				<ul id="attachment-list"></ul>
-				<!-- TODO: Make javascript list to add attachment values to -->
-				
-			</div>
+				<h2 id="success"></h2>
+
+				<div class="form-group center">
+					<button type="button" id="submit"  class="btn btn-info" onclick="verifyThenSubmit()">Submit Form</button>
+				</div>
+
+			</form>
 		</main>
 	</div>
 </body>
 </html>
+<script type="text/javascript">
+	init();
+</script>

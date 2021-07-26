@@ -4,13 +4,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.kevin_leader.models.Attachment;
 import com.kevin_leader.models.Employee;
 import com.kevin_leader.models.Event;
 import com.kevin_leader.models.EventType;
@@ -28,7 +26,6 @@ public class RequestFormServiceTest {
 	private static GenericRepo<EventType> etDao;
 	private static GenericRepo<GradingFormat> gfDao;
 	private static GenericRepo<Reimbursement> rDao;
-	private static GenericRepo<Attachment> aDao;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -37,9 +34,8 @@ public class RequestFormServiceTest {
 		etDao = new GenericRepoImpl<>(EventType.class);
 		gfDao = new GenericRepoImpl<>(GradingFormat.class);
 		rDao = new GenericRepoImpl<>(Reimbursement.class);
-		aDao = new GenericRepoImpl<>(Attachment.class);
 		rfServ = new RequestFormServiceImpl(
-				empDao, evDao, etDao, gfDao, rDao, aDao);
+				empDao, evDao, etDao, gfDao, rDao);
 	}
 	
 	@Test
@@ -87,12 +83,6 @@ public class RequestFormServiceTest {
 	@Test
 	public void processRequestFormFormatChosenWithAttachmentsSuccess() {
 		
-		List<Attachment> attachments = new ArrayList<>();
-		Attachment a1 = new Attachment(
-				null, "fakeBucket.com/dbaskeyfied/supervisor_email.msg",
-				"My supervisor's email saying they approve");
-		attachments.add(a1);
-		
 		RequestForm reqForm = new RequestForm(
 				"dbaskeyfiedf@cargocollective.com", 	//email
 				"3zhvDCkI", 							//password
@@ -110,8 +100,7 @@ public class RequestFormServiceTest {
 				"2022-04-20",							//endDate
 				"04:30",								//endTime
 				"I would like reimbursement for this.", //description
-				8.5,									//hoursMissed
-				attachments);							//attachments
+				8.5);									//hoursMissed
 		
 		rfServ.processRequestForm(reqForm);
 		
@@ -123,20 +112,10 @@ public class RequestFormServiceTest {
 		Event addedEvent = rfServ.getEventById(addedReimb.getEvent().getId());
 		assertEquals(addedReimb.getEvent().toString(), addedEvent.toString());
 		
-		List<Attachment> addedAttachments = 
-				rfServ.getAttachmentsByReimbursementId(addedReimb.getId());
-		assertEquals(attachments.toString(), addedAttachments.toString());
-		
 	}
 	
 	@Test
 	public void processRequestFormFullWithAttachmentsSuccess() {
-		
-		List<Attachment> attachments = new ArrayList<>();
-		Attachment a1 = new Attachment(
-				null, "fakeBucket.com/dbaskeyfied/supervisor_email.msg",
-				"My supervisor's email saying they approve");
-		attachments.add(a1);
 		
 		RequestForm reqForm = new RequestForm(
 				"dbaskeyfiedf@cargocollective.com", 	//email
@@ -155,8 +134,7 @@ public class RequestFormServiceTest {
 				"2022-04-20",							//endDate
 				"04:30",								//endTime
 				"I would like reimbursement for this.", //description
-				8.5,									//hoursMissed
-				attachments);							//attachments
+				8.5);									//hoursMissed
 		
 		Reimbursement processedReimb = rfServ.processRequestForm(reqForm);
 		Reimbursement addedReimb =
@@ -170,10 +148,6 @@ public class RequestFormServiceTest {
 				addedReimb.getEvent().getGradingFormat().getId());
 		assertEquals(addedReimb.getEvent().getGradingFormat().toString(),
 				addedFormat.toString());
-		
-		List<Attachment> addedAttachments = 
-				rfServ.getAttachmentsByReimbursementId(addedReimb.getId());
-		assertEquals(attachments.toString(), addedAttachments.toString());
 		
 	}
 	
@@ -212,12 +186,9 @@ public class RequestFormServiceTest {
 	}
 	
 	@Test
-	public void getAttachmentsByReimbursementIdSuccess() {
-		String expectedString = "[Attachment [id=2, reimbursementId=2, attachme"
-				+ "ntUrl=fakedatabucket.com/fatij124314ij, description=Here is "
-				+ "my presentation]]";
-		List<Attachment> attachments = rfServ.getAttachmentsByReimbursementId(2);
-		assertEquals(expectedString, attachments.toString());
+	public void getFutureEventsSuccess() {
+		List<Event> futureEvents = rfServ.getFutureEvents();
+		assertTrue(futureEvents.size() > 0);
 	}
 	
 }

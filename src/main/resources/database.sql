@@ -53,7 +53,7 @@ create table events (
 	event_name			varchar(50),
 	start_time			bigint,
 	location			varchar(200),
-	tuition				numeric(7,2),
+	tuition				numeric(8,2),
 	event_type_id		integer null references event_types(id) on delete set null,
 	grading_format_id	integer null references grading_formats(id) on delete set null,
 	end_time			bigint null
@@ -65,7 +65,7 @@ create table reimbursements (
 	event_id			integer references events(id) on delete set null,
 	description			varchar(200),
 	submission_time		bigint,
-	hours_missed		numeric(6,2) null,
+	hours_missed		numeric(8,2) null,
 	final_grade			varchar(50) null,
 	actual_claim		numeric(6,2) null
 );

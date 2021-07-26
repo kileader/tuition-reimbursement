@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Update Your Requests</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="jumbotron bg-info">Update Your Requests</h1>
+		</header>
+		<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="navbar-brand" href="index.html">Tuition Reimbursement Management System</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Request a Reimbursement</a></li>
+        <li class="nav-item"><a class="nav-link" href="update.html">Update Your Requests</a></li>
+        <li class="nav-item"><a class="nav-link" href="review.html">Review Others Requests</a></li>
+      </ul>
+		</nav>
+		<main>
+      <div class="form">
+        <h2>Add Attachments (optional)</h2>
+
+				<div class="form-group center">
+					<button id="add-attachment" class="btn btn-success" onclick="hideAttachments()">No Attachments</button>
+					<button id="add-attachment" class="btn btn-secondary" onclick="showAttachments()">Add Attachments</button>
+				</div>
+
+				<div class="form-group">	
+					<label for="attachment-url">Attachment URL (optional): </label>
+					<input type="url" id="attachment-url" class="form-control" placeholder="https://www.yourdatabucket.com/data.msg">
+				</div>
+
+				<div class="form-group">
+					<label for="attachment-description">Attachment Description (optional): </label>
+					<input type="text" id="attachment-description" class="form-control" placeholder="Describe the attachment.">
+				</div>
+				
+				<div id="attachments">
+					<label>Attachments: </label>
+					<ul id="attachment-list"></ul>
+				</div>
+				
+				<!-- TODO: Make javascript list to add attachment values to -->
+        <button id="submit"  class="btn btn-info" onclick="verifyThenSubmit()">Submit Form</button>
+      </div>
+    </main>
+	</div>
+</body>
+</html>

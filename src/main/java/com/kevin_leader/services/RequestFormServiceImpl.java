@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.kevin_leader.models.Attachment;
 import com.kevin_leader.models.Employee;
 import com.kevin_leader.models.Event;
 import com.kevin_leader.models.EventType;
@@ -26,21 +25,18 @@ public class RequestFormServiceImpl implements RequestFormService {
 	private GenericRepo<EventType> etDao;
 	private GenericRepo<GradingFormat> gfDao;
 	private GenericRepo<Reimbursement> rDao;
-	private GenericRepo<Attachment> aDao;
 	private static List<Employee> allEmployees;
 	private static List<EventType> allEventTypes;
 	
 	public RequestFormServiceImpl(GenericRepo<Employee> empDao,
 			GenericRepo<Event> evDao, GenericRepo<EventType> etDao,
-			GenericRepo<GradingFormat> gfDao, GenericRepo<Reimbursement> rDao,
-			GenericRepo<Attachment> aDao) {
+			GenericRepo<GradingFormat> gfDao, GenericRepo<Reimbursement> rDao) {
 		log.info("Instantiate RequestFormServiceImpl");
 		this.empDao = empDao;
 		this.evDao = evDao;
 		this.etDao = etDao;
 		this.gfDao = gfDao;
 		this.rDao = rDao;
-		this.aDao = aDao;
 	}
 	
 	@Override
@@ -50,10 +46,28 @@ public class RequestFormServiceImpl implements RequestFormService {
 		}
 		return allEmployees;
 	}
-
+	
 	@Override
 	public List<Event> getAllEvents() {
 		return evDao.getAll();
+	}
+	
+	@Override
+	// Check for events at least one week and half a day in the future
+	public List<Event> getFutureEvents() {
+		
+		List<Event> allEvents = evDao.getAll();
+		
+		Date dateTime = new Date();
+		long currentTime = dateTime.getTime();
+		
+		List<Event> futureEvents = new ArrayList<>();
+		for (Event event : allEvents) {
+			if (currentTime + 648000000L < event.getStartTime()) {
+				futureEvents.add(event);
+			}
+		}
+		return futureEvents;
 	}
 
 	@Override
@@ -126,14 +140,6 @@ public class RequestFormServiceImpl implements RequestFormService {
 			int id = rDao.add(reimbursement);
 			reimbursement.setId(id);
 			
-			List<Attachment> attachments = reqForm.getAttachments();
-			if (attachments != null) {
-				for (Attachment attachment : attachments) {
-					attachment.setReimbursement(reimbursement);
-					aDao.add(attachment);
-				}
-			}
-			
 		}
 		return reimbursement;
 	}
@@ -161,21 +167,6 @@ public class RequestFormServiceImpl implements RequestFormService {
 	@Override
 	public Reimbursement getReimbursementById(int id) {
 		return rDao.getById(id);
-	}
-
-	@Override
-	public List<Attachment> getAttachmentsByReimbursementId(int rId) {
-		
-		List<Attachment> allAttachments = aDao.getAll();
-		List<Attachment> filteredAttachments = new ArrayList<>();
-		
-		for (Attachment attachment : allAttachments) {
-			if (attachment.getReimbursement().getId() == rId) {
-				filteredAttachments.add(attachment);
-			}
-		}
-		
-		return filteredAttachments;
 	}
 
 	@Override
