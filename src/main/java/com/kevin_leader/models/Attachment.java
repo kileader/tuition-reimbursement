@@ -15,79 +15,85 @@ import com.google.gson.annotations.Expose;
 @Entity
 @Table(name = "attachments")
 public class Attachment {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Expose private int id;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "reimbursement_id")
-	@Expose private Reimbursement reimbursement;
-	
-	@Column(name = "attachment_url")
-	@Expose private String attachmentUrl;
-	
-	@Expose private String description;
 
-	public Attachment() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Expose
+    private int id;
 
-	public Attachment(Reimbursement reimbursement, String attachmentUrl,
-			String description) {
-		super();
-		this.reimbursement = reimbursement;
-		this.attachmentUrl = attachmentUrl;
-		this.description = description;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "reimbursement_id")
+    @Expose
+    private Reimbursement reimbursement;
 
-	public Attachment(int id, Reimbursement reimbursement, String attachmentUrl,
-			String description) {
-		super();
-		this.id = id;
-		this.reimbursement = reimbursement;
-		this.attachmentUrl = attachmentUrl;
-		this.description = description;
-	}
+    @Column(name = "attachment_url")
+    @Expose
+    private String attachmentUrl;
 
-	public int getId() {
-		return id;
-	}
+    @Expose
+    private String description;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Attachment() {
+        super();
+    }
 
-	public Reimbursement getReimbursement() {
-		return reimbursement;
-	}
+    public Attachment(Reimbursement reimbursement, String attachmentUrl,
+            String description) {
+        super();
+        this.reimbursement = reimbursement;
+        this.attachmentUrl = attachmentUrl;
+        this.description = description;
+    }
 
-	public void setReimbursement(Reimbursement reimbursement) {
-		this.reimbursement = reimbursement;
-	}
+    public Attachment(int id, Reimbursement reimbursement, String attachmentUrl,
+            String description) {
+        super();
+        this.id = id;
+        this.reimbursement = reimbursement;
+        this.attachmentUrl = attachmentUrl;
+        this.description = description;
+    }
 
-	public String getAttachmentUrl() {
-		return attachmentUrl;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setAttachmentUrl(String attachmentUrl) {
-		this.attachmentUrl = attachmentUrl;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public Reimbursement getReimbursement() {
+        return reimbursement;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setReimbursement(Reimbursement reimbursement) {
+        this.reimbursement = reimbursement;
+    }
 
-	@Override
-	public String toString() {
-		String reimbursementId = (reimbursement != null) ?
-				String.valueOf(reimbursement.getId()) : "";
-		return "Attachment [id=" + id + ", reimbursementId=" + reimbursementId +
-				", attachmentUrl=" + attachmentUrl+ ", description=" + description + "]";
-	}
-	
+    public String getAttachmentUrl() {
+        return attachmentUrl;
+    }
+
+    public void setAttachmentUrl(String attachmentUrl) {
+        this.attachmentUrl = attachmentUrl;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        String reimbursementId = (reimbursement != null)
+                ? String.valueOf(reimbursement.getId())
+                : "";
+        return "Attachment [id=" + id + ", reimbursementId=" + reimbursementId
+                + ", attachmentUrl=" + attachmentUrl + ", description="
+                + description + "]";
+    }
+
 }

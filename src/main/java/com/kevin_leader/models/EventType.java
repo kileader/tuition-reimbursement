@@ -16,72 +16,75 @@ import com.google.gson.annotations.Expose;
 @Table(name = "event_types")
 public class EventType {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Expose private int id;
-	
-	@Column(name = "type_name")
-	@Expose private String typeName;
-	
-	@Column(name = "percent_coverage")
-	@Expose private double percentCoverage;
-	
-	@OneToMany(mappedBy = "eventType")
-	private transient Set<Event> eventsWithType;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Expose
+    private int id;
 
-	public EventType() {
-		super();
-	}
+    @Column(name = "type_name")
+    @Expose
+    private String typeName;
 
-	public EventType(String typeName, double percentCoverage) {
-		super();
-		this.typeName = typeName;
-		this.percentCoverage = percentCoverage;
-	}
+    @Column(name = "percent_coverage")
+    @Expose
+    private double percentCoverage;
 
-	public EventType(int id, String typeName, double percentCoverage) {
-		super();
-		this.id = id;
-		this.typeName = typeName;
-		this.percentCoverage = percentCoverage;
-	}
+    @OneToMany(mappedBy = "eventType")
+    private transient Set<Event> eventsWithType;
 
-	public int getId() {
-		return id;
-	}
+    public EventType() {
+        super();
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public EventType(String typeName, double percentCoverage) {
+        super();
+        this.typeName = typeName;
+        this.percentCoverage = percentCoverage;
+    }
 
-	public String getTypeName() {
-		return typeName;
-	}
+    public EventType(int id, String typeName, double percentCoverage) {
+        super();
+        this.id = id;
+        this.typeName = typeName;
+        this.percentCoverage = percentCoverage;
+    }
 
-	public void setTypeName(String typeName) {
-		this.typeName = typeName;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public double getPercentCoverage() {
-		return percentCoverage;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setPercentCoverage(double percentCoverage) {
-		this.percentCoverage = percentCoverage;
-	}
+    public String getTypeName() {
+        return typeName;
+    }
 
-	public Set<Event> getEventsWithType() {
-		return eventsWithType;
-	}
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
 
-	public void setEventsWithType(Set<Event> eventsWithType) {
-		this.eventsWithType = eventsWithType;
-	}
+    public double getPercentCoverage() {
+        return percentCoverage;
+    }
 
-	@Override
-	public String toString() {
-		return "EventType [id=" + id + ", typeName=" + typeName +
-				", percentCoverage=" + percentCoverage + "]";
-	}
-	
+    public void setPercentCoverage(double percentCoverage) {
+        this.percentCoverage = percentCoverage;
+    }
+
+    public Set<Event> getEventsWithType() {
+        return eventsWithType;
+    }
+
+    public void setEventsWithType(Set<Event> eventsWithType) {
+        this.eventsWithType = eventsWithType;
+    }
+
+    @Override
+    public String toString() {
+        return "EventType [id=" + id + ", typeName=" + typeName
+                + ", percentCoverage=" + percentCoverage + "]";
+    }
+
 }

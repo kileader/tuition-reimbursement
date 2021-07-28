@@ -15,86 +15,91 @@ import com.google.gson.annotations.Expose;
 @Entity
 @Table(name = "grading_formats")
 public class GradingFormat {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Expose private int id;
-	
-	@Column(name = "format_name")
-	@Expose private String formatName;
-	
-	@Expose private String description;
-	
-	@Column(name = "passing_grade_cutoff")
-	@Expose private String passingGradeCutoff;
-	
-	@OneToMany(mappedBy = "gradingFormat")
-	private transient Set<Event> eventsWithFormat;
 
-	public GradingFormat() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Expose
+    private int id;
 
-	public GradingFormat(String formatName, String description,
-			String passingGradeCutoff) {
-		super();
-		this.formatName = formatName;
-		this.description = description;
-		this.passingGradeCutoff = passingGradeCutoff;
-	}
+    @Column(name = "format_name")
+    @Expose
+    private String formatName;
 
-	public GradingFormat(int id, String formatName, String description,
-			String passingGradeCutoff) {
-		super();
-		this.id = id;
-		this.formatName = formatName;
-		this.description = description;
-		this.passingGradeCutoff = passingGradeCutoff;
-	}
+    @Expose
+    private String description;
 
-	public int getId() {
-		return id;
-	}
+    @Column(name = "passing_grade_cutoff")
+    @Expose
+    private String passingGradeCutoff;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    @OneToMany(mappedBy = "gradingFormat")
+    private transient Set<Event> eventsWithFormat;
 
-	public String getFormatName() {
-		return formatName;
-	}
+    public GradingFormat() {
+        super();
+    }
 
-	public void setFormatName(String formatName) {
-		this.formatName = formatName;
-	}
+    public GradingFormat(String formatName, String description,
+            String passingGradeCutoff) {
+        super();
+        this.formatName = formatName;
+        this.description = description;
+        this.passingGradeCutoff = passingGradeCutoff;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public GradingFormat(int id, String formatName, String description,
+            String passingGradeCutoff) {
+        super();
+        this.id = id;
+        this.formatName = formatName;
+        this.description = description;
+        this.passingGradeCutoff = passingGradeCutoff;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getPassingGradeCutoff() {
-		return passingGradeCutoff;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setPassingGradeCutoff(String passingGradeCutoff) {
-		this.passingGradeCutoff = passingGradeCutoff;
-	}
+    public String getFormatName() {
+        return formatName;
+    }
 
-	public Set<Event> getEventsWithFormat() {
-		return eventsWithFormat;
-	}
+    public void setFormatName(String formatName) {
+        this.formatName = formatName;
+    }
 
-	public void setEventsWithFormat(Set<Event> eventsWithFormat) {
-		this.eventsWithFormat = eventsWithFormat;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	@Override
-	public String toString() {
-		return "GradingFormat [id=" + id + ", formatName=" + formatName + ", description=" + description
-				+ ", passingGradeCutoff=" + passingGradeCutoff + "]";
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPassingGradeCutoff() {
+        return passingGradeCutoff;
+    }
+
+    public void setPassingGradeCutoff(String passingGradeCutoff) {
+        this.passingGradeCutoff = passingGradeCutoff;
+    }
+
+    public Set<Event> getEventsWithFormat() {
+        return eventsWithFormat;
+    }
+
+    public void setEventsWithFormat(Set<Event> eventsWithFormat) {
+        this.eventsWithFormat = eventsWithFormat;
+    }
+
+    @Override
+    public String toString() {
+        return "GradingFormat [id=" + id + ", formatName=" + formatName
+                + ", description=" + description + ", passingGradeCutoff="
+                + passingGradeCutoff + "]";
+    }
 }

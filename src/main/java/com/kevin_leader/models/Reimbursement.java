@@ -15,139 +15,147 @@ import com.google.gson.annotations.Expose;
 @Entity
 @Table(name = "reimbursements")
 public class Reimbursement {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Expose private int id;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "employee_id")
-	@Expose private Employee reimbursee;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "event_id")
-	@Expose private Event event;
-	
-	@Expose private String description;
-	
-	@Column(name = "submission_time")
-	@Expose private long submissionTime;
-	
-	@Column(name = "hours_missed")
-	@Expose private Double hoursMissed;
-	
-	@Column(name = "final_grade")
-	@Expose private String finalGrade;
-	
-	@Column(name = "actual_claim")
-	@Expose private Double actualClaim;
 
-	public Reimbursement() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Expose
+    private int id;
 
-	public Reimbursement(Employee reimbursee, Event event, String description,
-			long submissionTime, Double hoursMissed,
-			String finalGrade, Double actualClaim) {
-		super();
-		this.reimbursee = reimbursee;
-		this.event = event;
-		this.description = description;
-		this.submissionTime = submissionTime;
-		this.hoursMissed = hoursMissed;
-		this.finalGrade = finalGrade;
-		this.actualClaim = actualClaim;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id")
+    @Expose
+    private Employee reimbursee;
 
-	public Reimbursement(int id, Employee reimbursee, Event event,
-			String description, long submissionTime,
-			Double hoursMissed, String finalGrade, Double actualClaim) {
-		super();
-		this.id = id;
-		this.reimbursee = reimbursee;
-		this.event = event;
-		this.description = description;
-		this.submissionTime = submissionTime;
-		this.hoursMissed = hoursMissed;
-		this.finalGrade = finalGrade;
-		this.actualClaim = actualClaim;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "event_id")
+    @Expose
+    private Event event;
 
-	public int getId() {
-		return id;
-	}
+    @Expose
+    private String description;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    @Column(name = "submission_time")
+    @Expose
+    private long submissionTime;
 
-	public Employee getReimbursee() {
-		return reimbursee;
-	}
+    @Column(name = "hours_missed")
+    @Expose
+    private Double hoursMissed;
 
-	public void setReimbursee(Employee reimbursee) {
-		this.reimbursee = reimbursee;
-	}
+    @Column(name = "final_grade")
+    @Expose
+    private String finalGrade;
 
-	public Event getEvent() {
-		return event;
-	}
+    @Column(name = "actual_claim")
+    @Expose
+    private Double actualClaim;
 
-	public void setEvent(Event event) {
-		this.event = event;
-	}
+    public Reimbursement() {
+        super();
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public Reimbursement(Employee reimbursee, Event event, String description,
+            long submissionTime, Double hoursMissed, String finalGrade,
+            Double actualClaim) {
+        super();
+        this.reimbursee = reimbursee;
+        this.event = event;
+        this.description = description;
+        this.submissionTime = submissionTime;
+        this.hoursMissed = hoursMissed;
+        this.finalGrade = finalGrade;
+        this.actualClaim = actualClaim;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public Reimbursement(int id, Employee reimbursee, Event event,
+            String description, long submissionTime, Double hoursMissed,
+            String finalGrade, Double actualClaim) {
+        super();
+        this.id = id;
+        this.reimbursee = reimbursee;
+        this.event = event;
+        this.description = description;
+        this.submissionTime = submissionTime;
+        this.hoursMissed = hoursMissed;
+        this.finalGrade = finalGrade;
+        this.actualClaim = actualClaim;
+    }
 
-	public long getSubmissionTime() {
-		return submissionTime;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setSubmissionTime(long submissionTime) {
-		this.submissionTime = submissionTime;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public Double getHoursMissed() {
-		return hoursMissed;
-	}
+    public Employee getReimbursee() {
+        return reimbursee;
+    }
 
-	public void setHoursMissed(Double hoursMissed) {
-		this.hoursMissed = hoursMissed;
-	}
+    public void setReimbursee(Employee reimbursee) {
+        this.reimbursee = reimbursee;
+    }
 
-	public String getFinalGrade() {
-		return finalGrade;
-	}
+    public Event getEvent() {
+        return event;
+    }
 
-	public void setFinalGrade(String finalGrade) {
-		this.finalGrade = finalGrade;
-	}
+    public void setEvent(Event event) {
+        this.event = event;
+    }
 
-	public Double getActualClaim() {
-		return actualClaim;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setActualClaim(Double actualClaim) {
-		this.actualClaim = actualClaim;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	@Override
-	public String toString() {
-		String employeeId = (reimbursee != null) ? 
-				String.valueOf(reimbursee.getId()) : "";
-		String eventId = (event != null) ?
-				String.valueOf(event.getId()) : "";
-		return "Reimbursement [id=" + id + ", employeeId=" +
-				employeeId + ", eventId=" + eventId + ", description="
-				+ description + ", submissionTime=" + submissionTime +
-				", hoursMissed=" + hoursMissed + ", finalGrade="
-				+ finalGrade + ", actualClaim=" + actualClaim + "]";
-	}
-	
+    public long getSubmissionTime() {
+        return submissionTime;
+    }
+
+    public void setSubmissionTime(long submissionTime) {
+        this.submissionTime = submissionTime;
+    }
+
+    public Double getHoursMissed() {
+        return hoursMissed;
+    }
+
+    public void setHoursMissed(Double hoursMissed) {
+        this.hoursMissed = hoursMissed;
+    }
+
+    public String getFinalGrade() {
+        return finalGrade;
+    }
+
+    public void setFinalGrade(String finalGrade) {
+        this.finalGrade = finalGrade;
+    }
+
+    public Double getActualClaim() {
+        return actualClaim;
+    }
+
+    public void setActualClaim(Double actualClaim) {
+        this.actualClaim = actualClaim;
+    }
+
+    @Override
+    public String toString() {
+        String employeeId = (reimbursee != null)
+                ? String.valueOf(reimbursee.getId())
+                : "";
+        String eventId = (event != null) ? String.valueOf(event.getId()) : "";
+        return "Reimbursement [id=" + id + ", employeeId=" + employeeId
+                + ", eventId=" + eventId + ", description=" + description
+                + ", submissionTime=" + submissionTime + ", hoursMissed="
+                + hoursMissed + ", finalGrade=" + finalGrade + ", actualClaim="
+                + actualClaim + "]";
+    }
+
 }

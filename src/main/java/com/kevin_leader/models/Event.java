@@ -18,150 +18,161 @@ import com.google.gson.annotations.Expose;
 @Entity
 @Table(name = "events")
 public class Event {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Expose private int id;
-	
-	@Column(name = "event_name")
-	@Expose private String eventName;
-	
-	@Column(name = "start_time")
-	@Expose private long startTime;
-	
-	@Expose private String location;
-	
-	@Expose private double tuition;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "event_type_id")
-	@Expose private EventType eventType;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "grading_format_id")
-	@Expose private GradingFormat gradingFormat;
-	
-	@Column(name = "end_time")
-	@Expose private Long endTime;
-	
-	@OneToMany
-	private transient Set<Reimbursement> reimbursements;
-	
-	// No-arg
-	public Event() {
-		super();
-	}
-	
-	// Id-less with end time
-	public Event(String eventName, long startTime, String location,
-			double tuition, EventType eventType, GradingFormat gradingFormat,
-			Long endTime) {
-		super();
-		this.eventName = eventName;
-		this.startTime = startTime;
-		this.location = location;
-		this.tuition = tuition;
-		this.eventType = eventType;
-		this.gradingFormat = gradingFormat;
-		this.endTime = endTime;
-	}
 
-	// Full constructor
-	public Event(int id, String eventName, long startTime, String location,
-			double tuition, EventType eventType, GradingFormat gradingFormat,
-			Long endTime) {
-		super();
-		this.id = id;
-		this.eventName = eventName;
-		this.startTime = startTime;
-		this.location = location;
-		this.tuition = tuition;
-		this.eventType = eventType;
-		this.gradingFormat = gradingFormat;
-		this.endTime = endTime;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Expose
+    private int id;
 
-	public int getId() {
-		return id;
-	}
+    @Column(name = "event_name")
+    @Expose
+    private String eventName;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    @Column(name = "start_time")
+    @Expose
+    private long startTime;
 
-	public String getEventName() {
-		return eventName;
-	}
+    @Expose
+    private String location;
 
-	public void setEventName(String eventName) {
-		this.eventName = eventName;
-	}
+    @Expose
+    private double tuition;
 
-	public long getStartTime() {
-		return startTime;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "event_type_id")
+    @Expose
+    private EventType eventType;
 
-	public void setStartTime(long startTime) {
-		this.startTime = startTime;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "grading_format_id")
+    @Expose
+    private GradingFormat gradingFormat;
 
-	public String getLocation() {
-		return location;
-	}
+    @Column(name = "end_time")
+    @Expose
+    private Long endTime;
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
+    @OneToMany
+    private transient Set<Reimbursement> reimbursements;
 
-	public double getTuition() {
-		return tuition;
-	}
+    // No-arg
+    public Event() {
+        super();
+    }
 
-	public void setTuition(double tuition) {
-		this.tuition = tuition;
-	}
+    // Id-less with end time
+    public Event(String eventName, long startTime, String location,
+            double tuition, EventType eventType, GradingFormat gradingFormat,
+            Long endTime) {
+        super();
+        this.eventName = eventName;
+        this.startTime = startTime;
+        this.location = location;
+        this.tuition = tuition;
+        this.eventType = eventType;
+        this.gradingFormat = gradingFormat;
+        this.endTime = endTime;
+    }
 
-	public EventType getEventType() {
-		return eventType;
-	}
+    // Full constructor
+    public Event(int id, String eventName, long startTime, String location,
+            double tuition, EventType eventType, GradingFormat gradingFormat,
+            Long endTime) {
+        super();
+        this.id = id;
+        this.eventName = eventName;
+        this.startTime = startTime;
+        this.location = location;
+        this.tuition = tuition;
+        this.eventType = eventType;
+        this.gradingFormat = gradingFormat;
+        this.endTime = endTime;
+    }
 
-	public void setEventType(EventType eventType) {
-		this.eventType = eventType;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public GradingFormat getGradingFormat() {
-		return gradingFormat;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setGradingFormat(GradingFormat gradingFormat) {
-		this.gradingFormat = gradingFormat;
-	}
+    public String getEventName() {
+        return eventName;
+    }
 
-	public Long getEndTime() {
-		return endTime;
-	}
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
 
-	public void setEndTime(Long endTime) {
-		this.endTime = endTime;
-	}
+    public long getStartTime() {
+        return startTime;
+    }
 
-	public Set<Reimbursement> getReimbursements() {
-		return reimbursements;
-	}
+    public void setStartTime(long startTime) {
+        this.startTime = startTime;
+    }
 
-	public void setReimbursements(Set<Reimbursement> reimbursements) {
-		this.reimbursements = reimbursements;
-	}
+    public String getLocation() {
+        return location;
+    }
 
-	@Override
-	public String toString() {
-		String gradingFormatId = (gradingFormat != null) ?
-				String.valueOf(gradingFormat.getId()) : "";
-		String eventTypeId = (eventType != null) ?
-				String.valueOf(eventType.getId()) : "";
-		return "Event [id=" + id + ", eventName=" + eventName + ", startTime=" + startTime + ", location=" + location
-				+ ", tuition=" + tuition + ", eventTypeId=" + eventTypeId + ", gradingFormatId=" + gradingFormatId
-				+ ", endTime=" + endTime + "]";
-	}
-	
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public double getTuition() {
+        return tuition;
+    }
+
+    public void setTuition(double tuition) {
+        this.tuition = tuition;
+    }
+
+    public EventType getEventType() {
+        return eventType;
+    }
+
+    public void setEventType(EventType eventType) {
+        this.eventType = eventType;
+    }
+
+    public GradingFormat getGradingFormat() {
+        return gradingFormat;
+    }
+
+    public void setGradingFormat(GradingFormat gradingFormat) {
+        this.gradingFormat = gradingFormat;
+    }
+
+    public Long getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Long endTime) {
+        this.endTime = endTime;
+    }
+
+    public Set<Reimbursement> getReimbursements() {
+        return reimbursements;
+    }
+
+    public void setReimbursements(Set<Reimbursement> reimbursements) {
+        this.reimbursements = reimbursements;
+    }
+
+    @Override
+    public String toString() {
+        String gradingFormatId = (gradingFormat != null)
+                ? String.valueOf(gradingFormat.getId())
+                : "";
+        String eventTypeId = (eventType != null)
+                ? String.valueOf(eventType.getId())
+                : "";
+        return "Event [id=" + id + ", eventName=" + eventName + ", startTime="
+                + startTime + ", location=" + location + ", tuition=" + tuition
+                + ", eventTypeId=" + eventTypeId + ", gradingFormatId="
+                + gradingFormatId + ", endTime=" + endTime + "]";
+    }
+
 }

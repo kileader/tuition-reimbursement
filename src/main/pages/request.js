@@ -25,7 +25,7 @@ let chooseEventSelected;
 let chooseGradingFormatSelected;
 
 // Define variables and load lists
-const init = () => {
+const initRequest = () => {
 
   chooseEvBtn = document.getElementById("choose-event");
   createEvBtn = document.getElementById("create-event");
@@ -61,7 +61,7 @@ const getFutureEvents = () => {
 
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
-      
+
       if (futureEventsArr = JSON.parse(this.responseText)) {
 
         console.log("JSON parsed successfully.");
@@ -86,7 +86,7 @@ const getFutureEvents = () => {
 }
 
 const displayFutureEvents = () => {
-  
+
   console.log("Start displayFutureEvents()");
 
   for (let i = 0; i < futureEventsArr.length; i++) {
@@ -104,7 +104,7 @@ const displayFutureEvents = () => {
       String(futureEvent.eventType.typeName) + ", starting on " +
       date.toString()
     );
-    
+
     optionNode.appendChild(textNode);
     futureEventSelect.appendChild(optionNode);
 
@@ -127,7 +127,7 @@ const getEventTypes = () => {
 
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
-      
+
       if (eventTypesArr = JSON.parse(this.responseText)) {
 
         console.log("JSON parsed successfully.");
@@ -167,7 +167,7 @@ const displayEventTypes = () => {
       String(eventType.typeName) + ", " +
       String(eventType.percentCoverage) + "% of tuition covered"
     );
-    
+
     optionNode.appendChild(textNode);
     eventTypeSelect.appendChild(optionNode);
 
@@ -190,7 +190,7 @@ const getGradingFormats = () => {
 
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
-      
+
       if (gradingFormatsArr = JSON.parse(this.responseText)) {
 
         console.log("JSON parsed successfully.");
@@ -244,7 +244,7 @@ const displayGradingFormats = () => {
 
 const showChooseEvent = () => {
   if (chooseEvDiv.hasAttribute("hidden")) {
-    chooseEvDiv.removeAttribute("hidden");  
+    chooseEvDiv.removeAttribute("hidden");
   }
   chooseEvBtn.setAttribute("class", "btn btn-primary");
 
@@ -268,7 +268,7 @@ const showCreateEvent = () => {
 
 const showChooseFormat = () => {
   if (chooseGfDiv.hasAttribute("hidden")) {
-    chooseGfDiv.removeAttribute("hidden");  
+    chooseGfDiv.removeAttribute("hidden");
   }
   chooseGfBtn.setAttribute("class", "btn btn-primary");
 
@@ -287,7 +287,7 @@ const showCreateFormat = () => {
   chooseGfDiv.setAttribute("hidden", "");
   chooseGfBtn.setAttribute("class", "btn btn-secondary");
 
-  chooseGradingFormatSelecte = false;
+  chooseGradingFormatSelected = false;
 }
 
 
@@ -295,9 +295,8 @@ const showCreateFormat = () => {
 const verifyThenSubmit = () => {
 
   console.log("Start verifyThenSubmit()");
-  
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+
+  const employeeId = sessionStorage.getItem("employeeId");
   const eventId = futureEventSelect.value;
   const eventName = document.getElementById("event-name").value;
   const startDate = document.getElementById("start-date").value;
@@ -316,8 +315,7 @@ const verifyThenSubmit = () => {
 
   let requestForm = new Object();
 
-  requestForm.email = email;
-  requestForm.password = password;
+  requestForm.employeeId = employeeId;
 
   if (chooseEventSelected) {
 
@@ -335,7 +333,7 @@ const verifyThenSubmit = () => {
     if (chooseGradingFormatSelected) {
 
       requestForm.formatId = formatId;
-    
+
     } else {
 
       requestForm.formatName = formatName;
@@ -347,8 +345,8 @@ const verifyThenSubmit = () => {
     requestForm.endDate = endDate;
     requestForm.endTime = endTime;
 
-  } 
-  
+  }
+
   requestForm.description = description;
   requestForm.hoursMissed = hoursMissed;
 
@@ -361,34 +359,39 @@ const verifyThenSubmit = () => {
 }
 
 const sendRequestFormString = requestFormString => {
-  
+
   console.log("Start sendRequestFormString()");
 
   const successH2 = document.getElementById("success");
-
   successH2.innerHTML = "Processing...";
-  successH2.setAttribute("class", "bg-warning")
+  successH2.setAttribute("class", "bg-warning");
+
+  const submitButton = document.getElementById("submit");
+  submitButton.setAttribute("disabled", "");
 
   const url = "http://localhost:7000/reimbursements";
   const xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
     console.log("Begin loop iteration");
-    
+
     if (this.readyState == 4 && this.status == 201) {
       console.log(this.responseText);
-      
+
       if (JSON.parse(this.responseText)) {
-        successH2.innerHTML = "Reimbursement Request was added successfully!";
-        successH2.setAttribute("class", "bg-success")
+        successH2.innerHTML = "Reimbursement Request was added successfully! Redirecting to home...";
+        successH2.setAttribute("class", "bg-success");
+        setTimeout(redirectToHome(), 5000);
       } else {
         successH2.innerHTML = "Something went wrong! Is everything entered correctly?";
-        successH2.setAttribute("class", "bg-danger")
+        successH2.setAttribute("class", "bg-danger");
+        submitButton.removeAttribute("disabled");
       }
 
     } else if (this.readyState == 4) {
       successH2.innerHTML = "Something went wrong! Is everything entered correctly?";
-      successH2.setAttribute("class", "bg-danger")
+      successH2.setAttribute("class", "bg-danger");
+      submitButton.removeAttribute("disabled");
     }
 
   }
@@ -397,4 +400,8 @@ const sendRequestFormString = requestFormString => {
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(requestFormString);
 
+}
+
+const redirectToHome = () => {
+  document.getElementById("index-link").click();
 }

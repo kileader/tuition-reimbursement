@@ -7,8 +7,9 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 /**
- * Class for providing SessionFactory for use with Hibernate.
- * Revised from a design by Paula Waite at Madison College
+ * Class for providing SessionFactory for use with Hibernate. Revised from a
+ * design by Paula Waite at Madison College
+ * 
  * @author Kevin Leader
  */
 public class SessionFactoryProvider {
@@ -27,15 +28,16 @@ public class SessionFactoryProvider {
      */
     public static void createSessionFactory() {
 
-        StandardServiceRegistry standardRegistry =
-                new StandardServiceRegistryBuilder().configure().build();
-        Metadata metaData =
-                new MetadataSources(standardRegistry).getMetadataBuilder().build();
+        StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
+                .configure().build();
+        Metadata metaData = new MetadataSources(standardRegistry)
+                .getMetadataBuilder().build();
         sessionFactory = metaData.getSessionFactoryBuilder().build();
     }
 
     /**
      * Get session factory
+     * 
      * @return the session factory
      */
     public static SessionFactory getSessionFactory() {
@@ -44,5 +46,5 @@ public class SessionFactoryProvider {
         }
         return sessionFactory;
     }
-    
+
 }

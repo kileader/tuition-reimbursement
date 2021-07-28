@@ -15,106 +15,114 @@ import com.google.gson.annotations.Expose;
 @Entity
 @Table(name = "messages")
 public class Message {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Expose private int id;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "reimbursement_id")
-	@Expose private Reimbursement reimbursement;
-	
-	@Column(name = "approver_type")
-	@Expose private String approverType;
-	
-	@Column(name = "message_type")
-	@Expose private String messageType;
-	
-	@Column(name = "time_sent")
-	@Expose private long timeSent;
-	
-	@Expose private String message;
 
-	public Message() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Expose
+    private int id;
 
-	public Message(Reimbursement reimbursement, String approverType, String messageType, long timeSent,
-			String message) {
-		super();
-		this.reimbursement = reimbursement;
-		this.approverType = approverType;
-		this.messageType = messageType;
-		this.timeSent = timeSent;
-		this.message = message;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "reimbursement_id")
+    @Expose
+    private Reimbursement reimbursement;
 
-	public Message(int id, Reimbursement reimbursement, String approverType, String messageType, long timeSent,
-			String message) {
-		super();
-		this.id = id;
-		this.reimbursement = reimbursement;
-		this.approverType = approverType;
-		this.messageType = messageType;
-		this.timeSent = timeSent;
-		this.message = message;
-	}
+    @Column(name = "approver_type")
+    @Expose
+    private String approverType;
 
-	public int getId() {
-		return id;
-	}
+    @Column(name = "message_type")
+    @Expose
+    private String messageType;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    @Column(name = "time_sent")
+    @Expose
+    private long timeSent;
 
-	public Reimbursement getReimbursement() {
-		return reimbursement;
-	}
+    @Expose
+    private String message;
 
-	public void setReimbursement(Reimbursement reimbursement) {
-		this.reimbursement = reimbursement;
-	}
+    public Message() {
+        super();
+    }
 
-	public String getApproverType() {
-		return approverType;
-	}
+    public Message(Reimbursement reimbursement, String approverType,
+            String messageType, long timeSent, String message) {
+        super();
+        this.reimbursement = reimbursement;
+        this.approverType = approverType;
+        this.messageType = messageType;
+        this.timeSent = timeSent;
+        this.message = message;
+    }
 
-	public void setApproverType(String approverType) {
-		this.approverType = approverType;
-	}
+    public Message(int id, Reimbursement reimbursement, String approverType,
+            String messageType, long timeSent, String message) {
+        super();
+        this.id = id;
+        this.reimbursement = reimbursement;
+        this.approverType = approverType;
+        this.messageType = messageType;
+        this.timeSent = timeSent;
+        this.message = message;
+    }
 
-	public String getMessageType() {
-		return messageType;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setMessageType(String messageType) {
-		this.messageType = messageType;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public long getTimeSent() {
-		return timeSent;
-	}
+    public Reimbursement getReimbursement() {
+        return reimbursement;
+    }
 
-	public void setTimeSent(long timeSent) {
-		this.timeSent = timeSent;
-	}
+    public void setReimbursement(Reimbursement reimbursement) {
+        this.reimbursement = reimbursement;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public String getApproverType() {
+        return approverType;
+    }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public void setApproverType(String approverType) {
+        this.approverType = approverType;
+    }
 
-	@Override
-	public String toString() {
-		String reimbursementId = (reimbursement != null) ?
-				String.valueOf(reimbursement.getId()) : "";
-		return "Message [id=" + id + ", reimbursementId=" + reimbursementId
-				+ ", approverType=" + approverType + ", messageType=" +
-				messageType + ", timeSent=" + timeSent + ", message=" + message + "]";
-	}
-	
+    public String getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(String messageType) {
+        this.messageType = messageType;
+    }
+
+    public long getTimeSent() {
+        return timeSent;
+    }
+
+    public void setTimeSent(long timeSent) {
+        this.timeSent = timeSent;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        String reimbursementId = (reimbursement != null)
+                ? String.valueOf(reimbursement.getId())
+                : "";
+        return "Message [id=" + id + ", reimbursementId=" + reimbursementId
+                + ", approverType=" + approverType + ", messageType="
+                + messageType + ", timeSent=" + timeSent + ", message="
+                + message + "]";
+    }
+
 }

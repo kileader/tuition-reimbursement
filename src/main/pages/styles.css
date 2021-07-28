@@ -67,7 +67,7 @@ h2 {
     margin: 12px auto;
 }
 
-h2#success {
+h2#success, h2#login-success {
     margin: 0.5em auto;
     padding: 1em;
     width: max-content;
@@ -77,6 +77,13 @@ form {
     padding: 1em 2em;
     margin: 1em 0;
     border: 5px double black;
+}
+
+.fancy-border {
+    border: 5px double black;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5em;
 }
 
 label {
