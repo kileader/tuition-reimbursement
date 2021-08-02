@@ -1,7 +1,6 @@
 package com.kevin_leader.services;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -18,7 +17,7 @@ import com.kevin_leader.models.RequestForm;
 import com.kevin_leader.repositories.GenericRepo;
 import com.kevin_leader.repositories.GenericRepoImpl;
 
-public class RequestFormServiceTest {
+public class RequestFormServiceTests {
 
     private static RequestFormService rfServ;
     private static GenericRepo<Employee> empDao;
@@ -59,8 +58,7 @@ public class RequestFormServiceTest {
     public void processRequestFormChosenEventSuccess() {
 
         RequestForm reqForm = new RequestForm(
-                "dbaskeyfiedf@cargocollective.com", // email
-                "3zhvDCkI", // password
+                14, // employeeId
                 5, // eventId
                 "I would like reimbursement for this.", // description
                 7.5 // hoursMissed
@@ -77,8 +75,7 @@ public class RequestFormServiceTest {
     public void processRequestFormFormatChosenWithAttachmentsSuccess() {
 
         RequestForm reqForm = new RequestForm(
-                "dbaskeyfiedf@cargocollective.com", // email
-                "3zhvDCkI", // password
+                14, // employeeId
                 null, // eventId
                 "How to Run in Place", // eventName
                 "2022-04-20", // startDate
@@ -111,8 +108,7 @@ public class RequestFormServiceTest {
     public void processRequestFormFullWithAttachmentsSuccess() {
 
         RequestForm reqForm = new RequestForm(
-                "dbaskeyfiedf@cargocollective.com", // email
-                "3zhvDCkI", // password
+                14, // employeeId
                 null, // eventId
                 "How to Run in Place", // eventName
                 "2022-04-20", // startDate
@@ -145,21 +141,6 @@ public class RequestFormServiceTest {
     }
 
     @Test
-    public void processRequestFormWrongCredentialsFailure() {
-
-        RequestForm reqForm = new RequestForm("greentortoise@gmail.com", // email
-                "3ijtioja84", // password
-                5, // eventId
-                "I would like reimbursement for this.", // description
-                7.5 // hoursMissed
-        );
-
-        Reimbursement processedReimb = rfServ.processRequestForm(reqForm);
-        assertNull(processedReimb);
-
-    }
-
-    @Test
     public void convertToEpochSuccess() {
         String date = "2050-06-15";
         String time = "10:00";
@@ -171,7 +152,7 @@ public class RequestFormServiceTest {
     public void getReimbursementByIdSuccess() {
         String expectedString = "Reimbursement [id=2, employeeId=4, eventId=2, "
                 + "description=I am getting some supervisoral training., submis"
-                + "sionTime=1442682000000, hoursMissed=40.0, finalGrade=91, act"
+                + "sionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, act"
                 + "ualClaim=899.2]";
         Reimbursement reimbursement = rfServ.getReimbursementById(2);
         assertEquals(expectedString, reimbursement.toString());

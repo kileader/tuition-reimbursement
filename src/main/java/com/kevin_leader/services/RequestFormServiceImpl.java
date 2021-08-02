@@ -78,10 +78,10 @@ public class RequestFormServiceImpl implements RequestFormService {
     public Reimbursement processRequestForm(RequestForm reqForm) {
 
         Reimbursement reimbursement = null;
-        
+
         log.info("reqForm empId: " + reqForm.getEmployeeId());
         Employee reimbursee = empDao.getById(reqForm.getEmployeeId());
-    
+
         Date dateTime = new Date();
         long currentTime = dateTime.getTime();
 
@@ -114,8 +114,8 @@ public class RequestFormServiceImpl implements RequestFormService {
         }
 
         reimbursement = new Reimbursement(reimbursee, event,
-                reqForm.getDescription(), currentTime,
-                reqForm.getHoursMissed(), null, null);
+                reqForm.getDescription(), currentTime, reqForm.getHoursMissed(),
+                0, null, null);
 
         int id = rDao.add(reimbursement);
         reimbursement.setId(id);

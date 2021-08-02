@@ -6,6 +6,13 @@ Feature: Employee fills out a reimbursement request form
 	Background:
 		Given Employee is on request page
 		
+	Scenario: Employee wants to be logged in on request page
+    Given Employee sees login inputs on request page
+    When Employee enters a good email on request page
+    And Employee enters a good password on request page
+    And Employee clicks the Log In button on request page
+    Then Employee is logged in on request page
+		
 	Scenario: Revealing Choose Your Event and hiding New Event fields works
 		When Employee clicks Choose from Events button
 		Then Choose Your Event dropdown is seen on page
@@ -29,3 +36,4 @@ Feature: Employee fills out a reimbursement request form
 		When Employee clicks Create a New Grading Format button
 		Then New Grading Format fields are seen on page
 		And Choose the Grading Format dropdown is hidden from page
+		

@@ -33,7 +33,7 @@ public class GradingFormat {
     private String passingGradeCutoff;
 
     @OneToMany(mappedBy = "gradingFormat")
-    private transient Set<Event> eventsWithFormat;
+    private Set<Event> eventsWithFormat;
 
     public GradingFormat() {
         super();

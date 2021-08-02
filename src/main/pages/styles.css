@@ -8,13 +8,7 @@ body {
 }
 
 main {
-    background-color: rgb(231, 207, 138);
     min-width: 75%;
-}
-
-article {
-    padding: 1em;
-    margin: 1em;
 }
 
 h1.jumbotron {
@@ -43,6 +37,7 @@ nav {
 
 .center {
     text-align: center;
+    margin: auto;
 }
 
 ul {
@@ -67,15 +62,17 @@ h2 {
     margin: 12px auto;
 }
 
-h2#success, h2#login-success {
+h2#success, h2#login-success, h2#add-attachment-success, h2#add-final-grade-success, h2#award-reimbursement-success, h2#add-message-success {
     margin: 0.5em auto;
     padding: 1em;
     width: max-content;
 }
 
-form {
+form, article, section {
+    background-color: rgb(231, 207, 138);
     padding: 1em 2em;
-    margin: 1em 0;
+    margin: 1em auto;
+    width: fit-content;
     border: 5px double black;
 }
 
@@ -89,3 +86,12 @@ form {
 label {
     font-weight: bold;
 }
+
+table.table {
+    border: 5px double silver;
+    padding: 0.5em;
+    margin: auto;
+    min-width: 50%;
+    width: fit-content;
+}
+

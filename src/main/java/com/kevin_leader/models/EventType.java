@@ -30,7 +30,7 @@ public class EventType {
     private double percentCoverage;
 
     @OneToMany(mappedBy = "eventType")
-    private transient Set<Event> eventsWithType;
+    private Set<Event> eventsWithType;
 
     public EventType() {
         super();

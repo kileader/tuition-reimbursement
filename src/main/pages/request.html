@@ -35,33 +35,34 @@
 		</main>
 	</div>
 
-	<div id="page-container" class="container" hidden>
+	<div id="page-container" class="container">
 		<header>
 			<h1 class="jumbotron bg-info">Request a Reimbursement</h1>
 		</header>
-		<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a id="index-link" class="navbar-brand" href="index.html">TRMS</a></li>
 				<li class="nav-item"><a class="nav-link" href="request.html">Request a Reimbursement</a></li>
 				<li class="nav-item"><a class="nav-link" href="update.html">Update Your Requests</a></li>
-				<li class="nav-item for-reviewers"><a class="nav-link" href="review.html">Review Others Requests</a></li>
+				<li class="nav-item"><a class="nav-link" href="review.html">Review Others Requests</a></li>
 				<li class="nav-item"><a class="nav-link" onclick="logout()">Log Out</a></li>
 			</ul>
 		</nav>
 		<main>
 
-			<form>
-
-				<p class="center bg-light fancy-border">
-					<strong><span id="employee-name"></span></strong>... Here you can request a tuition reimbursement.<br>
-					You must either choose an upcoming event already listed or give the following details.<br>
-					After you submit your request, it will go through a series of reviews in order to be approved<br>
-					You must respond to any messages you receive for your request, and you may upload attachments.<br>
-					Once you finish your event, you must update with your grade or a presentation attachment.<br>
-					We hope that you can learn something new and provide more for the company.<br>
+			<article>
+				<h2>Request a Reimbursement</h2>
+				<p class="center">
+					<strong><span id="employee-name"></span></strong>... Here you can request a tuition reimbursement.
+					You must either choose an upcoming event already listed or give the following details.
+					After you submit your request, it will go through a series of reviews in order to be approved
+					You must respond to any messages you receive for your request, and you may upload attachments.
+					Once you finish your event, you must update with your grade or a presentation attachment.
+					We hope that you can learn something new and provide more for the company.
 				</p>
+			</article>
 
-				<hr>
+			<form>
 
 				<h2>Event</h2>
 
@@ -73,7 +74,7 @@
 				<div id="choose-from-events" class="form-group" hidden>
 					<label for="event-select"><span id="future-events-loading" class="small text-danger">loading... </span>Choose Your Event <span class="small text-danger">(required)</span>: </label>
 					<select id="event-select" class="form-control" disabled>
-						<option>Choose an Upcoming Event</option>
+						<option disabled selected>Choose an Upcoming Event</option>
 					</select>
 				</div>
 
@@ -123,7 +124,7 @@
 					<div class="form-group">
 						<label for="event-type"><span id="event-types-loading" class="small text-danger">loading... </span>Event Type <span class="small text-danger">(required)</span>: </label>
 						<select id="event-type" class="form-control" disabled>
-							<option>Choose an Event Type</option>
+							<option disabled selected>Choose an Event Type</option>
 						</select>
 					</div>
 
@@ -143,7 +144,7 @@
 					<div class="form-group" id="choose-from-formats" hidden>
 						<label for="format-select"><span id="grading-formats-loading" class="small text-danger">loading... </span>Choose the Grading Format <span class="small text-danger">(required)</span>: </label>
 						<select id="format-select" class="form-control" disabled>
-							<option>Choose a Grading Format</option>
+							<option disabled selected>Choose a Grading Format</option>
 						</select>
 					</div>
 

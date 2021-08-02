@@ -14,13 +14,13 @@ public class LogInServiceImpl implements LogInService {
     private static List<Employee> allEmployees;
 
     public LogInServiceImpl(GenericRepo<Employee> empDao) {
-        log.info("Instantiate LogInServiceImpl()");
+        log.info("Instantiate LogInServiceImpl");
         this.empDao = empDao;
     }
 
     @Override
     public List<Employee> getAllEmployees() {
-        if (allEmployees == null) {
+        if (!allEmployees.isEmpty()) {
             allEmployees = empDao.getAll();
         }
         return allEmployees;
@@ -40,6 +40,7 @@ public class LogInServiceImpl implements LogInService {
                 if (employee.getEmail().equals(logInAttempt.getEmail()) && 
                         employee.getPassword().equals(logInAttempt.getPassword())) {
                     log.info("found one");
+                    
                     employee.setPassword(null);
                     return employee;
                 }

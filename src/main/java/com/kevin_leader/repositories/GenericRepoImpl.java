@@ -30,7 +30,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
      */
     public GenericRepoImpl(Class<T> type) {
         this.type = type;
-        log.info("Instantiate GenericDaoImpl<" + type + ">");
+        log.info("Instantiate GenericDaoImpl<" + type.getName() + ">");
     }
 
     /**
@@ -41,6 +41,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
     private Session getSession() {
         return SessionFactoryProvider.getSessionFactory().openSession();
     }
+    
 
     /**
      * Add an entity
@@ -50,7 +51,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
      * @return the id of the inserted entity
      */
     public int add(T entity) {
-        log.info("Run add(" + entity + ")");
+        log.info("Run add" + type.getName() + "(" + entity + ")");
 
         Session session = getSession();
         Transaction transaction = null;
@@ -75,7 +76,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
      * @return list of all entities
      */
     public List<T> getAll() {
-        log.info("Run getAll()");
+        log.info("Run getAll" + type.getName() + "()");
 
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -102,7 +103,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
      * @return the retreived entity
      */
     public <T> T getById(int id) {
-        log.info("Run get(" + id + ")");
+        log.info("Run get" + type.getName() + "(" + id + ")");
 
         Session session = getSession();
         T entity = null;
@@ -125,7 +126,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
      * @return the updated entity
      */
     public <T> T update(T entity) {
-        log.info("Run update(" + entity + ")");
+        log.info("Run update" + type.getName() + "(" + entity + ")");
 
         Session session = getSession();
         Transaction transaction = null;
@@ -152,7 +153,7 @@ public class GenericRepoImpl<T> implements GenericRepo<T> {
      * @return the entity deleted
      */
     public <T> T delete(T entity) {
-        log.info("Run delete(" + entity + ")");
+        log.info("Run delete" + type.getName() + "(" + entity + ")");
 
         Session session = getSession();
         Transaction transaction = null;

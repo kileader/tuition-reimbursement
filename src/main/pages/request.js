@@ -101,7 +101,7 @@ const displayFutureEvents = () => {
 
     const textNode = document.createTextNode(
       String(futureEvent.eventName) + ", " +
-      String(futureEvent.eventType.typeName) + ", starting on " +
+      String(futureEvent.eventType.typeName) + ", on " +
       date.toString()
     );
 

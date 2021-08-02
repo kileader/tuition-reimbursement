@@ -3,7 +3,12 @@ package com.kevin_leader.webapp.steps;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import com.kevin_leader.webapp.pages.RequestPage;
 import com.kevin_leader.webapp.runners.TrmsRunner;
@@ -13,15 +18,59 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class FillRequestFormStepsImpl {
+public class RequestStepsImpl {
 	
 	public static RequestPage requestPage = TrmsRunner.requestPage;
 	public static WebDriver driver = TrmsRunner.driver;
+	public static Wait<WebDriver> wait = new FluentWait<>(driver)
+            .withTimeout(10, TimeUnit.SECONDS)
+            .pollingEvery(250, TimeUnit.MILLISECONDS)
+            .ignoring(Exception.class);
+	
+//	@Given("^Employee is logged in$")
+//    public void employee_is_logged_in() {
+//        assertNull(requestPage.pageContainer.getAttribute("hidden"));
+//        assertNotNull(requestPage.loginContainer.getAttribute("hidden"));
+//    }
+//    
+//    @Given("^Employee sees login inputs$")
+//    public void employee_sees_login_inputs() {
+//        assertNotNull(requestPage.pageContainer.getAttribute("hidden"));
+//        assertNull(requestPage.loginContainer.getAttribute("hidden"));
+//    }
+	
+	@Given("^Employee sees login inputs on request page$")
+	public void employee_sees_login_inputs_on_request_page() {
+	    wait.until(ExpectedConditions.visibilityOf(requestPage.loginContainer));
+	    assertNotNull(requestPage.pageContainer.getAttribute("hidden"));
+        assertNull(requestPage.loginContainer.getAttribute("hidden"));
+	}
+
+	@When("^Employee enters a good email on request page$")
+	public void employee_enters_a_good_email_on_request_page() {
+	    requestPage.sendKeysToEmailInput("wmarousek9@springer.com");
+	}
+
+	@When("^Employee enters a good password on request page$")
+	public void employee_enters_a_good_password_on_request_page() {
+	    requestPage.sendKeysToPasswordInput("ZWcVaZOXi");
+	}
+
+	@When("^Employee clicks the Log In button on request page$")
+	public void employee_clicks_the_Log_In_button_on_request_page() {
+	    requestPage.clickLogInButton();
+	}
+
+	@Then("^Employee is logged in on request page$")
+	public void employee_is_logged_in_on_request_page() {
+	    wait.until(ExpectedConditions.visibilityOf(requestPage.pageContainer));
+	    assertNull(requestPage.pageContainer.getAttribute("hidden"));
+	    assertNotNull(requestPage.loginContainer.getAttribute("hidden"));
+	}
 	
 	@Given("^Employee is on request page$")
 	public void employee_is_on_index_page() {
-		driver.get("file:///C:/Users/Kevin/Documents/workspace-spring-tool-suite-4-4.10.0"
-				+ ".RELEASE/tuition-reimbursement/src/main/pages/request.html");
+		driver.get("file:///C:/Users/Kevin/Documents/STS/tuition-reimbursement/src/main/pages/request.html");
 	}
 	
 	@When("Employee clicks Choose from Events button$")

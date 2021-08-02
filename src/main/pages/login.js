@@ -1,6 +1,6 @@
 
 const initLogin = () => {
-  console.log("Begin initLogin");
+  console.log("Begin initLogin()");
 
   let loginContainer = document.getElementById("login-container");
   let pageContainer = document.getElementById("page-container");
@@ -116,9 +116,5 @@ const sendLoginFormString = loginFormString => {
 
 const logout = () => {
   sessionStorage.clear();
-  initLogin();
+  document.getElementById("index-link").click();
 }
-
-// const refreshPage = () => {
-//   document.getElementById("current-page").click();
-// }

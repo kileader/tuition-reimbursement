@@ -41,38 +41,48 @@ public class Employee {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "supervisor_emp_id")
+    @Expose
     private Employee supervisor;
 
     @OneToMany(mappedBy = "supervisor")
-    private transient Set<Employee> subordinates;
+    private Set<Employee> subordinates;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "department_id")
+    @JoinColumn(name = "dep_head_emp_id")
     @Expose
-    private Department department;
-
+    private Employee departmentHead;
+    
+    @OneToMany(mappedBy = "departmentHead")
+    private Set<Employee> departmentEmployees;
+    
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "ben_co_emp_id")
     private Employee benefitsCoordinator;
 
     @OneToMany(mappedBy = "benefitsCoordinator")
-    private transient Set<Employee> benefitors;
+    private Set<Employee> benefitors;
 
     @Column(name = "termination_time")
     @Expose
     private Long terminationTime;
 
     @OneToMany(mappedBy = "reimbursee")
-    private transient Set<Reimbursement> reimbursements;
+    private Set<Reimbursement> reimbursements;
 
     // No-args constructor
     public Employee() {
         super();
     }
+    
+    // Log In Constructor
+    public Employee(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 
     // Id-less Constructor
     public Employee(String firstName, String lastName, String email,
-            String password, Employee supervisor, Department department,
+            String password, Employee supervisor, Employee departmentHead,
             Employee benefitsCoordinator, Long terminationTime) {
         super();
         this.firstName = firstName;
@@ -80,14 +90,14 @@ public class Employee {
         this.email = email;
         this.password = password;
         this.supervisor = supervisor;
-        this.department = department;
+        this.departmentHead = departmentHead;
         this.benefitsCoordinator = benefitsCoordinator;
         this.terminationTime = terminationTime;
     }
 
     // Full Constructor
-    public Employee(int id, String firstName, String lastName, String email,
-            String password, Employee supervisor, Department department,
+    public Employee(Integer id, String firstName, String lastName, String email,
+            String password, Employee supervisor, Employee departmentHead,
             Employee benefitsCoordinator, Long terminationTime) {
         super();
         this.id = id;
@@ -96,7 +106,7 @@ public class Employee {
         this.email = email;
         this.password = password;
         this.supervisor = supervisor;
-        this.department = department;
+        this.departmentHead = departmentHead;
         this.benefitsCoordinator = benefitsCoordinator;
         this.terminationTime = terminationTime;
     }
@@ -149,12 +159,12 @@ public class Employee {
         this.supervisor = supervisor;
     }
 
-    public Department getDepartment() {
-        return department;
+    public Employee getDepartmentHead() {
+        return departmentHead;
     }
 
-    public void setDepartment(Department department) {
-        this.department = department;
+    public void setDepartmentHead(Employee departmentHead) {
+        this.departmentHead = departmentHead;
     }
 
     public Employee getBenefitsCoordinator() {
@@ -186,16 +196,16 @@ public class Employee {
         String supervisorEmpId = (supervisor != null)
                 ? String.valueOf(supervisor.getId())
                 : "";
-        String departmentId = (department != null)
-                ? String.valueOf(department.getId())
+        String depHeadEmpId = (departmentHead != null)
+                ? String.valueOf(departmentHead.getId())
                 : "";
         String benCoEmpId = (benefitsCoordinator != null)
                 ? String.valueOf(benefitsCoordinator.getId())
                 : "";
         return "Employee [id=" + id + ", firstName=" + firstName + ", lastName="
                 + lastName + ", email=" + email + ", password=" + password
-                + ", supervisorEmpId=" + supervisorEmpId + ", departmentId="
-                + departmentId + ", benCoEmpId=" + benCoEmpId
+                + ", supervisorEmpId=" + supervisorEmpId + ", depHeadEmpId="
+                + depHeadEmpId + ", benCoEmpId=" + benCoEmpId
                 + ", terminationTime=" + terminationTime + "]";
     }
 

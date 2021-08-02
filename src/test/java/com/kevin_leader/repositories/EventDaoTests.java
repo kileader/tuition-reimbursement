@@ -55,13 +55,10 @@ public class EventDaoTests {
 
     @Test
     public void updateSuccess() {
-        EventType newType = new EventType("Battle Arena", 33);
-        GradingFormat newFormat = new GradingFormat("Rock Paper Scissors",
-                "Best two out of three", "2 wins");
-        Event newEvent = new Event(3, "Gettin Jiggy Wit It", 1626824924000L,
-                "Yo Momma's House", 3.50, newType, newFormat, null);
-        Event updatedEvent = evDao.update(newEvent);
-        assertEquals(newEvent.toString(), updatedEvent.toString());
+        Event eventToUpdate = evDao.getById(3);
+        eventToUpdate.setEndTime(1627686024000L);
+        Event updatedEvent = evDao.update(eventToUpdate);
+        assertEquals(eventToUpdate.toString(), updatedEvent.toString());
     }
 
     @Test

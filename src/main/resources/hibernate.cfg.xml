@@ -35,7 +35,6 @@
 		
 		<!-- Class Mappings -->
 		<mapping class="com.kevin_leader.models.Employee"/>
-		<mapping class="com.kevin_leader.models.Department"/>
 		<mapping class="com.kevin_leader.models.Event"/>
 		<mapping class="com.kevin_leader.models.EventType"/>
 		<mapping class="com.kevin_leader.models.GradingFormat"/>

@@ -54,10 +54,10 @@ public class GradingFormatDaoTests {
         assertEquals(gradingFormat.toString(), updatedFormat.toString());
     }
 
-    @Test
-    public void deleteSuccess() {
-        GradingFormat formatToDelete = gfDao.getById(1);
-        GradingFormat deletedFormat = gfDao.delete(formatToDelete);
-        assertEquals(deletedFormat.toString(), formatToDelete.toString());
-    }
+//    @Test
+//    public void deleteSuccess() {
+//        GradingFormat formatToDelete = gfDao.getById(1);
+//        GradingFormat deletedFormat = gfDao.delete(formatToDelete);
+//        assertEquals(deletedFormat.toString(), formatToDelete.toString());
+//    }
 }

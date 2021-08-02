@@ -53,7 +53,7 @@ public class Event {
     private Long endTime;
 
     @OneToMany
-    private transient Set<Reimbursement> reimbursements;
+    private Set<Reimbursement> reimbursements;
 
     // No-arg
     public Event() {

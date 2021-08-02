@@ -42,6 +42,10 @@ public class Reimbursement {
     @Expose
     private Double hoursMissed;
 
+    @Column(name = "approval_step")
+    @Expose
+    private int approvalStep;
+
     @Column(name = "final_grade")
     @Expose
     private String finalGrade;
@@ -55,21 +59,22 @@ public class Reimbursement {
     }
 
     public Reimbursement(Employee reimbursee, Event event, String description,
-            long submissionTime, Double hoursMissed, String finalGrade,
-            Double actualClaim) {
+            long submissionTime, Double hoursMissed, int approvalStep,
+            String finalGrade, Double actualClaim) {
         super();
         this.reimbursee = reimbursee;
         this.event = event;
         this.description = description;
         this.submissionTime = submissionTime;
         this.hoursMissed = hoursMissed;
+        this.approvalStep = approvalStep;
         this.finalGrade = finalGrade;
         this.actualClaim = actualClaim;
     }
 
     public Reimbursement(int id, Employee reimbursee, Event event,
             String description, long submissionTime, Double hoursMissed,
-            String finalGrade, Double actualClaim) {
+            int approvalStep, String finalGrade, Double actualClaim) {
         super();
         this.id = id;
         this.reimbursee = reimbursee;
@@ -77,6 +82,7 @@ public class Reimbursement {
         this.description = description;
         this.submissionTime = submissionTime;
         this.hoursMissed = hoursMissed;
+        this.approvalStep = approvalStep;
         this.finalGrade = finalGrade;
         this.actualClaim = actualClaim;
     }
@@ -129,6 +135,14 @@ public class Reimbursement {
         this.hoursMissed = hoursMissed;
     }
 
+    public int getApprovalStep() {
+        return approvalStep;
+    }
+
+    public void setApprovalStep(int approvalStep) {
+        this.approvalStep = approvalStep;
+    }
+
     public String getFinalGrade() {
         return finalGrade;
     }
@@ -154,8 +168,9 @@ public class Reimbursement {
         return "Reimbursement [id=" + id + ", employeeId=" + employeeId
                 + ", eventId=" + eventId + ", description=" + description
                 + ", submissionTime=" + submissionTime + ", hoursMissed="
-                + hoursMissed + ", finalGrade=" + finalGrade + ", actualClaim="
-                + actualClaim + "]";
+                + hoursMissed + ", approvalStep=" + approvalStep
+                + ", finalGrade=" + finalGrade + ", actualClaim=" + actualClaim
+                + "]";
     }
 
 }
