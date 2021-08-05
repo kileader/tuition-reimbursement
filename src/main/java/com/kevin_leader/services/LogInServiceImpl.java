@@ -41,7 +41,7 @@ public class LogInServiceImpl implements LogInService {
                         employee.getPassword().equals(logInAttempt.getPassword())) {
                     log.info("found one");
                     
-                    employee.setPassword(null);
+//                    employee.setPassword(null);
                     return employee;
                 }
             } catch (Exception e) {

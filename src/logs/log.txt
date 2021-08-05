@@ -31751,3 +31751,1181 @@ java.lang.IllegalStateException: Cannot get a connection as the driver manager i
 2021-08-02 01:09:10 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
 2021-08-02 01:09:10 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
 2021-08-02 01:09:21 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 09:58:58 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 09:58:58 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 09:58:58 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 09:58:58 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 09:58:58 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 09:58:58 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 09:58:58 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 09:58:59 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 09:58:59 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 09:58:59 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 09:58:59 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 09:58:59 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 09:58:59 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 09:59:23 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 09:59:23 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 09:59:23 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 09:59:23 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 09:59:23 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 09:59:24 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 09:59:24 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 09:59:24 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 09:59:24 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 09:59:24 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 09:59:33 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 09:59:37 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26ec8d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 10:00:31 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 10:00:41 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(6)
+2021-08-02 10:00:45 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Attachment(Attachment [id=0, reimbursementId=6, attachmentUrl=fakedatabucket.com/jfgiouhj234ijo, description=Here's my scorecard.])
+2021-08-02 10:00:50 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Attachment(2)
+2021-08-02 10:00:52 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 10:00:52 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 10:00:52 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 10:00:52 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 10:00:52 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 10:00:57 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(6)
+2021-08-02 10:00:59 INFO  UpdateRequestServiceImpl:45 - Run add attachment
+2021-08-02 10:00:59 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Attachment(Attachment [id=0, reimbursementId=6, attachmentUrl=fakeBucket.com/iaghjia2jiu.txt, description=My awesome text.])
+2021-08-02 10:01:11 INFO  UpdateRequestServiceImpl:49 - Attachment [id=6, reimbursementId=6, attachmentUrl=fakeBucket.com/iaghjia2jiu.txt, description=My awesome text.]
+2021-08-02 10:01:11 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 10:01:37 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 10:01:49 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(6)
+2021-08-02 10:01:51 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=A, actualClaim=null])
+2021-08-02 10:02:02 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 10:02:02 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 10:02:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 10:02:12 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(6)
+2021-08-02 10:02:15 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=6, approverType=supervisor, messageType=request, timeSent=1626909805000, message=You need assignments before you can get a reimbursement.])
+2021-08-02 10:02:28 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Message(10)
+2021-08-02 10:02:31 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 10:02:31 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 10:02:34 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.GradingFormat(GradingFormat [id=0, formatName=No Ds, description=Grades that are typically Ds are Fs, passingGradeCutoff=C])
+2021-08-02 10:02:37 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(2)
+2021-08-02 10:02:40 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.GradingFormat(GradingFormat [id=3, formatName=You Lose, description=Good day sir!, passingGradeCutoff=not possible])
+2021-08-02 10:02:44 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 10:02:44 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 10:02:44 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 10:02:44 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 10:02:47 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 10:02:47 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 10:02:47 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 10:02:47 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 10:02:50 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 10:02:50 INFO  LogInServiceImpl:42 - found one
+2021-08-02 10:02:50 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 10:02:50 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 10:02:50 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 10:03:12 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(18)
+2021-08-02 10:03:15 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(2)
+2021-08-02 10:03:18 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(6)
+2021-08-02 10:03:21 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=1, finalGrade=A, actualClaim=null])
+2021-08-02 10:03:31 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 10:03:31 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 10:03:31 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 10:03:31 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 10:03:31 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 10:03:31 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 10:03:31 INFO  ReviewRequestServiceImpl:86 - empId = 1
+2021-08-02 10:03:31 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=8, employeeId=9, eventId=6, description=3sfa2, submissionTime=1627880620415, hoursMissed=23.0, approvalStep=1, finalGrade=null, actualClaim=null]
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 31
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=1, finalGrade=A, actualClaim=null]
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 10:03:50 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 10:03:50 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 10:04:03 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 10:04:12 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 10:04:12 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 10:04:12 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 10:04:12 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 10:04:12 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 10:04:12 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 10:04:12 INFO  RequestForm:70 - Create RequestForm full object
+2021-08-02 10:04:12 INFO  RequestFormServiceImpl:82 - reqForm empId: 14
+2021-08-02 10:04:12 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(14)
+2021-08-02 10:04:13 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.GradingFormat(GradingFormat [id=0, formatName=Smile or Fail, description=All you have to do is smile., passingGradeCutoff=Smile])
+2021-08-02 10:04:15 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(3)
+2021-08-02 10:04:16 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=5, endTime=1640511000000])
+2021-08-02 10:04:19 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=14, eventId=7, description=I would like reimbursement for this., submissionTime=1627913053521, hoursMissed=8.5, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 10:04:25 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(9)
+2021-08-02 10:04:27 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(7)
+2021-08-02 10:04:28 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(5)
+2021-08-02 10:04:30 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 10:04:31 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(2)
+2021-08-02 10:04:33 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 10:04:43 INFO  RequestForm:70 - Create RequestForm full object
+2021-08-02 10:04:43 INFO  RequestFormServiceImpl:82 - reqForm empId: 14
+2021-08-02 10:04:43 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(14)
+2021-08-02 10:04:44 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(3)
+2021-08-02 10:04:46 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(3)
+2021-08-02 10:04:48 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=3, endTime=1640511000000])
+2021-08-02 10:04:56 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=14, eventId=8, description=I would like reimbursement for this., submissionTime=1627913084915, hoursMissed=8.5, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 10:05:08 INFO  RequestFormServiceImpl:82 - reqForm empId: 14
+2021-08-02 10:05:08 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(14)
+2021-08-02 10:05:11 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(3)
+2021-08-02 10:05:13 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(3)
+2021-08-02 10:05:15 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=How to Run in Place, startTime=1640523600000, location=51 East Blv. Kevin Crater, Moon 51356, tuition=400.0, eventTypeId=3, gradingFormatId=3, endTime=1640511000000])
+2021-08-02 10:05:21 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=14, eventId=9, description=I would like reimbursement for this., submissionTime=1627913111206, hoursMissed=8.5, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 10:05:32 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(11)
+2021-08-02 10:05:34 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(9)
+2021-08-02 10:05:38 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 10:05:54 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 10:05:58 INFO  RequestForm:56 - Create RequestForm with chosen event
+2021-08-02 10:05:58 INFO  RequestFormServiceImpl:82 - reqForm empId: 14
+2021-08-02 10:05:58 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(14)
+2021-08-02 10:06:01 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(5)
+2021-08-02 10:06:05 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=14, eventId=5, description=I would like reimbursement for this., submissionTime=1627913161685, hoursMissed=7.5, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 10:06:14 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(12)
+2021-08-02 10:06:17 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 10:06:17 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 10:06:22 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 10:06:23 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(23)
+2021-08-02 10:06:26 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Employee(Employee [id=23, firstName=Filip, lastName=Sumpton, email=fsumptonm@state.tx.us, password=m6w6f4suss9, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=1627686024000])
+2021-08-02 10:06:29 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 10:06:29 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(4)
+2021-08-02 10:06:31 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Event(Event [id=4, eventName=How to Eat Pie, startTime=1555076237000, location=911 Real Street Name Blv. Tokyo, JP, tuition=9999.99, eventTypeId=, gradingFormatId=, endTime=null])
+2021-08-02 10:06:35 INFO  GenericRepoImpl:156 - Run deletecom.kevin_leader.models.Event(Event [id=4, eventName=How to Eat Pie, startTime=1555076237000, location=911 Real Street Name Blv. Tokyo, JP, tuition=9999.99, eventTypeId=, gradingFormatId=, endTime=null])
+2021-08-02 10:06:39 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 10:06:53 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=Gettin Jiggy Wit It, startTime=1626824924000, location=Yo Momma's House, tuition=3.5, eventTypeId=0, gradingFormatId=0, endTime=null])
+2021-08-02 10:06:59 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(2)
+2021-08-02 10:07:01 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(3)
+2021-08-02 10:07:04 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Event(Event [id=3, eventName=Public Speaking, startTime=1456673400000, location=1337 Road Street Ln. Litte Rock, AR 72002, tuition=200.0, eventTypeId=1, gradingFormatId=3, endTime=1627686024000])
+2021-08-02 10:07:09 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 10:07:09 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 10:07:12 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.EventType(EventType [id=0, typeName=Corporate Party, percentCoverage=95.0])
+2021-08-02 10:07:16 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(2)
+2021-08-02 10:07:18 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.EventType(EventType [id=3, typeName=dragon training, percentCoverage=10.0])
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 10:09:41 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 10:09:41 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 10:09:41 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 10:09:41 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 10:09:41 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 10:09:41 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 10:09:41 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 10:09:42 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 10:09:42 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 10:09:42 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 10:09:42 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 10:09:42 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 10:09:42 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 10:09:53 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 10:09:57 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d901aa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 10:10:55 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 11:51:02 INFO  LogInController:23 - Start Handler processLogInAttempt
+2021-08-02 11:51:02 INFO  LogInController:26 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 11:51:02 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 11:51:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 11:51:05 INFO  LogInServiceImpl:42 - found one
+2021-08-02 11:51:05 INFO  LogInController:29 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 11:52:57 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 11:52:57 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 11:52:57 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 11:52:57 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 11:52:57 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 11:52:57 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 11:52:57 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 11:52:57 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 11:52:57 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 11:52:57 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 11:52:57 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 11:52:57 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 11:52:57 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 11:53:09 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 11:53:13 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d901aa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 11:54:18 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 11:54:53 INFO  LogInController:23 - Start Handler processLogInAttempt
+2021-08-02 11:54:53 INFO  LogInController:26 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 11:54:53 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 11:54:53 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 11:54:56 INFO  LogInServiceImpl:42 - found one
+2021-08-02 11:54:56 INFO  LogInController:29 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 11:59:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 11:59:00 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 11:59:00 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 11:59:00 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 11:59:00 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 11:59:00 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 11:59:00 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 11:59:01 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 11:59:01 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 11:59:01 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 11:59:01 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 11:59:01 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 11:59:01 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 11:59:13 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 11:59:19 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 12:00:28 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 12:00:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 12:00:37 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 12:00:37 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 12:00:37 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 12:00:37 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 12:00:37 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 12:00:37 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 12:00:37 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 12:00:38 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 12:00:38 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 12:00:38 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 12:00:38 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 12:00:38 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 12:00:50 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 12:00:55 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 12:02:03 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 12:02:03 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 12:02:03 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 12:02:03 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 12:02:03 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 12:02:03 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 12:02:03 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 12:02:03 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 12:02:03 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 12:02:03 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 12:02:03 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 12:02:03 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 12:02:03 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 12:02:18 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 12:02:25 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 12:03:43 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 12:04:19 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 12:04:19 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 12:04:19 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 12:04:19 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 12:04:22 INFO  LogInServiceImpl:42 - found one
+2021-08-02 12:04:22 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 12:05:18 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 12:05:18 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 12:05:18 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 12:05:18 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 12:05:18 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 12:05:18 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 12:05:19 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 12:05:19 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 12:05:19 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 12:05:19 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 12:05:19 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 12:05:19 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 12:05:19 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 12:05:33 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 12:05:37 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 12:06:37 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 12:08:49 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 12:08:49 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 12:08:49 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 12:08:49 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 12:08:54 INFO  LogInServiceImpl:42 - found one
+2021-08-02 12:08:54 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 12:09:13 INFO  RequestFormController:61 - Start Handler getAllGradingFormats
+2021-08-02 12:09:13 INFO  RequestFormController:48 - Start Handler getAllEventTypes
+2021-08-02 12:09:13 INFO  RequestFormController:33 - Start Handler getFutureEvents
+2021-08-02 12:09:13 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 12:09:13 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 12:09:13 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 12:09:44 INFO  RequestFormController:74 - Start Handler processReimbursementRequest
+2021-08-02 12:09:44 INFO  RequestFormServiceImpl:82 - reqForm empId: 9
+2021-08-02 12:09:44 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 12:09:48 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Event(5)
+2021-08-02 12:09:53 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=9, eventId=5, description=i need it, submissionTime=1627920588871, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 12:10:20 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 12:10:20 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=hdonovan3@businessinsider.com, password=rWUM01OQX, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 12:10:20 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 12:10:20 INFO  LogInServiceImpl:42 - found one
+2021-08-02 12:10:20 INFO  LogInController:31 - Employee [id=4, firstName=Hoyt, lastName=Donovan, email=hdonovan3@businessinsider.com, password=null, supervisorEmpId=3, depHeadEmpId=3, benCoEmpId=1, terminationTime=null]
+2021-08-02 12:10:23 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 12:10:23 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 12:10:23 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 12:10:23 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=5, description=i need it, submissionTime=1627920588871, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 12:10:49 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 12:10:49 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 12:10:58 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 12:50:11 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 12:50:11 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 12:50:11 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 12:50:11 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 12:50:11 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 12:50:12 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 12:50:12 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 12:50:12 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 12:50:12 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 12:50:12 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 12:50:12 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 12:50:12 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 12:50:12 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 12:50:20 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 12:50:23 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 12:50:55 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 12:52:21 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 12:52:21 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 12:52:21 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 12:52:21 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 12:52:23 INFO  LogInServiceImpl:42 - found one
+2021-08-02 12:52:23 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 12:53:35 INFO  RequestFormController:48 - Start Handler getAllEventTypes
+2021-08-02 12:53:35 INFO  RequestFormController:61 - Start Handler getAllGradingFormats
+2021-08-02 12:53:35 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 12:53:35 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 12:53:35 INFO  RequestFormController:33 - Start Handler getFutureEvents
+2021-08-02 12:53:35 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 12:54:27 INFO  RequestFormController:74 - Start Handler processReimbursementRequest
+2021-08-02 12:54:27 INFO  RequestFormServiceImpl:82 - reqForm empId: 9
+2021-08-02 12:54:27 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 12:54:30 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(2)
+2021-08-02 12:54:34 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(3)
+2021-08-02 12:54:37 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=a, startTime=1609084800000, location=fsf, tuition=2.0, eventTypeId=3, gradingFormatId=2, endTime=1609106460000])
+2021-08-02 12:54:44 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 12:55:11 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 12:55:11 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 12:55:11 INFO  ReviewRequestServiceImpl:86 - empId = 9
+2021-08-02 12:55:11 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 12:55:32 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 12:55:32 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=hdonovan3@businessinsider.com, password=rWUM01OQX, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 12:55:32 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 12:55:32 INFO  LogInServiceImpl:42 - found one
+2021-08-02 12:55:32 INFO  LogInController:31 - Employee [id=4, firstName=Hoyt, lastName=Donovan, email=hdonovan3@businessinsider.com, password=null, supervisorEmpId=3, depHeadEmpId=3, benCoEmpId=1, terminationTime=null]
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:55:42 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 12:55:42 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 12:55:43 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 12:55:43 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 12:55:43 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 12:55:43 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 12:55:50 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 12:56:03 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 12:56:03 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 12:56:12 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 13:46:14 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 13:46:14 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 13:46:26 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 13:46:26 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 13:46:26 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 13:46:29 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 13:46:32 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 13:46:34 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 13:46:37 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 13:46:39 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 13:46:39 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null])
+2021-08-02 13:46:53 INFO  ReviewRequestServiceImpl:245 - 1
+2021-08-02 13:46:53 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Supervisor, messageType=Approval, timeSent=1627926413585, message=c])
+2021-08-02 13:47:17 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 13:47:17 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 13:47:17 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 13:47:17 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null]
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:47:37 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 13:47:37 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 13:47:45 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 13:48:26 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 13:48:26 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=rgolson2@dropbox.com, password=Ke4GS5qop7WH, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 13:48:26 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 13:48:26 INFO  LogInServiceImpl:42 - found one
+2021-08-02 13:48:26 INFO  LogInController:31 - Employee [id=3, firstName=Rozalin, lastName=Golson, email=rgolson2@dropbox.com, password=null, supervisorEmpId=, depHeadEmpId=, benCoEmpId=1, terminationTime=null]
+2021-08-02 13:48:39 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 13:48:39 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 13:48:39 INFO  ReviewRequestServiceImpl:86 - empId = 3
+2021-08-02 13:48:39 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:121 - If it needs dep head approval
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:121 - If it needs dep head approval
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null]
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 13:48:58 INFO  ReviewRequestServiceImpl:121 - If it needs dep head approval
+2021-08-02 13:48:58 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 13:49:07 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 13:49:22 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 13:49:22 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 13:49:34 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 13:49:34 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 13:49:34 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 13:49:38 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 13:49:41 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 13:49:43 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 13:49:45 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 13:49:47 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 13:49:47 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=2, finalGrade=null, actualClaim=null])
+2021-08-02 13:50:01 INFO  ReviewRequestServiceImpl:245 - 2
+2021-08-02 13:50:01 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Department Head, messageType=Approval, timeSent=1627926601674, message=r])
+2021-08-02 13:50:40 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 13:50:40 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=ptasseler1@technorati.com, password=nIPt3pNB, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 13:50:40 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 13:50:40 INFO  LogInServiceImpl:42 - found one
+2021-08-02 13:50:40 INFO  LogInController:31 - Employee [id=2, firstName=Pippa, lastName=Tasseler, email=ptasseler1@technorati.com, password=null, supervisorEmpId=1, depHeadEmpId=1, benCoEmpId=1, terminationTime=null]
+2021-08-02 13:50:43 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 13:50:43 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 13:50:43 INFO  ReviewRequestServiceImpl:86 - empId = 2
+2021-08-02 13:50:43 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=2, finalGrade=null, actualClaim=null]
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 13:51:03 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 13:51:03 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 13:51:12 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 13:51:29 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 13:51:29 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 13:51:44 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 13:51:44 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 13:51:44 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 13:51:46 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 13:51:50 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 13:51:52 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 13:51:54 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 13:51:56 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 13:51:56 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=sdfs, submissionTime=1627923270978, hoursMissed=2.0, approvalStep=3, finalGrade=null, actualClaim=null])
+2021-08-02 13:52:08 INFO  ReviewRequestServiceImpl:245 - 3
+2021-08-02 13:52:08 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Benefits Coordinator, messageType=Approval, timeSent=1627926728109, message=y])
+2021-08-02 13:53:05 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 13:53:05 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 13:53:05 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 13:53:05 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 13:53:05 INFO  LogInController:31 - 
+2021-08-02 13:53:40 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 13:53:40 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 13:53:40 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 13:53:40 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 13:53:40 INFO  LogInController:31 - 
+2021-08-02 13:53:57 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 13:53:57 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 13:53:57 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 13:53:57 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 13:53:57 INFO  LogInController:31 - 
+2021-08-02 13:59:54 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 13:59:54 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 13:59:54 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 13:59:54 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 13:59:54 INFO  LogInController:31 - 
+2021-08-02 14:14:05 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 14:14:06 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 14:14:06 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 14:14:06 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 14:14:06 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 14:14:06 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 14:14:06 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 14:14:06 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 14:14:06 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 14:14:06 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 14:14:06 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 14:14:06 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 14:14:06 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 14:14:06 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 14:14:06 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 14:14:06 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 14:14:06 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 14:14:06 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 14:14:06 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 14:14:18 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 14:14:23 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 14:15:34 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 14:16:12 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:16:12 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:16:12 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:16:12 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 14:16:15 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:16:15 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 14:16:18 INFO  UpdateRequestController:31 - Start Handler getReimbursementsByEmployeeId
+2021-08-02 14:16:18 INFO  UpdateRequestController:72 - Start Handler getMessagesForEmployee
+2021-08-02 14:16:18 INFO  UpdateRequestController:54 - Start Handler getAttachmentsByEmployeeId
+2021-08-02 14:16:18 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:16:18 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:16:18 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 14:17:26 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 14:17:26 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 14:17:26 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 14:17:26 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 14:17:26 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 14:17:26 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 14:17:26 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 14:17:27 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 14:17:27 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 14:17:27 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 14:17:27 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 14:17:27 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 14:17:27 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 14:17:37 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 14:17:41 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 14:18:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 14:21:06 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:21:06 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:21:06 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:21:06 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 14:21:09 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:21:09 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=null, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 14:21:11 INFO  RequestFormController:61 - Start Handler getAllGradingFormats
+2021-08-02 14:21:11 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 14:21:11 INFO  RequestFormController:48 - Start Handler getAllEventTypes
+2021-08-02 14:21:11 INFO  RequestFormController:33 - Start Handler getFutureEvents
+2021-08-02 14:21:11 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 14:21:11 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 14:21:45 INFO  RequestFormController:74 - Start Handler processReimbursementRequest
+2021-08-02 14:21:45 INFO  RequestFormServiceImpl:82 - reqForm empId: 9
+2021-08-02 14:21:45 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 14:21:48 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(1)
+2021-08-02 14:21:51 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(2)
+2021-08-02 14:21:53 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=a, startTime=1609079400000, location=a, tuition=2.0, eventTypeId=2, gradingFormatId=1, endTime=1609108200000])
+2021-08-02 14:21:58 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 14:22:23 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:22:23 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=hdonovan3@businessinsider.com, password=rWUM01OQX, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:22:23 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:22:23 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:22:23 INFO  LogInController:31 - Employee [id=4, firstName=Hoyt, lastName=Donovan, email=hdonovan3@businessinsider.com, password=null, supervisorEmpId=3, depHeadEmpId=3, benCoEmpId=1, terminationTime=null]
+2021-08-02 14:22:25 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 14:22:25 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 14:22:25 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 14:22:25 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:22:52 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 14:22:52 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:23:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:23:26 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 14:23:26 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 14:23:34 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 14:23:34 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 14:23:48 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 14:23:48 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 14:23:48 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 14:23:51 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 14:23:53 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 14:23:56 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 14:23:59 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 14:24:02 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 14:24:02 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null])
+2021-08-02 14:24:16 INFO  ReviewRequestServiceImpl:245 - 1
+2021-08-02 14:24:16 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Supervisor, messageType=Approval, timeSent=1627928656539, message=a])
+2021-08-02 14:24:55 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:24:55 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=rgolson2@dropbox.com, password=Ke4GS5qop7WH, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:24:55 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:24:55 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:24:55 INFO  LogInController:31 - Employee [id=3, firstName=Rozalin, lastName=Golson, email=rgolson2@dropbox.com, password=null, supervisorEmpId=, depHeadEmpId=, benCoEmpId=1, terminationTime=null]
+2021-08-02 14:25:25 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 14:25:25 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 14:25:25 INFO  ReviewRequestServiceImpl:86 - empId = 3
+2021-08-02 14:25:25 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:121 - If it needs dep head approval
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:121 - If it needs dep head approval
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null]
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:25:49 INFO  ReviewRequestServiceImpl:121 - If it needs dep head approval
+2021-08-02 14:25:49 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:25:59 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:26:17 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 14:26:17 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 14:26:27 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 14:26:27 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 14:26:27 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 14:26:30 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 14:26:33 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 14:26:37 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 14:26:39 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 14:26:42 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 14:26:42 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=2, finalGrade=null, actualClaim=null])
+2021-08-02 14:26:56 INFO  ReviewRequestServiceImpl:245 - 2
+2021-08-02 14:26:56 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Department Head, messageType=Approval, timeSent=1627928816865, message=a])
+2021-08-02 14:27:46 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:27:46 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=ptasseler1@technorati.com, password=nIPt3pNB, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:27:46 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:27:46 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:27:46 INFO  LogInController:31 - Employee [id=2, firstName=Pippa, lastName=Tasseler, email=ptasseler1@technorati.com, password=null, supervisorEmpId=1, depHeadEmpId=1, benCoEmpId=1, terminationTime=null]
+2021-08-02 14:27:50 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 14:27:50 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 14:27:50 INFO  ReviewRequestServiceImpl:86 - empId = 2
+2021-08-02 14:27:50 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=2, finalGrade=null, actualClaim=null]
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:28:07 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 14:28:07 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:28:14 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:28:31 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 14:28:31 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 14:28:51 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 14:28:51 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 14:28:51 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 14:28:53 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 14:28:56 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 14:28:59 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 14:29:01 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 14:29:03 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 14:29:03 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=3, finalGrade=null, actualClaim=null])
+2021-08-02 14:29:14 INFO  ReviewRequestServiceImpl:245 - 3
+2021-08-02 14:29:14 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Benefits Coordinator, messageType=Approval, timeSent=1627928954190, message=a])
+2021-08-02 14:29:52 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:29:52 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:29:52 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:29:52 WARN  LogInServiceImpl:48 - java.lang.NullPointerException
+2021-08-02 14:29:52 INFO  LogInController:31 - 
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 14:34:37 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 14:34:37 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 14:34:37 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 14:34:37 INFO  UpdateRequestServiceImpl:22 - Instantiate UpdateServiceImpl
+2021-08-02 14:34:37 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 14:34:37 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 14:34:37 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 14:34:37 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 14:34:37 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 14:34:37 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 14:34:37 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 14:34:37 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 14:34:37 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 14:34:48 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 14:34:51 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 14:36:10 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 14:36:55 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:36:55 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:36:55 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:36:55 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 14:36:58 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:36:58 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 14:37:01 INFO  UpdateRequestController:31 - Start Handler getReimbursementsByEmployeeId
+2021-08-02 14:37:01 INFO  UpdateRequestController:72 - Start Handler getMessagesForEmployee
+2021-08-02 14:37:01 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:37:01 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:37:01 INFO  UpdateRequestController:54 - Start Handler getAttachmentsByEmployeeId
+2021-08-02 14:37:01 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:53:02 INFO  UpdateRequestController:31 - Start Handler getReimbursementsByEmployeeId
+2021-08-02 14:53:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:53:02 INFO  UpdateRequestController:54 - Start Handler getAttachmentsByEmployeeId
+2021-08-02 14:53:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:53:02 INFO  UpdateRequestController:72 - Start Handler getMessagesForEmployee
+2021-08-02 14:53:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:54:06 INFO  UpdateRequestController:88 - Start Handler addAttachment
+2021-08-02 14:54:06 INFO  UpdateRequestController:91 - Attachment [id=0, reimbursementId=7, attachmentUrl=C:\Users\Kevin\Desktop\Project1FakeBucket\doge.jpg, description=This without a doubt proves my grade is a pass.]
+2021-08-02 14:54:06 INFO  UpdateRequestServiceImpl:45 - Run add attachment
+2021-08-02 14:54:06 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Attachment(Attachment [id=0, reimbursementId=7, attachmentUrl=C:\Users\Kevin\Desktop\Project1FakeBucket\doge.jpg, description=This without a doubt proves my grade is a pass.])
+2021-08-02 14:54:34 INFO  UpdateRequestServiceImpl:49 - Attachment [id=4, reimbursementId=7, attachmentUrl=C:\Users\Kevin\Desktop\Project1FakeBucket\doge.jpg, description=This without a doubt proves my grade is a pass.]
+2021-08-02 14:54:40 INFO  UpdateRequestController:31 - Start Handler getReimbursementsByEmployeeId
+2021-08-02 14:54:40 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:54:40 INFO  UpdateRequestController:72 - Start Handler getMessagesForEmployee
+2021-08-02 14:54:40 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:54:40 INFO  UpdateRequestController:54 - Start Handler getAttachmentsByEmployeeId
+2021-08-02 14:54:40 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:55:19 INFO  UpdateRequestController:106 - Start Handler updateReimbursement
+2021-08-02 14:55:19 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=4, finalGrade=A, actualClaim=null])
+2021-08-02 14:55:46 INFO  UpdateRequestController:31 - Start Handler getReimbursementsByEmployeeId
+2021-08-02 14:55:46 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:55:46 INFO  UpdateRequestController:54 - Start Handler getAttachmentsByEmployeeId
+2021-08-02 14:55:46 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:55:46 INFO  UpdateRequestController:72 - Start Handler getMessagesForEmployee
+2021-08-02 14:55:46 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:56:23 INFO  UpdateRequestController:31 - Start Handler getReimbursementsByEmployeeId
+2021-08-02 14:56:23 INFO  UpdateRequestController:72 - Start Handler getMessagesForEmployee
+2021-08-02 14:56:23 WARN  UpdateRequestController:37 - java.lang.NumberFormatException: For input string: "null"
+2021-08-02 14:56:23 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:56:23 INFO  UpdateRequestController:54 - Start Handler getAttachmentsByEmployeeId
+2021-08-02 14:56:51 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 14:56:51 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=ptasseler1@technorati.com, password=nIPt3pNB, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 14:56:51 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 14:56:51 INFO  LogInServiceImpl:42 - found one
+2021-08-02 14:56:51 INFO  LogInController:31 - Employee [id=2, firstName=Pippa, lastName=Tasseler, email=ptasseler1@technorati.com, password=nIPt3pNB, supervisorEmpId=1, depHeadEmpId=1, benCoEmpId=1, terminationTime=null]
+2021-08-02 14:57:02 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 14:57:02 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 14:57:02 INFO  ReviewRequestServiceImpl:86 - empId = 2
+2021-08-02 14:57:02 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:99 - BenCoId = 38
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 39
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 40
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:99 - BenCoId = 42
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 43
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 44
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:99 - BenCoId = 38
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 39
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 40
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627928508416, hoursMissed=2.0, approvalStep=4, finalGrade=A, actualClaim=null]
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 41
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 14:57:19 INFO  ReviewRequestServiceImpl:114 - If it needs ben co approval
+2021-08-02 14:57:19 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 14:57:26 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 14:57:41 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 14:57:41 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 15:00:00 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 15:30:00 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 15:30:00 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 15:30:00 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 15:30:00 INFO  UpdateRequestServiceImpl:26 - Instantiate UpdateServiceImpl
+2021-08-02 15:30:00 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 15:30:00 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 15:30:00 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 15:30:01 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 15:30:01 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 15:30:01 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 15:30:01 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 15:30:01 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 15:30:01 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 15:30:08 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 15:30:11 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 15:30:42 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 15:33:27 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 15:33:27 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 15:33:27 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 15:33:27 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 15:33:30 INFO  LogInServiceImpl:42 - found one
+2021-08-02 15:33:30 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 15:33:39 INFO  RequestFormController:33 - Start Handler getFutureEvents
+2021-08-02 15:33:39 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 15:33:39 INFO  RequestFormController:61 - Start Handler getAllGradingFormats
+2021-08-02 15:33:39 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 15:33:39 INFO  RequestFormController:48 - Start Handler getAllEventTypes
+2021-08-02 15:33:39 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 15:34:23 INFO  RequestFormController:74 - Start Handler processReimbursementRequest
+2021-08-02 15:34:23 INFO  RequestFormServiceImpl:82 - reqForm empId: 9
+2021-08-02 15:34:23 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 15:34:26 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(1)
+2021-08-02 15:34:30 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(4)
+2021-08-02 15:34:32 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=a, startTime=1609085460000, location=a, tuition=2.0, eventTypeId=4, gradingFormatId=1, endTime=1609085460000])
+2021-08-02 15:34:38 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=9, eventId=6, description=a, submissionTime=1627932866437, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null])
+2021-08-02 15:35:06 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 15:35:06 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=hdonovan3@businessinsider.com, password=rWUM01OQX, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 15:35:06 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 15:35:06 INFO  LogInServiceImpl:42 - found one
+2021-08-02 15:35:06 INFO  LogInController:31 - Employee [id=4, firstName=Hoyt, lastName=Donovan, email=hdonovan3@businessinsider.com, password=rWUM01OQX, supervisorEmpId=3, depHeadEmpId=3, benCoEmpId=1, terminationTime=null]
+2021-08-02 15:35:08 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 15:35:08 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 15:35:08 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 15:35:08 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627932866437, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 15:35:33 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 15:35:33 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 15:35:42 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 15:36:01 INFO  ReviewRequestController:63 - Start Handler getAttachmentsForReimbursement
+2021-08-02 15:36:01 INFO  ReviewRequestController:47 - Start Handler getMessagesForReimbursement
+2021-08-02 15:36:07 INFO  ReviewRequestController:80 - Start Handler incrementStepAndAddMessage
+2021-08-02 15:36:07 INFO  ReviewRequestServiceImpl:179 - Run incrementStepAndAddMessage()
+2021-08-02 15:36:07 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Reimbursement(7)
+2021-08-02 15:36:10 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 15:36:13 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(2)
+2021-08-02 15:36:16 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(3)
+2021-08-02 15:36:18 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(4)
+2021-08-02 15:36:20 INFO  ReviewRequestServiceImpl:220 - Approval
+2021-08-02 15:36:20 INFO  GenericRepoImpl:129 - Run updatecom.kevin_leader.models.Reimbursement(Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627932866437, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null])
+2021-08-02 15:36:34 INFO  ReviewRequestServiceImpl:245 - 1
+2021-08-02 15:36:34 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Message(Message [id=0, reimbursementId=7, approverType=Supervisor, messageType=Approval, timeSent=1627932994661, message=a])
+2021-08-02 15:39:27 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 15:39:27 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 15:39:27 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 15:39:27 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627932866437, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null]
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:39:53 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 15:39:53 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 15:39:59 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 15:40:37 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 15:40:37 INFO  ReviewRequestServiceImpl:84 - Run getReimbursementsForReviewer()
+2021-08-02 15:40:37 INFO  ReviewRequestServiceImpl:86 - empId = 4
+2021-08-02 15:40:37 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Reimbursement()
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=1, employeeId=2, eventId=1, description=I would like reimbursement for my benefits coordinator certification., submissionTime=1442682000000, hoursMissed=null, approvalStep=4, finalGrade=B, actualClaim=1000.0]
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualClaim=899.2]
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 3
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=3, employeeId=10, eventId=3, description=My public speaking needs improvement. I hope I can get reimbursed., submissionTime=1454859400000, hoursMissed=null, approvalStep=4, finalGrade=Pass, actualClaim=160.0]
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:128 - It needs direct super approval
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=6, employeeId=2, eventId=5, description=There is a certification that I want to take preparation classes for., submissionTime=1627550700000, hoursMissed=40.0, approvalStep=0, finalGrade=null, actualClaim=null]
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:99 - BenCoId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 1
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:96 - If the reimb needs an approval.
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:97 - reimb = Reimbursement [id=7, employeeId=9, eventId=6, description=a, submissionTime=1627932866437, hoursMissed=2.0, approvalStep=1, finalGrade=null, actualClaim=null]
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:99 - BenCoId = 2
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:103 - DepHeadId = 3
+2021-08-02 15:40:56 INFO  ReviewRequestServiceImpl:107 - SupervisorId = 4
+2021-08-02 15:40:56 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Attachment()
+2021-08-02 15:41:03 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Message()
+2021-08-02 15:41:21 INFO  ReviewRequestController:30 - Start Handler getReimbursementsForReviewer
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Attachment>
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Employee>
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Event>
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.EventType>
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.GradingFormat>
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Message>
+2021-08-02 15:43:47 INFO  GenericRepoImpl:33 - Instantiate GenericDaoImpl<com.kevin_leader.models.Reimbursement>
+2021-08-02 15:43:47 INFO  RequestFormServiceImpl:33 - Instantiate RequestFormServiceImpl
+2021-08-02 15:43:47 INFO  LogInServiceImpl:17 - Instantiate LogInServiceImpl
+2021-08-02 15:43:47 INFO  UpdateRequestServiceImpl:26 - Instantiate UpdateServiceImpl
+2021-08-02 15:43:47 INFO  ReviewRequestServiceImpl:29 - Instatiate ReviewRequestServiceImpl
+2021-08-02 15:43:47 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(0)
+2021-08-02 15:43:47 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-08-02 15:43:47 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 15:43:48 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 15:43:48 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres]
+2021-08-02 15:43:48 INFO  pooling:124 - HHH10001001: Connection properties: {user=kevin, password=****}
+2021-08-02 15:43:48 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-08-02 15:43:48 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-08-02 15:43:54 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-08-02 15:43:58 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f72d88] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-08-02 15:44:32 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-02 15:45:31 INFO  LogInController:25 - Start Handler processLogInAttempt
+2021-08-02 15:45:31 INFO  LogInController:28 - Employee [id=0, firstName=null, lastName=null, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=, depHeadEmpId=, benCoEmpId=, terminationTime=null]
+2021-08-02 15:45:31 INFO  LogInServiceImpl:31 - Run checkForEmployee
+2021-08-02 15:45:31 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Employee()
+2021-08-02 15:45:32 INFO  LogInServiceImpl:42 - found one
+2021-08-02 15:45:32 INFO  LogInController:31 - Employee [id=9, firstName=Tracee, lastName=Baumler, email=tbaumler8@amazon.co.uk, password=7Fw892E5lED, supervisorEmpId=4, depHeadEmpId=3, benCoEmpId=2, terminationTime=null]
+2021-08-02 15:45:44 INFO  RequestFormController:33 - Start Handler getFutureEvents
+2021-08-02 15:45:44 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.Event()
+2021-08-02 15:45:44 INFO  RequestFormController:48 - Start Handler getAllEventTypes
+2021-08-02 15:45:44 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.EventType()
+2021-08-02 15:45:44 INFO  RequestFormController:61 - Start Handler getAllGradingFormats
+2021-08-02 15:45:44 INFO  GenericRepoImpl:79 - Run getAllcom.kevin_leader.models.GradingFormat()
+2021-08-02 15:46:28 INFO  RequestFormController:74 - Start Handler processReimbursementRequest
+2021-08-02 15:46:28 INFO  RequestFormServiceImpl:82 - reqForm empId: 9
+2021-08-02 15:46:28 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.Employee(9)
+2021-08-02 15:46:30 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.GradingFormat(1)
+2021-08-02 15:46:32 INFO  GenericRepoImpl:106 - Run getcom.kevin_leader.models.EventType(5)
+2021-08-02 15:46:33 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Event(Event [id=0, eventName=A, startTime=1609062360000, location=a, tuition=2.0, eventTypeId=5, gradingFormatId=1, endTime=1609062420000])
+2021-08-02 15:46:37 INFO  GenericRepoImpl:54 - Run addcom.kevin_leader.models.Reimbursement(Reimbursement [id=0, employeeId=9, eventId=6, description=fsfa, submissionTime=1627933590476, hoursMissed=2.0, approvalStep=0, finalGrade=null, actualClaim=null])

@@ -181,6 +181,42 @@ public class ReviewRequestServiceImpl implements ReviewRequestService {
         int reimbId = message.getReimbursement().getId();
         Reimbursement reimb = rDao.getById(reimbId);
 
+        int reimburseeId = reimb.getReimbursee().getId();
+        Employee reimbursee = empDao.getById(reimburseeId);
+        
+        int benCoId = 0;
+        if (reimbursee.getBenefitsCoordinator() != null) {
+            benCoId = reimbursee.getBenefitsCoordinator().getId();
+        }
+        Employee benCo = null;
+        if (benCoId != 0) {
+            benCo = empDao.getById(benCoId);
+        }
+        
+        int depHeadId = 0;
+        if (reimbursee.getDepartmentHead() != null) {
+            depHeadId = reimbursee.getDepartmentHead().getId();
+        }
+        Employee depHead = null;
+        if (depHeadId != 0) {
+            depHead = empDao.getById(depHeadId);
+        }
+        
+        int supervisorId = 0;
+        if (reimbursee.getSupervisor() != null) {
+            supervisorId = reimbursee.getSupervisor().getId();
+        }
+        Employee supervisor = null;
+        if (supervisorId != 0) {
+            supervisor = empDao.getById(supervisorId);
+        }
+        
+        reimbursee.setBenefitsCoordinator(benCo);
+        reimbursee.setDepartmentHead(depHead);
+        reimbursee.setSupervisor(supervisor);
+        
+        reimb.setReimbursee(reimbursee);
+        
         log.info(message.getMessageType());
 
         if (message.getMessageType().equals("Denial")) {

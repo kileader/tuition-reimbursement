@@ -57,6 +57,7 @@ public class Employee {
     
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "ben_co_emp_id")
+    @Expose
     private Employee benefitsCoordinator;
 
     @OneToMany(mappedBy = "benefitsCoordinator")

@@ -1,6 +1,7 @@
 package com.kevin_leader.services;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class UpdateRequestServiceImplTests {
     @Test
     public void testGetAttachmentsByEmployeeId() {
         List<Attachment> attachments = urServ.getAttachmentsByEmployeeId(2);
-        assertEquals(1, attachments.size());
+        assertTrue(0 < attachments.size());
     }
 
     @Test

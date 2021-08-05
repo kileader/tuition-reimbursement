@@ -52,8 +52,8 @@ public class App {
         RequestFormService rfServ = new RequestFormServiceImpl(empDao, evDao,
                 etDao, gfDao, rDao);
         LogInService liServ = new LogInServiceImpl(empDao);
-        UpdateRequestService urServ = new UpdateRequestServiceImpl(aDao, mDao,
-                rDao);
+        UpdateRequestService urServ = new UpdateRequestServiceImpl(aDao, empDao,
+                mDao, rDao);
         ReviewRequestService rrServ = new ReviewRequestServiceImpl(aDao, empDao,
                 mDao, rDao);
 
