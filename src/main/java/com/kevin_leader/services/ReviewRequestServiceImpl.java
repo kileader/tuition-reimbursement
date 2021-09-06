@@ -67,10 +67,12 @@ public class ReviewRequestServiceImpl implements ReviewRequestService {
         return reimbsForReview;
     }
 
+    @Override
     public void loadAllAttachments() {
         allAttachments = aDao.getAll();
     }
 
+    @Override
     public void loadAllMessages() {
         allMessages = mDao.getAll();
     }
@@ -117,11 +119,11 @@ public class ReviewRequestServiceImpl implements ReviewRequestService {
 
         } else if (message.getMessageType().equals("Approval")) {
 
-            if (reimb.getApprovalStep() == 2) {
+            if (message.getApproverType().equals("Benefits Coordinator")) {
 
                 reimb.setApprovalStep(3);
 
-            } else if (reimb.getApprovalStep() == 1) {
+            } else if (message.getApproverType().equals("Department Head")) {
 
                 reimb.setApprovalStep(2);
 

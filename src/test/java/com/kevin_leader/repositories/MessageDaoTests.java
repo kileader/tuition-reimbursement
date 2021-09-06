@@ -1,7 +1,6 @@
 package com.kevin_leader.repositories;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -28,10 +27,9 @@ public class MessageDaoTests {
         Reimbursement reimbursement = rDao.getById(6);
         Message message = new Message(reimbursement, "supervisor", "request",
                 1626909805000L,
-                "You need assignments before you can get a reimbursement.");
+                "You need an attachment before you can get a reimbursement.");
         int id = mDao.add(message);
-        assertNotEquals(0, id);
-        assertNotEquals(-1, id);
+        assertTrue(id > 0);
     }
 
     @Test

@@ -502,7 +502,7 @@ const addFinalGrade = () => {
       if (JSON.parse(this.responseText)) {
         addFinalGradeSuccessH2.innerHTML = "Final Grade was added successfully! Redirecting to home...";
         addFinalGradeSuccessH2.setAttribute("class", "bg-success");
-        setTimeout(redirectToHome(), 10000);
+        setTimeout(redirectToHome(), 5000);
       } else {
         addFinalGradeSuccessH2.innerHTML = "Something went wrong! Is everything entered correctly?";
         addFinalGradeSuccessH2.setAttribute("class", "bg-danger");

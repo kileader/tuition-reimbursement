@@ -33,7 +33,7 @@ public class Employee {
 
     @Column(name = "dep_head_emp_id")
     private Integer depHeadEmpId;
-    
+
     @Column(name = "ben_co_emp_id")
     private Integer benCoEmpId;
 
@@ -48,10 +48,39 @@ public class Employee {
         super();
     }
     
-    // Log In Constructor
     public Employee(String email, String password) {
+        super();
         this.email = email;
         this.password = password;
+    }
+
+    public Employee(String firstName, String lastName, String email,
+            String password, Integer supervisorEmpId, Integer depHeadEmpId,
+            Integer benCoEmpId, Long terminationTime) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.supervisorEmpId = supervisorEmpId;
+        this.depHeadEmpId = depHeadEmpId;
+        this.benCoEmpId = benCoEmpId;
+        this.terminationTime = terminationTime;
+    }
+
+    public Employee(int id, String firstName, String lastName, String email,
+            String password, Integer supervisorEmpId, Integer depHeadEmpId,
+            Integer benCoEmpId, Long terminationTime) {
+        super();
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.supervisorEmpId = supervisorEmpId;
+        this.depHeadEmpId = depHeadEmpId;
+        this.benCoEmpId = benCoEmpId;
+        this.terminationTime = terminationTime;
     }
 
     public int getId() {

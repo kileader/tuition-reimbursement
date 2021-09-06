@@ -36,11 +36,10 @@ public class EmployeeDaoTests {
 
     @Test
     public void getByIdSuccess() {
-        Employee employee = empDao.getById(2);
-        String expected = "Employee [id=2, firstName=Pippa, lastName=Tasseler, "
-                + "email=ptasseler1@technorati.com, password=nIPt3pNB, supervis"
-                + "orEmpId=1, depHeadEmpId=1, benCoEmpId=1, terminationTime=null]";
-        assertEquals(expected, employee.toString());
+        Employee expected = new Employee(2, "Pippa", "Tasseler",
+                "ptasseler1@technorati.com", "nIPt3pNB", 1, 1, 1, null);
+        Employee actual = empDao.getById(2);
+        assertEquals(expected.toString(), actual.toString());
     }
 
     @Test

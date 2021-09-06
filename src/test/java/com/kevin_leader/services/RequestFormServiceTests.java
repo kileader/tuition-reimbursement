@@ -37,45 +37,45 @@ public class RequestFormServiceTests {
     }
 
     @Test
-    public void getAllEventsSuccess() {
+    public void getAllEventsPass() {
         List<Event> events = rfServ.getAllEvents();
         assertTrue(4 < events.size());
     }
 
     @Test
-    public void getAllEventTypesSuccess() {
+    public void getFutureEventsSuccess() {
+        List<Event> futureEvents = rfServ.getFutureEvents();
+        assertTrue(futureEvents.size() > 0);
+    }
+
+    @Test
+    public void getAllEventTypesPass() {
         List<EventType> eventTypes = rfServ.getAllEventTypes();
         assertTrue(5 < eventTypes.size());
     }
 
     @Test
-    public void getAllGradingFormatsSuccess() {
+    public void getAllGradingFormatsPass() {
         List<GradingFormat> gradingFormats = rfServ.getAllGradingFormats();
         assertTrue(2 < gradingFormats.size());
     }
 
     @Test
-    public void processRequestFormChosenEventSuccess() {
-
-        RequestForm reqForm = new RequestForm(
-                14, // employeeId
+    public void processRequestFormChosenEventPass() {
+        RequestForm reqForm = new RequestForm(14, // employeeId
                 5, // eventId
                 "I would like reimbursement for this.", // description
                 7.5 // hoursMissed
         );
-
         Reimbursement processedReimb = rfServ.processRequestForm(reqForm);
         Reimbursement addedReimb = rfServ
                 .getReimbursementById(processedReimb.getId());
         assertEquals(processedReimb.toString(), addedReimb.toString());
-
     }
 
     @Test
-    public void processRequestFormFormatChosenWithAttachmentsSuccess() {
-
-        RequestForm reqForm = new RequestForm(
-                14, // employeeId
+    public void processRequestFormChosenFormatPass() {
+        RequestForm reqForm = new RequestForm(14, // employeeId
                 null, // eventId
                 "How to Run in Place", // eventName
                 "2022-04-20", // startDate
@@ -101,14 +101,11 @@ public class RequestFormServiceTests {
 
         Event addedEvent = rfServ.getEventById(addedReimb.getEvent().getId());
         assertEquals(addedReimb.getEvent().toString(), addedEvent.toString());
-
     }
 
     @Test
-    public void processRequestFormFullWithAttachmentsSuccess() {
-
-        RequestForm reqForm = new RequestForm(
-                14, // employeeId
+    public void processRequestFormFullPass() {
+        RequestForm reqForm = new RequestForm(14, // employeeId
                 null, // eventId
                 "How to Run in Place", // eventName
                 "2022-04-20", // startDate
@@ -137,11 +134,10 @@ public class RequestFormServiceTests {
                 addedReimb.getEvent().getGradingFormat().getId());
         assertEquals(addedReimb.getEvent().getGradingFormat().toString(),
                 addedFormat.toString());
-
     }
 
     @Test
-    public void convertToEpochSuccess() {
+    public void convertToEpochPass() {
         String date = "2050-06-15";
         String time = "10:00";
         long epoch = rfServ.convertToEpoch(date, time);
@@ -149,19 +145,27 @@ public class RequestFormServiceTests {
     }
 
     @Test
-    public void getReimbursementByIdSuccess() {
+    public void getReimbursementByIdPass() {
         String expectedString = "Reimbursement [id=2, employeeId=4, eventId=2, "
                 + "description=I am getting some supervisoral training., submis"
-                + "sionTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, act"
+                + "sionTime=1442682000000, hoursMissed=40.0, approvalStep=5, finalGrade=91, act"
                 + "ualClaim=899.2]";
         Reimbursement reimbursement = rfServ.getReimbursementById(2);
         assertEquals(expectedString, reimbursement.toString());
     }
 
     @Test
-    public void getFutureEventsSuccess() {
-        List<Event> futureEvents = rfServ.getFutureEvents();
-        assertTrue(futureEvents.size() > 0);
+    public void getEventByIdPass() {
+        String expectedString = "Event [id=3, eventName=Public Speaking, startTime=1456673400000, location=1337 Road Street Ln. Litte Rock, AR 72002, tuition=200.0, eventTypeId=1, gradingFormatId=3, endTime=1627686024000]";
+        Event event = rfServ.getEventById(3);
+        assertEquals(expectedString, event.toString());
+    }
+
+    @Test
+    public void getGradingFormatByIdPass() {
+        String expectedString = "GradingFormat [id=3, formatName=You Lose, description=Good day sir!, passingGradeCutoff=not possible]";
+        GradingFormat format = rfServ.getGradingFormatById(1);
+        assertEquals(expectedString, format.toString());
     }
 
 }

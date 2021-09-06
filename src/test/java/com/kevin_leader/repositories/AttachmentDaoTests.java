@@ -1,7 +1,6 @@
 package com.kevin_leader.repositories;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -29,8 +28,7 @@ public class AttachmentDaoTests {
         Attachment attachment = new Attachment(reimbursement,
                 "fakedatabucket.com/jfgiouhj234ijo", "Here's my scorecard.");
         int id = aDao.add(attachment);
-        assertNotEquals(0, id);
-        assertNotEquals(-1, id);
+        assertTrue(id > 0);
     }
 
     @Test
@@ -41,11 +39,10 @@ public class AttachmentDaoTests {
 
     @Test
     public void getByIdSuccess() {
-        Attachment attachment = aDao.getById(2);
-        String expected = "Attachment [id=2, reimbursementId=2, attachmentUrl=f"
-                + "akedatabucket.com/fatij124314ij, description=Here is my pres"
-                + "entation]";
-        assertEquals(expected, attachment.toString());
+        Attachment expected = new Attachment(2, rDao.getById(2),
+                "fakedatabucket.com/fatij124314ij", "Here is my presentation");
+        Attachment actual = aDao.getById(2);
+        assertEquals(expected.toString(), actual.toString());
     }
 
 //    @Test

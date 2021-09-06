@@ -1,7 +1,6 @@
 package com.kevin_leader.repositories;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -18,8 +17,6 @@ public class GradingFormatDaoTests {
     @BeforeClass
     public static void setUpBeforeClass() {
         gfDao = new GenericRepoImpl<>(GradingFormat.class);
-//		Database database = Database.getInstance();
-//		database.runSQL("database.sql");
     }
 
     @Test
@@ -27,8 +24,7 @@ public class GradingFormatDaoTests {
         GradingFormat gradingFormat = new GradingFormat("No Ds",
                 "Grades that are typically Ds are Fs", "C");
         int id = gfDao.add(gradingFormat);
-        assertNotEquals(0, id);
-        assertNotEquals(-1, id);
+        assertTrue(id > 0);
     }
 
     @Test

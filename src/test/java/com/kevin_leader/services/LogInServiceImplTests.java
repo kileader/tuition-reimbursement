@@ -25,24 +25,21 @@ public class LogInServiceImplTests {
     }
     
     @Test
-    public void getAllEmployeesSuccess() {
+    public void getAllEmployeesPass() {
         List<Employee> allEmployees = liServ.getAllEmployees();
         assertTrue(allEmployees.size() > 28);
     }
     
     @Test
-    public void checkForEmployeeSuccess() {
+    public void checkForEmployeePass() {
         Employee logInAttempt = new Employee("bbarnewell5@yandex.ru", "aA8vR7c");
-        Employee employee = liServ.checkForEmployee(logInAttempt);
-        String expected = "Employee [id=6, firstName=Benny, "
-                + "lastName=Barnewell, email=bbarnewell5@yandex.ru, "
-                + "password=null, supervisorEmpId=3, depHeadEmpId=3, "
-                + "benCoEmpId=1, terminationTime=1443888000000]";
-        assertEquals(expected, employee.toString());
+        Employee expected = empDao.getById(6);
+        Employee actual = liServ.checkForEmployee(logInAttempt);
+        assertEquals(expected.toString(), actual.toString());
     }
     
     @Test
-    public void checkForEmployeeFailure() {
+    public void checkForEmployeeFail() {
         Employee logInAttempt = new Employee("divinereflection@adam.va", "eveDaBest");
         Employee employee = liServ.checkForEmployee(logInAttempt);
         assertNull(employee);

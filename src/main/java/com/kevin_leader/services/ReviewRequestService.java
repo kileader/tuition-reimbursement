@@ -8,8 +8,6 @@ import com.kevin_leader.models.Reimbursement;
 
 public interface ReviewRequestService {
     
-//    public List<List<Employee>> getSubordinates(int empId);
-    
     public List<Reimbursement> getReimbursementsForReviewer(int empId);
     
     public List<Attachment> getAttachmentsForReimbursement(int rId);
@@ -17,5 +15,9 @@ public interface ReviewRequestService {
     public List<Message> getMessagesForReimbursement(int rId);
 
     public Message incrementStepAndAddMessage(Message message);
+
+    public void loadAllAttachments();
+
+    public void loadAllMessages();
 
 }

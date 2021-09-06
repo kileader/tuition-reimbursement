@@ -1,7 +1,6 @@
 package com.kevin_leader.repositories;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
@@ -24,18 +23,19 @@ public class ReimbursementDaoTests {
     public static void setUpBeforeClass() {
         rDao = new GenericRepoImpl<>(Reimbursement.class);
         empDao = new GenericRepoImpl<>(Employee.class);
+        evDao = new GenericRepoImpl<>(Event.class);
     }
 
     @Test
     public void addSuccess() {
+        Employee employee = empDao.getById(20);
         Event event = evDao.getById(5);
         long currentTime = new Date().getTime();
-        Reimbursement reimbursement = new Reimbursement(18, event,
+        Reimbursement reimbursement = new Reimbursement(employee, event,
                 "I want to be reimbursed for a rock paper scissors death match.",
-                currentTime, 8.0, 0, null, null);
+                currentTime, 8.5, 0, null, null);
         int id = rDao.add(reimbursement);
-        assertNotEquals(0, id);
-        assertNotEquals(-1, id);
+        assertTrue(id > 0);
     }
 
     @Test
@@ -47,10 +47,7 @@ public class ReimbursementDaoTests {
     @Test
     public void getByIdSuccess() {
         Reimbursement actualReimbursement = rDao.getById(2);
-        String expected = "Reimbursement [id=2, employeeId=4, eventId=2, de"
-                + "scription=I am getting some supervisoral training., submissi"
-                + "onTime=1442682000000, hoursMissed=40.0, approvalStep=4, finalGrade=91, actualCl"
-                + "aim=899.2]";
+        String expected = "Reimbursement [id=2, employeeId=4, eventId=2, description=I am getting some supervisoral training., submissionTime=1442682000000, hoursMissed=40.0, approvalStep=5, finalGrade=91, actualClaim=899.2]";
         assertEquals(expected, actualReimbursement.toString());
     }
 

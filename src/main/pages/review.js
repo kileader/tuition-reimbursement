@@ -121,10 +121,8 @@ const displayReimbursements = () => {
 
     let date = new Date(reimbursement.event.startTime);
 
-    let currentDate = new Date();
-
     let textNode;
-    if (currentDate + 60480000 * 2 > date) {
+    if (Date.now() + 60480000 * 2 > date) {
       textNode = document.createTextNode(
         "URGENT! " + reimburseeName + " at " + reimbursement.event.eventName + " on " + date.toString()
       );
@@ -419,9 +417,9 @@ const addMessage = () => {
 
   message.reimbursement = reimbursement;
 
-  if (reimbursement.approvalStep == 2) {
+  if (reimbursement.reimbursee.benCoEmpId == sessionStorage.getItem("employeeId")) {
     message.approverType = "Benefits Coordinator";
-  } else if (reimbursement.approvalStep == 1) {
+  } else if (reimbursement.reimbursee.depHeadEmpId == sessionStorage.getItem("employeeId")) {
     message.approverType = "Department Head";
   } else if (reimbursement.approvalStep == 0) {
     message.approverType = "Supervisor";

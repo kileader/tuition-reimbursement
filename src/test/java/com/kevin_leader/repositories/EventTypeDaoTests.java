@@ -1,7 +1,6 @@
 package com.kevin_leader.repositories;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -24,8 +23,7 @@ public class EventTypeDaoTests {
     public void addSuccess() {
         EventType eventType = new EventType("Corporate Party", 95);
         int id = etDao.add(eventType);
-        assertNotEquals(0, id);
-        assertNotEquals(-1, id);
+        assertTrue(id > 0);
     }
 
     @Test
