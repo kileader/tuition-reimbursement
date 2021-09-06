@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.kevin_leader.models.Event;
 import com.kevin_leader.models.EventType;
 import com.kevin_leader.models.GradingFormat;
@@ -24,9 +23,7 @@ public class RequestFormController {
 
     public RequestFormController(RequestFormService rfServ) {
         this.rfServ = rfServ;
-        gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation()
-//				.excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.STATIC)
-                .create();
+        gson = new Gson();
     }
 
     public Handler getFutureEvents = (context) -> {

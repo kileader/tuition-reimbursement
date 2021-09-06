@@ -10,27 +10,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.google.gson.annotations.Expose;
-
 @Entity
 @Table(name = "attachments")
 public class Attachment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose
     private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "reimbursement_id")
-    @Expose
     private Reimbursement reimbursement;
 
     @Column(name = "attachment_url")
-    @Expose
     private String attachmentUrl;
 
-    @Expose
     private String description;
 
     public Attachment() {

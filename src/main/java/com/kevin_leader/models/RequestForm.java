@@ -2,8 +2,6 @@ package com.kevin_leader.models;
 
 import org.apache.log4j.Logger;
 
-import com.google.gson.annotations.Expose;
-
 /**
  * Class for reimbursement request info to be mapped from JSON
  * 
@@ -12,37 +10,37 @@ import com.google.gson.annotations.Expose;
 public class RequestForm {
 
     private static final Logger log = Logger.getLogger(RequestForm.class);
-    @Expose
+
     private Integer employeeId;
-    @Expose
+
     private Integer eventId;
-    @Expose
+
     private String eventName;
-    @Expose
+
     private String startDate;
-    @Expose
+
     private String startTime;
-    @Expose
+
     private String location;
-    @Expose
+
     private Double tuition;
-    @Expose
+
     private Integer typeId;
-    @Expose
+
     private Integer formatId;
-    @Expose
+
     private String formatName;
-    @Expose
+
     private String formatDescription;
-    @Expose
+
     private String passingGradeCutoff;
-    @Expose
+
     private String endDate;
-    @Expose
+
     private String endTime;
-    @Expose
+
     private String description;
-    @Expose
+
     private Double hoursMissed;
 
     // No-args

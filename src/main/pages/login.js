@@ -1,33 +1,30 @@
-
 const initLogin = () => {
   console.log("Begin initLogin()");
 
   let loginContainer = document.getElementById("login-container");
   let pageContainer = document.getElementById("page-container");
-  let employeeNameSpan = document.getElementById("employee-name")
+  let employeeNameSpan = document.getElementById("employee-name");
 
   let firstName = sessionStorage.getItem("firstName");
   let lastName = sessionStorage.getItem("lastName");
 
   if (firstName) {
-    console.log("Name exists")
+    console.log("Name exists");
     if (pageContainer.hasAttribute("hidden")) {
       pageContainer.removeAttribute("hidden");
     }
     loginContainer.setAttribute("hidden", "");
     employeeNameSpan.innerHTML = firstName + " " + lastName;
   } else {
-    console.log("Name doesn't exist")
+    console.log("Name doesn't exist");
     if (loginContainer.hasAttribute("hidden")) {
       loginContainer.removeAttribute("hidden");
     }
     pageContainer.setAttribute("hidden", "");
   }
-
-}
+};
 
 const attemptLogin = () => {
-
   let emailInput = document.getElementById("email");
   let passwordInput = document.getElementById("password");
 
@@ -43,11 +40,9 @@ const attemptLogin = () => {
   console.log("JSON is ready to send");
 
   sendLoginFormString(loginFormString);
+};
 
-}
-
-const sendLoginFormString = loginFormString => {
-
+const sendLoginFormString = (loginFormString) => {
   console.log("Start sendLoginFormString()");
 
   let loginSuccessH2 = document.getElementById("login-success");
@@ -57,7 +52,7 @@ const sendLoginFormString = loginFormString => {
   let loginButton = document.getElementById("login-button");
   loginButton.setAttribute("disabled", "");
 
-  const url = "http://localhost:7000/login"
+  const url = "http://localhost:7000/login";
   let xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
@@ -67,7 +62,7 @@ const sendLoginFormString = loginFormString => {
       console.log(this.responseText);
 
       let employee = JSON.parse(this.responseText);
-      console.log(employee)
+      console.log(employee);
 
       if (employee) {
         sessionStorage.setItem("employeeId", employee.id);
@@ -80,15 +75,20 @@ const sendLoginFormString = loginFormString => {
         loginButton.removeAttribute("disabled");
         initLogin();
       } else {
-        console.log("ready state is: " + this.readyState + ", status is: "
-          + this.status + ", employee is " + JSON.stringify(employee));
+        console.log(
+          "ready state is: " +
+            this.readyState +
+            ", status is: " +
+            this.status +
+            ", employee is " +
+            JSON.stringify(employee)
+        );
         loginSuccessH2.innerHTML = "Something went wrong!";
         loginSuccessH2.setAttribute("class", "bg-danger");
         loginButton.removeAttribute("disabled");
       }
-
     } else if (this.status == 500) {
-      console.log("Server side error")
+      console.log("Server side error");
       loginSuccessH2.innerHTML = "Server side error!";
       loginSuccessH2.setAttribute("class", "bg-danger");
       loginButton.removeAttribute("disabled");
@@ -106,15 +106,14 @@ const sendLoginFormString = loginFormString => {
 
     console.log("End loop iteration");
     console.log(this.readyState);
-  }
+  };
 
   xhr.open("POST", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(loginFormString);
-
-}
+};
 
 const logout = () => {
-  sessionStorage.clear();
   document.getElementById("index-link").click();
-}
+  sessionStorage.clear();
+};

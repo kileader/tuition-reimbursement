@@ -1,4 +1,3 @@
-
 let reimbursementSelect;
 let reimbursements;
 let eventNameTd;
@@ -33,7 +32,6 @@ let addFinalGradeButton;
 let addFinalGradeSuccessH2;
 
 const initUpdate = () => {
-
   reimbursementSelect = document.getElementById("reimbursement-select");
   eventNameTd = document.getElementById("event-name");
   startTimeTd = document.getElementById("start-time");
@@ -67,15 +65,12 @@ const initUpdate = () => {
   getReimbursements();
   getAllMessages();
   getAllAttachments();
-
 };
 
 const getReimbursements = () => {
-
   console.log("Start getReimbursements()");
 
-  const url = "http://localhost:7000/employees/" +
-    sessionStorage.getItem("employeeId") + "/reimbursements";
+  const url = "http://localhost:7000/employees/" + sessionStorage.getItem("employeeId") + "/reimbursements";
 
   const xhr = new XMLHttpRequest();
 
@@ -85,35 +80,28 @@ const getReimbursements = () => {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
-      if (reimbursements = JSON.parse(this.responseText)) {
-
+      if ((reimbursements = JSON.parse(this.responseText))) {
         console.log("JSON parsed successfully.");
         console.log(reimbursements);
 
         displayReimbursements();
-
       } else {
         console.log("JSON has incorrect syntax!");
       }
-
     } else if (this.readyState == 4) {
       console.log("Request was not successfully processed!");
     }
-
-  }
+  };
 
   xhr.open("GET", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
-
 };
 
 const displayReimbursements = () => {
-
   console.log("Start displayReimbursements()");
 
   for (i = 0; i < reimbursements.length; i++) {
-
     const reimbursement = reimbursements[i];
     console.log(reimbursement);
 
@@ -123,9 +111,11 @@ const displayReimbursements = () => {
     const date = new Date(reimbursement.event.startTime);
 
     const textNode = document.createTextNode(
-      String(reimbursement.event.eventName) + ", " +
-      String(reimbursement.event.eventType.typeName) + ", on " +
-      date.toString()
+      String(reimbursement.event.eventName) +
+        ", " +
+        String(reimbursement.event.eventType.typeName) +
+        ", on " +
+        date.toString()
     );
 
     console.log(textNode);
@@ -133,16 +123,13 @@ const displayReimbursements = () => {
 
     optionNode.appendChild(textNode);
     reimbursementSelect.appendChild(optionNode);
-
   }
 
   document.getElementById("reimbursements-loading").remove();
   reimbursementSelect.removeAttribute("disabled");
-
 };
 
 const selectReimbursement = () => {
-
   console.log("Start selectReimbursement()");
 
   const i = reimbursementSelect.value;
@@ -152,14 +139,14 @@ const selectReimbursement = () => {
   getAttachmentsForReimbursement(reimbursement.id);
 
   // If the reimbursement is ready to add a final grade
-  if (reimbursement.approvalStep == 3 && finalGradeDiv.hasAttribute("hidden")) {
+  if ((reimbursement.approvalStep == 3 || reimbursement.approvalStep == 4) && finalGradeDiv.hasAttribute("hidden")) {
     finalGradeDiv.removeAttribute("hidden");
   } else {
     finalGradeDiv.setAttribute("hidden", "");
   }
 
   let endDate;
-  if (tryEndTime = reimbursement.event.endTime) {
+  if ((tryEndTime = reimbursement.event.endTime)) {
     endDate = new Date(tryEndTime);
     endDateString = endDate.toString();
   } else {
@@ -180,8 +167,9 @@ const selectReimbursement = () => {
     finalGrade = "N/A";
   }
 
-  const projectedClaim = String((Math.round(reimbursement.event.tuition
-    * reimbursement.event.eventType.percentCoverage) / 100).toFixed(2)) + " USD";
+  const projectedClaim =
+    String((Math.round(reimbursement.event.tuition * reimbursement.event.eventType.percentCoverage) / 100).toFixed(2)) +
+    " USD";
 
   let actualClaim;
   if (reimbursement.actualClaim && reimbursement.actualClaim != undefined) {
@@ -206,15 +194,12 @@ const selectReimbursement = () => {
   finalGradeTd.innerHTML = finalGrade;
   projectedClaimTd.innerHTML = projectedClaim;
   actualClaimTd.innerHTML = actualClaim;
-
 };
 
 const getAllMessages = () => {
-
   console.log("Start getMessages()");
 
-  const url = "http://localhost:7000/employees/" +
-    sessionStorage.getItem("employeeId") + "/messages";
+  const url = "http://localhost:7000/employees/" + sessionStorage.getItem("employeeId") + "/messages";
 
   const xhr = new XMLHttpRequest();
 
@@ -224,77 +209,58 @@ const getAllMessages = () => {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
-      if (allMessages = JSON.parse(this.responseText)) {
-
+      if ((allMessages = JSON.parse(this.responseText))) {
         console.log("JSON parsed successfully.");
         console.log(allMessages);
-
       } else {
         console.log("JSON has incorrect syntax!");
       }
-
     } else if (this.readyState == 4) {
       console.log("Request was not successfully processed!");
     }
-
-  }
+  };
 
   xhr.open("GET", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
-
 };
 
-const getMessagesForReimbursement = rId => {
-
+const getMessagesForReimbursement = (rId) => {
   console.log("Start getMessagesForReimbursement()");
 
   let foundMessages = [];
 
   for (i = 0; i < allMessages.length; i++) {
-
     if (allMessages[i].reimbursement.id == rId) {
-
       foundMessages.push(allMessages[i]);
-
     }
-
   }
 
   displayMessages(foundMessages);
   messagesLoading.remove();
-
 };
 
-const getAttachmentsForReimbursement = rId => {
-
+const getAttachmentsForReimbursement = (rId) => {
   console.log("Start getAttachmentsForReimbursement()");
 
   let foundAttachments = [];
 
   for (i = 0; i < allAttachments.length; i++) {
-
     if (allAttachments[i].reimbursement.id == rId) {
-
       foundAttachments.push(allAttachments[i]);
-
     }
-
   }
 
   displayAttachments(foundAttachments);
   attachmentsLoading.remove();
-
 };
 
-const displayMessages = messages => {
-
+const displayMessages = (messages) => {
   console.log("Start displayMessages()");
 
   messagesDiv.innerHTML = "";
 
   for (i = 0; i < messages.length; i++) {
-
     let message = messages[i];
     console.log(message);
 
@@ -335,7 +301,7 @@ const displayMessages = messages => {
     approverTypeValue.appendChild(aTypeValueText);
 
     messageTypeKey.appendChild(mTypeKeyText);
-    messageTypeValue.appendChild(mTypeValueText)
+    messageTypeValue.appendChild(mTypeValueText);
 
     timeSentKey.appendChild(timeSentKeyText);
     timeSentValue.appendChild(timeSentValueText);
@@ -361,17 +327,13 @@ const displayMessages = messages => {
     tableNode.appendChild(messageTr);
 
     messagesDiv.appendChild(tableNode);
-
   }
-
 };
 
 const getAllAttachments = () => {
-
   console.log("Start getAllAttachments()");
 
-  const url = "http://localhost:7000/employees/" +
-    sessionStorage.getItem("employeeId") + "/attachments";
+  const url = "http://localhost:7000/employees/" + sessionStorage.getItem("employeeId") + "/attachments";
 
   const xhr = new XMLHttpRequest();
 
@@ -381,34 +343,28 @@ const getAllAttachments = () => {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
-      if (allAttachments = JSON.parse(this.responseText)) {
-
+      if ((allAttachments = JSON.parse(this.responseText))) {
         console.log("JSON parsed successfully.");
         console.log(allAttachments);
-
       } else {
         console.log("JSON has incorrect syntax!");
       }
-
     } else if (this.readyState == 4) {
       console.log("Request was not successfully processed!");
     }
-
-  }
+  };
 
   xhr.open("GET", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
 };
 
-const displayAttachments = attachments => {
-
+const displayAttachments = (attachments) => {
   console.log("Start displayAttachments()");
 
   attachmentsDiv.innerHTML = "";
 
   for (i = 0; i < attachments.length; i++) {
-
     let attachment = attachments[i];
     console.log(attachment);
 
@@ -434,7 +390,7 @@ const displayAttachments = attachments => {
     attachmentUrlValue.appendChild(attachmentUrlValueText);
 
     attachmentDescriptionKey.appendChild(attachmentDescriptionKeyText);
-    attachmentDescriptionValue.appendChild(attachmentDescriptionValueText)
+    attachmentDescriptionValue.appendChild(attachmentDescriptionValueText);
 
     attachmentUrlTr.appendChild(attachmentUrlKey);
     attachmentUrlTr.appendChild(attachmentUrlValue);
@@ -446,13 +402,10 @@ const displayAttachments = attachments => {
     tableNode.appendChild(attachmentDescriptionTr);
 
     attachmentsDiv.appendChild(tableNode);
-
   }
-
 };
 
 const addAttachment = () => {
-
   console.log("Start addAttachment()");
 
   addAttachmentSuccessH2.innerHTML = "Processing...";
@@ -481,7 +434,7 @@ const addAttachment = () => {
   console.log("JSON is ready to send");
   console.log(attachmentString);
 
-  const url = "http://localhost:7000/attachments"
+  const url = "http://localhost:7000/attachments";
   const xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
@@ -499,23 +452,19 @@ const addAttachment = () => {
         addAttachmentSuccessH2.setAttribute("class", "bg-danger");
         addAttachmentButton.removeAttribute("disabled");
       }
-
     } else if (this.readyState == 4) {
       addAttachmentSuccessH2.innerHTML = "Something went wrong! Is everything entered correctly?";
       addAttachmentSuccessH2.setAttribute("class", "bg-danger");
       addAttachmentButton.removeAttribute("disabled");
     }
-
-  }
+  };
 
   xhr.open("POST", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(attachmentString);
-
 };
 
 const addFinalGrade = () => {
-
   console.log("Start addFinalGrade()");
 
   addFinalGradeSuccessH2.innerHTML = "Processing...";
@@ -559,20 +508,17 @@ const addFinalGrade = () => {
         addFinalGradeSuccessH2.setAttribute("class", "bg-danger");
         addFinalGradeButton.removeAttribute("disabled");
       }
-
     } else if (this.readyState == 4) {
       addFinalGradeSuccessH2.innerHTML = "Something went wrong! Is everything entered correctly?";
       addFinalGradeSuccessH2.setAttribute("class", "bg-danger");
       addFinalGradeButton.removeAttribute("disabled");
     }
-
-  }
+  };
 
   xhr.open("PUT", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(reimbursementString);
-
-}
+};
 
 const redirectToHome = () => {
   document.getElementById("index-link").click();

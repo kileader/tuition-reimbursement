@@ -3,44 +3,48 @@
 
 <hibernate-configuration>
 	<session-factory>
-		
+
 		<property name="hibernate.connection.driver_class">
 			org.postgresql.Driver
 		</property>
-		
+
 		<property name="hibernate.dialect">
 			org.hibernate.dialect.PostgreSQLDialect
 		</property>
-		
+
 		<property name="hibernate.connection.url">
-			jdbc:postgresql://revature-projects.c3w8xexsymza.us-east-2.rds.amazonaws.com/postgres
+			jdbc:postgresql://revature-p1.cp5z2ajiqpjf.us-east-2.rds.amazonaws.com/postgres
 		</property>
-		
+
 		<property name="hibernate.connection.username">
-			kevin
+			postgres
 		</property>
-		
+
 		<property name="hibernate.connection.password">
 			password
 		</property>
-		
+
 		<!-- Optional Properties -->
 		<property name="show_sql">
 			true
 		</property>
-		
+
 		<property name="hbm2ddl.auto">
 			update
 		</property>
-		
+
+		<property name="hibernate.current_session_context_class">
+			thread
+		</property>
+
 		<!-- Class Mappings -->
-		<mapping class="com.kevin_leader.models.Employee"/>
-		<mapping class="com.kevin_leader.models.Event"/>
-		<mapping class="com.kevin_leader.models.EventType"/>
-		<mapping class="com.kevin_leader.models.GradingFormat"/>
-		<mapping class="com.kevin_leader.models.Attachment"/>
-		<mapping class="com.kevin_leader.models.Message"/>
-		<mapping class="com.kevin_leader.models.Reimbursement"/>
+		<mapping class="com.kevin_leader.models.Attachment" />
+		<mapping class="com.kevin_leader.models.Employee" />
+		<mapping class="com.kevin_leader.models.Event" />
+		<mapping class="com.kevin_leader.models.EventType" />
+		<mapping class="com.kevin_leader.models.GradingFormat" />
+		<mapping class="com.kevin_leader.models.Message" />
+		<mapping class="com.kevin_leader.models.Reimbursement" />
 
 	</session-factory>
 </hibernate-configuration>

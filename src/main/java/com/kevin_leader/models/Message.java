@@ -10,35 +10,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.google.gson.annotations.Expose;
-
 @Entity
 @Table(name = "messages")
 public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose
     private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "reimbursement_id")
-    @Expose
     private Reimbursement reimbursement;
 
     @Column(name = "approver_type")
-    @Expose
     private String approverType;
 
     @Column(name = "message_type")
-    @Expose
     private String messageType;
 
     @Column(name = "time_sent")
-    @Expose
     private long timeSent;
 
-    @Expose
     private String message;
 
     public Message() {

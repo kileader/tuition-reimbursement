@@ -28,10 +28,9 @@ public class ReimbursementDaoTests {
 
     @Test
     public void addSuccess() {
-        Employee reimbursee = empDao.getById(18);
         Event event = evDao.getById(5);
         long currentTime = new Date().getTime();
-        Reimbursement reimbursement = new Reimbursement(reimbursee, event,
+        Reimbursement reimbursement = new Reimbursement(18, event,
                 "I want to be reimbursed for a rock paper scissors death match.",
                 currentTime, 8.0, 0, null, null);
         int id = rDao.add(reimbursement);

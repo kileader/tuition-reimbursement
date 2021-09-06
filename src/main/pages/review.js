@@ -1,8 +1,6 @@
-
 let reimbursementSelect;
 let reimbursements;
 let employeeNameTd;
-let supervisorNameTd
 let depHeadNameTd;
 let benCoNameTd;
 let eventNameTd;
@@ -39,10 +37,8 @@ let awardReimbursementSuccessH2;
 let actualClaimInput;
 
 const initReview = () => {
-
   reimbursementSelect = document.getElementById("reimbursement-select");
   employeeNameTd = document.getElementById("employee-name-td");
-  supervisorNameTd = document.getElementById("supervisor-name");
   depHeadNameTd = document.getElementById("dep-head-name");
   benCoNameTd = document.getElementById("ben-co-name");
   eventNameTd = document.getElementById("event-name");
@@ -71,22 +67,19 @@ const initReview = () => {
   descriptionInput = document.getElementById("attachment-description");
   messageTypeSelect = document.getElementById("message-type-select");
   messageBodyInput = document.getElementById("message-body");
-  addMessageButton = document.getElementById("add-message")
+  addMessageButton = document.getElementById("add-message");
   step4OnlyDiv = document.getElementById("step-4-only");
   awardReimbursementButton = document.getElementById("award-reimbursement");
   awardReimbursementSuccessH2 = document.getElementById("award-reimbursement-success");
   actualClaimInput = document.getElementById("actual-claim");
 
   getReimbursements();
-
 };
 
 const getReimbursements = () => {
-
   console.log("Start getReimbursements()");
 
-  let url = "http://localhost:7000/reviewers/" +
-    sessionStorage.getItem("employeeId") + "/reimbursements";
+  let url = "http://localhost:7000/reviewers/" + sessionStorage.getItem("employeeId") + "/reimbursements";
 
   let xhr = new XMLHttpRequest();
 
@@ -96,61 +89,49 @@ const getReimbursements = () => {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
-      if (reimbursements = JSON.parse(this.responseText)) {
-
+      if ((reimbursements = JSON.parse(this.responseText))) {
         console.log("JSON parsed successfully.");
         console.log(reimbursements);
 
         displayReimbursements();
-
       } else {
         console.log("JSON has incorrect syntax!");
       }
-
     } else if (this.readyState == 4) {
       console.log("Request was not successfully processed!");
     }
-
-  }
+  };
 
   xhr.open("GET", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
-
 };
 
 const displayReimbursements = () => {
-
   console.log("Start displayReimbursements()");
 
   for (i = 0; i < reimbursements.length; i++) {
-
     let reimbursement = reimbursements[i];
     console.log(reimbursement);
 
     let optionNode = document.createElement("option");
     optionNode.setAttribute("value", String(i));
 
-    let reimburseeName = reimbursement.reimbursee.firstName
-      + " " + reimbursement.reimbursee.lastName;
+    let reimburseeName = reimbursement.reimbursee.firstName + " " + reimbursement.reimbursee.lastName;
 
     let date = new Date(reimbursement.event.startTime);
 
     let currentDate = new Date();
 
     let textNode;
-    if (currentDate + (60480000 * 2) > date) {
+    if (currentDate + 60480000 * 2 > date) {
       textNode = document.createTextNode(
-        "URGENT! " + reimburseeName + " at " +
-        reimbursement.event.eventName + " on " +
-        date.toString()
+        "URGENT! " + reimburseeName + " at " + reimbursement.event.eventName + " on " + date.toString()
       );
       optionNode.prepend(textNode);
     } else {
       textNode = document.createTextNode(
-        reimburseeName + " at " +
-        reimbursement.event.eventName + " on " +
-        date.toString()
+        reimburseeName + " at " + reimbursement.event.eventName + " on " + date.toString()
       );
       optionNode.appendChild(textNode);
     }
@@ -159,17 +140,14 @@ const displayReimbursements = () => {
     console.log(reimbursementSelect);
 
     reimbursementSelect.appendChild(optionNode);
-
   }
 
   document.getElementById("reimbursements-loading").remove();
   reimbursementSelect.removeAttribute("disabled");
   document.getElementById("reimbursement-request").removeAttribute("hidden");
-
 };
 
 const selectReimbursement = () => {
-
   console.log("Start selectReimbursement()");
 
   let i = reimbursementSelect.value;
@@ -179,7 +157,7 @@ const selectReimbursement = () => {
   getMessagesForReimbursement(reimbursement.id);
 
   let endDate;
-  if (tryEndTime = reimbursement.event.endTime) {
+  if ((tryEndTime = reimbursement.event.endTime)) {
     endDate = new Date(tryEndTime);
     endDateString = endDate.toString();
   } else {
@@ -193,16 +171,11 @@ const selectReimbursement = () => {
     hoursMissed = "N/A";
   }
 
-  let projectedClaim = String((Math.round(reimbursement.event.tuition
-    * reimbursement.event.eventType.percentCoverage) / 100).toFixed(2)) + " USD";
-
-  let supervisorName;
-  if (reimbursement.reimbursee.supervisor) {
-    supervisorName = reimbursement.reimbursee.supervisor.firstName + " " + reimbursement.reimbursee.supervisor.lastName;
-  }
+  let projectedClaim =
+    String((Math.round(reimbursement.event.tuition * reimbursement.event.eventType.percentCoverage) / 100).toFixed(2)) +
+    " USD";
 
   employeeNameTd.innerHTML = reimbursement.reimbursee.firstName + " " + reimbursement.reimbursee.lastName;
-  supervisorNameTd.innerHTML = supervisorName;
   eventNameTd.innerHTML = reimbursement.event.eventName;
   startTimeTd.innerHTML = new Date(reimbursement.event.startTime).toString();
   endTimeTd.innerHTML = endDate;
@@ -218,7 +191,7 @@ const selectReimbursement = () => {
   hoursMissedTd.innerHTML = hoursMissed;
   projectedClaimTd.innerHTML = projectedClaim;
 
-  if (reimbursement.approvalStep == 5) {
+  if (reimbursement.approvalStep == 4) {
     if (step4OnlyDiv.hasAttribute("hidden")) {
       step4OnlyDiv.removeAttribute("hidden");
     }
@@ -229,11 +202,9 @@ const selectReimbursement = () => {
     }
     step4OnlyDiv.setAttribute("hidden", "");
   }
-
 };
 
-const getMessagesForReimbursement = rId => {
-
+const getMessagesForReimbursement = (rId) => {
   console.log("Start getMessagesForReimbursement()");
 
   let url = "http://localhost:7000/reimbursements/" + rId + "/messages";
@@ -246,30 +217,24 @@ const getMessagesForReimbursement = rId => {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
-      if (messages = JSON.parse(this.responseText)) {
-
+      if ((messages = JSON.parse(this.responseText))) {
         console.log("JSON parsed successfully.");
         console.log(messages);
         displayMessages(messages);
-
       } else {
         console.log("JSON has incorrect syntax!");
       }
-
     } else if (this.readyState == 4) {
       console.log("Request was not successfully processed!");
     }
-
-  }
+  };
 
   xhr.open("GET", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
-
 };
 
-const getAttachmentsForReimbursement = rId => {
-
+const getAttachmentsForReimbursement = (rId) => {
   console.log("Start getAttachmentsForReimbursement()");
 
   let url = "http://localhost:7000/reimbursements/" + rId + "/attachments";
@@ -282,36 +247,29 @@ const getAttachmentsForReimbursement = rId => {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
-      if (attachments = JSON.parse(this.responseText)) {
-
+      if ((attachments = JSON.parse(this.responseText))) {
         console.log("JSON parsed successfully.");
         console.log(attachments);
         displayAttachments(attachments);
-
       } else {
         console.log("JSON has incorrect syntax!");
       }
-
     } else if (this.readyState == 4) {
       console.log("Request was not successfully processed!");
     }
-
-  }
+  };
 
   xhr.open("GET", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
-
 };
 
-const displayMessages = messages => {
-
+const displayMessages = (messages) => {
   console.log("Start displayMessages()");
 
   messagesTableDiv.innerHTML = "";
 
   for (i = 0; i < messages.length; i++) {
-
     let message = messages[i];
     console.log(message);
 
@@ -352,7 +310,7 @@ const displayMessages = messages => {
     approverTypeValue.appendChild(aTypeValueText);
 
     messageTypeKey.appendChild(mTypeKeyText);
-    messageTypeValue.appendChild(mTypeValueText)
+    messageTypeValue.appendChild(mTypeValueText);
 
     timeSentKey.appendChild(timeSentKeyText);
     timeSentValue.appendChild(timeSentValueText);
@@ -378,7 +336,6 @@ const displayMessages = messages => {
     tableNode.appendChild(messageTr);
 
     messagesTableDiv.appendChild(tableNode);
-
   }
 
   if (messagesDiv.hasAttribute("hidden")) {
@@ -386,17 +343,14 @@ const displayMessages = messages => {
   }
 
   messagesLoading.remove();
-
 };
 
-const displayAttachments = attachments => {
-
+const displayAttachments = (attachments) => {
   console.log("Start displayAttachments()");
 
   attachmentsTableDiv.innerHTML = "";
 
   for (i = 0; i < attachments.length; i++) {
-
     let attachment = attachments[i];
     console.log(attachment);
 
@@ -422,7 +376,7 @@ const displayAttachments = attachments => {
     attachmentUrlValue.appendChild(attachmentUrlValueText);
 
     attachmentDescriptionKey.appendChild(attachmentDescriptionKeyText);
-    attachmentDescriptionValue.appendChild(attachmentDescriptionValueText)
+    attachmentDescriptionValue.appendChild(attachmentDescriptionValueText);
 
     attachmentUrlTr.appendChild(attachmentUrlKey);
     attachmentUrlTr.appendChild(attachmentUrlValue);
@@ -434,7 +388,6 @@ const displayAttachments = attachments => {
     tableNode.appendChild(attachmentDescriptionTr);
 
     attachmentsTableDiv.appendChild(tableNode);
-
   }
 
   if (attachmentsDiv.hasAttribute("hidden")) {
@@ -442,11 +395,9 @@ const displayAttachments = attachments => {
   }
 
   attachmentsLoading.remove();
-
 };
 
 const addMessage = () => {
-
   console.log("Run addMessage()");
 
   addMessageSuccessH2.innerHTML = "Processing...";
@@ -502,23 +453,19 @@ const addMessage = () => {
         addMessageSuccessH2.setAttribute("class", "bg-danger");
         addMessageButton.removeAttribute("disabled");
       }
-
     } else if (this.readyState == 4) {
       addMessageSuccessH2.innerHTML = "Something went wrong! Is everything entered correctly?";
       addMessageSuccessH2.setAttribute("class", "bg-danger");
       addMessageButton.removeAttribute("disabled");
     }
-
-  }
+  };
 
   xhr.open("POST", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(messageString);
-
-}
+};
 
 const awardReimbursement = () => {
-
   console.log("Start awardReimbursement()");
 
   awardReimbursementSuccessH2.innerHTML = "Processing...";
@@ -534,11 +481,9 @@ const awardReimbursement = () => {
     return;
   }
 
-  let reimbursement = reimbursements[reimbursementSelect.value];
-
-  reimbursement.actualClaim = actualClaim;
+  const reimbursement = reimbursements[reimbursementSelect.value];
   reimbursement.approvalStep = 5;
-
+  reimbursement.actualClaim = actualClaim;
   let reimbursementString = JSON.stringify(reimbursement);
 
   console.log("JSON is ready to send");
@@ -550,7 +495,7 @@ const awardReimbursement = () => {
   xhr.onreadystatechange = function () {
     console.log("Begin loop iteration");
 
-    if (this.readyState == 4 && this.status == 201) {
+    if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
 
       if (JSON.parse(this.responseText)) {
@@ -562,19 +507,16 @@ const awardReimbursement = () => {
         awardReimbursementSuccessH2.setAttribute("class", "bg-danger");
         awardReimbursementButton.removeAttribute("disabled");
       }
-
     } else if (this.readyState == 4) {
       awardReimbursementSuccessH2.innerHTML = "Something went wrong! Is everything entered correctly?";
       awardReimbursementSuccessH2.setAttribute("class", "bg-danger");
       awardReimbursementButton.removeAttribute("disabled");
     }
-
-  }
+  };
 
   xhr.open("PUT", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(awardReimbursementString);
-
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(reimbursementString);
 };
 
 const redirectToHome = () => {

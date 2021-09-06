@@ -2,7 +2,6 @@ package com.kevin_leader.models;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,54 +12,44 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.google.gson.annotations.Expose;
-
 @Entity
 @Table(name = "events")
 public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose
     private int id;
 
     @Column(name = "event_name")
-    @Expose
     private String eventName;
 
     @Column(name = "start_time")
-    @Expose
     private long startTime;
 
-    @Expose
     private String location;
 
-    @Expose
     private double tuition;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "event_type_id")
-    @Expose
     private EventType eventType;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "grading_format_id")
-    @Expose
     private GradingFormat gradingFormat;
 
     @Column(name = "end_time")
-    @Expose
     private Long endTime;
 
-    @OneToMany
-    private Set<Reimbursement> reimbursements;
+    @OneToMany(mappedBy = "event")
+    private transient Set<Reimbursement> reimbursements;
 
     // No-arg
     public Event() {
         super();
     }
 
-    // Id-less with end time
+    // Id-less
     public Event(String eventName, long startTime, String location,
             double tuition, EventType eventType, GradingFormat gradingFormat,
             Long endTime) {

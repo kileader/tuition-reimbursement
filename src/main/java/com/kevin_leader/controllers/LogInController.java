@@ -3,7 +3,6 @@ package com.kevin_leader.controllers;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.kevin_leader.models.Employee;
 import com.kevin_leader.services.LogInService;
 
@@ -17,8 +16,7 @@ public class LogInController {
 
     public LogInController(LogInService liServ) {
         this.liServ = liServ;
-        gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation()
-                .create();
+        gson = new Gson();
     }
 
     public Handler processLogInAttempt = (context) -> {

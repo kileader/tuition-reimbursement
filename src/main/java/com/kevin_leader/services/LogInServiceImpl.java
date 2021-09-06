@@ -40,8 +40,6 @@ public class LogInServiceImpl implements LogInService {
                 if (employee.getEmail().equals(logInAttempt.getEmail()) && 
                         employee.getPassword().equals(logInAttempt.getPassword())) {
                     log.info("found one");
-                    
-                    employee.setPassword(null);
                     return employee;
                 }
             } catch (Exception e) {

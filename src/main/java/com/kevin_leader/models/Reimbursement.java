@@ -1,6 +1,5 @@
 package com.kevin_leader.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,48 +9,37 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.google.gson.annotations.Expose;
-
 @Entity
 @Table(name = "reimbursements")
 public class Reimbursement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose
     private int id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "employee_id")
-    @Expose
     private Employee reimbursee;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "event_id")
-    @Expose
     private Event event;
 
-    @Expose
     private String description;
 
     @Column(name = "submission_time")
-    @Expose
     private long submissionTime;
 
     @Column(name = "hours_missed")
-    @Expose
     private Double hoursMissed;
 
     @Column(name = "approval_step")
-    @Expose
     private int approvalStep;
 
     @Column(name = "final_grade")
-    @Expose
     private String finalGrade;
 
     @Column(name = "actual_claim")
-    @Expose
     private Double actualClaim;
 
     public Reimbursement() {

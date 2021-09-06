@@ -2,19 +2,13 @@ package com.kevin_leader.models;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.google.gson.annotations.Expose;
 
 @Entity
 @Table(name = "employees")
@@ -22,52 +16,32 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose
     private int id;
 
     @Column(name = "first_name")
-    @Expose
     private String firstName;
 
     @Column(name = "last_name")
-    @Expose
     private String lastName;
 
-    @Expose
     private String email;
 
-    @Expose
     private String password;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "supervisor_emp_id")
-    @Expose
-    private Employee supervisor;
+    @Column(name = "supervisor_emp_id")
+    private Integer supervisorEmpId;
 
-    @OneToMany(mappedBy = "supervisor")
-    private Set<Employee> subordinates;
-
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "dep_head_emp_id")
-    @Expose
-    private Employee departmentHead;
+    @Column(name = "dep_head_emp_id")
+    private Integer depHeadEmpId;
     
-    @OneToMany(mappedBy = "departmentHead")
-    private Set<Employee> departmentEmployees;
-    
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "ben_co_emp_id")
-    private Employee benefitsCoordinator;
-
-    @OneToMany(mappedBy = "benefitsCoordinator")
-    private Set<Employee> benefitors;
+    @Column(name = "ben_co_emp_id")
+    private Integer benCoEmpId;
 
     @Column(name = "termination_time")
-    @Expose
     private Long terminationTime;
 
     @OneToMany(mappedBy = "reimbursee")
-    private Set<Reimbursement> reimbursements;
+    private transient Set<Reimbursement> reimbursements;
 
     // No-args constructor
     public Employee() {
@@ -78,37 +52,6 @@ public class Employee {
     public Employee(String email, String password) {
         this.email = email;
         this.password = password;
-    }
-
-    // Id-less Constructor
-    public Employee(String firstName, String lastName, String email,
-            String password, Employee supervisor, Employee departmentHead,
-            Employee benefitsCoordinator, Long terminationTime) {
-        super();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.supervisor = supervisor;
-        this.departmentHead = departmentHead;
-        this.benefitsCoordinator = benefitsCoordinator;
-        this.terminationTime = terminationTime;
-    }
-
-    // Full Constructor
-    public Employee(Integer id, String firstName, String lastName, String email,
-            String password, Employee supervisor, Employee departmentHead,
-            Employee benefitsCoordinator, Long terminationTime) {
-        super();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.supervisor = supervisor;
-        this.departmentHead = departmentHead;
-        this.benefitsCoordinator = benefitsCoordinator;
-        this.terminationTime = terminationTime;
     }
 
     public int getId() {
@@ -151,28 +94,28 @@ public class Employee {
         this.password = password;
     }
 
-    public Employee getSupervisor() {
-        return supervisor;
+    public Integer getSupervisorEmpId() {
+        return supervisorEmpId;
     }
 
-    public void setSupervisor(Employee supervisor) {
-        this.supervisor = supervisor;
+    public void setSupervisorEmpId(Integer supervisorEmpId) {
+        this.supervisorEmpId = supervisorEmpId;
     }
 
-    public Employee getDepartmentHead() {
-        return departmentHead;
+    public Integer getDepHeadEmpId() {
+        return depHeadEmpId;
     }
 
-    public void setDepartmentHead(Employee departmentHead) {
-        this.departmentHead = departmentHead;
+    public void setDepHeadEmpId(Integer depHeadEmpId) {
+        this.depHeadEmpId = depHeadEmpId;
     }
 
-    public Employee getBenefitsCoordinator() {
-        return benefitsCoordinator;
+    public Integer getBenCoEmpId() {
+        return benCoEmpId;
     }
 
-    public void setBenefitsCoordinator(Employee benefitsCoordinator) {
-        this.benefitsCoordinator = benefitsCoordinator;
+    public void setBenCoEmpId(Integer benCoEmpId) {
+        this.benCoEmpId = benCoEmpId;
     }
 
     public Long getTerminationTime() {
@@ -193,15 +136,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        String supervisorEmpId = (supervisor != null)
-                ? String.valueOf(supervisor.getId())
-                : "";
-        String depHeadEmpId = (departmentHead != null)
-                ? String.valueOf(departmentHead.getId())
-                : "";
-        String benCoEmpId = (benefitsCoordinator != null)
-                ? String.valueOf(benefitsCoordinator.getId())
-                : "";
         return "Employee [id=" + id + ", firstName=" + firstName + ", lastName="
                 + lastName + ", email=" + email + ", password=" + password
                 + ", supervisorEmpId=" + supervisorEmpId + ", depHeadEmpId="

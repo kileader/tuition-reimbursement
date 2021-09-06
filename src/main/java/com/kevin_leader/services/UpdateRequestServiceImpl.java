@@ -83,7 +83,12 @@ public class UpdateRequestServiceImpl implements UpdateRequestService {
     @Override
     public Reimbursement updateReimbursement(Reimbursement reimb) {
         
-        Reimbursement updatedReimb = rDao.update(reimb);
+        Reimbursement reimbToUpdate = rDao.getById(reimb.getId());
+        reimbToUpdate.setApprovalStep(reimb.getApprovalStep());
+        reimbToUpdate.setFinalGrade(reimb.getFinalGrade());
+        reimbToUpdate.setActualClaim(reimb.getActualClaim());
+        
+        Reimbursement updatedReimb = rDao.update(reimbToUpdate);
         
         return updatedReimb;
     }

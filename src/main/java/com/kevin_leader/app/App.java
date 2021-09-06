@@ -54,15 +54,15 @@ public class App {
         LogInService liServ = new LogInServiceImpl(empDao);
         UpdateRequestService urServ = new UpdateRequestServiceImpl(aDao, mDao,
                 rDao);
-        ReviewRequestService rrServ = new ReviewRequestServiceImpl(aDao, empDao,
-                mDao, rDao);
+        ReviewRequestService rrServ = new ReviewRequestServiceImpl(aDao, mDao,
+                rDao);
 
         RequestFormController rfCon = new RequestFormController(rfServ);
         LogInController liCon = new LogInController(liServ);
         UpdateRequestController urCon = new UpdateRequestController(urServ);
         ReviewRequestController rrCon = new ReviewRequestController(rrServ);
 
-        etDao.getById(0); // start up hibernate
+        rDao.getById(0); // start up hibernate
 
         app.get("/hello", (ctx) -> ctx.result("Hello World!"));
 

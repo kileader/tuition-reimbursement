@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.kevin_leader.models.Attachment;
 import com.kevin_leader.models.Message;
 import com.kevin_leader.models.Reimbursement;
@@ -22,9 +21,7 @@ public class UpdateRequestController {
 
     public UpdateRequestController(UpdateRequestService urServ) {
         this.urServ = urServ;
-        gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation()
-//              .excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.STATIC)
-                .create();
+        gson = new Gson();
     }
 
     public Handler getReimbursementsByEmployeeId = (context) -> {

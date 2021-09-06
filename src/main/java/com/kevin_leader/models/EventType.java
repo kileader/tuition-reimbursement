@@ -10,27 +10,22 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.google.gson.annotations.Expose;
-
 @Entity
 @Table(name = "event_types")
 public class EventType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose
     private int id;
 
     @Column(name = "type_name")
-    @Expose
     private String typeName;
 
     @Column(name = "percent_coverage")
-    @Expose
     private double percentCoverage;
 
     @OneToMany(mappedBy = "eventType")
-    private Set<Event> eventsWithType;
+    private transient Set<Event> eventsWithType;
 
     public EventType() {
         super();

@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.kevin_leader.models.Attachment;
 import com.kevin_leader.models.Message;
 import com.kevin_leader.models.Reimbursement;
@@ -22,8 +21,7 @@ public class ReviewRequestController {
 
     public ReviewRequestController(ReviewRequestService rrServ) {
         this.rrServ = rrServ;
-        gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation()
-                .create();
+        gson = new Gson();
     }
 
     public Handler getReimbursementsForReviewer = (context) -> {
