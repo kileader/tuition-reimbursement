@@ -1,97 +1,108 @@
 * {
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
-    background-color: rgb(17, 140, 79);
+  background-color: rgb(17, 140, 79);
 }
 
 main {
-    min-width: 75%;
+  min-width: 75%;
 }
 
 h1.jumbotron {
-    max-width: fit-content;
-    margin: auto;
-    border: 5px double black;
+  max-width: fit-content;
+  margin: auto;
+  border: 5px double black;
 }
 
 p {
-    margin: 1em;
+  margin: 1em;
 }
 
 a.navbar-brand {
-    margin: auto;
-    padding: 8px;
+  margin: auto;
+  padding: 8px;
 }
 button {
-    margin: 0.4em 0.7em;
+  margin: 0.4em 0.7em;
 }
 
 nav {
-    width: max-content;
-    margin: auto;
-    border: 5px double black;
+  width: max-content;
+  margin: auto;
+  border: 5px double black;
 }
 
 .center {
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 ul {
-    margin: auto;
+  margin: auto;
 }
 
 li {
-    margin: auto;
+  margin: auto;
 }
 
 header {
-    margin: 1em;
+  margin: 1em;
 }
 
-h1, h2 {
-    text-align: center;
+h1,
+h2 {
+  text-align: center;
 }
 
 h2 {
-    font-size: large;
-    font-weight: bold;
-    margin: 12px auto;
+  font-size: large;
+  font-weight: bold;
+  margin: 12px auto;
 }
 
-h2#success, h2#login-success, h2#add-attachment-success, h2#add-final-grade-success, h2#award-reimbursement-success, h2#add-message-success {
-    margin: 0.5em auto;
-    padding: 1em;
-    width: max-content;
+h2#success,
+h2#login-success,
+h2#add-attachment-success,
+h2#add-final-grade-success,
+h2#award-reimbursement-success,
+h2#add-message-success {
+  margin: 0.5em auto;
+  padding: 1em;
+  width: max-content;
 }
 
-form, article, section {
-    background-color: rgb(231, 207, 138);
-    padding: 1em 2em;
-    margin: 1em auto;
-    width: fit-content;
-    border: 5px double black;
+form,
+article,
+section {
+  background-color: rgb(231, 207, 138);
+  padding: 1em 2em;
+  margin: 1em auto;
+  width: fit-content;
+  border: 5px double black;
 }
 
 .fancy-border {
-    border: 5px double black;
-    width: fit-content;
-    margin: auto;
-    padding: 0.5em;
+  border: 5px double black;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5em;
 }
 
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 table.table {
-    border: 5px double silver;
-    padding: 0.5em;
-    margin: auto;
-    min-width: 50%;
-    width: fit-content;
+  border: 5px double silver;
+  padding: 0.5em;
+  margin: auto;
+  min-width: 50%;
+  width: fit-content;
 }
 
+.form-group.col-md {
+  min-width: 300px;
+}

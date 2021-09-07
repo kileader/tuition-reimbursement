@@ -156,14 +156,14 @@ public class RequestFormServiceTests {
 
     @Test
     public void getEventByIdPass() {
-        String expectedString = "Event [id=3, eventName=Public Speaking, startTime=1456673400000, location=1337 Road Street Ln. Litte Rock, AR 72002, tuition=200.0, eventTypeId=1, gradingFormatId=3, endTime=1627686024000]";
+        String expectedString = "Event [id=3, eventName=Public Speaking, startTime=1456673400000, location=1337 Road Street Ln. Litte Rock, AR 72002, tuition=200.0, eventTypeId=1, gradingFormatId=3, endTime=null]";
         Event event = rfServ.getEventById(3);
         assertEquals(expectedString, event.toString());
     }
 
     @Test
     public void getGradingFormatByIdPass() {
-        String expectedString = "GradingFormat [id=3, formatName=You Lose, description=Good day sir!, passingGradeCutoff=not possible]";
+        String expectedString = "GradingFormat [id=1, formatName=Typical Letter Grade, description=Grades are A, B, C, D, and F. F is fail, D is lowest passing, A is highest passing, passingGradeCutoff=D]";
         GradingFormat format = rfServ.getGradingFormatById(1);
         assertEquals(expectedString, format.toString());
     }

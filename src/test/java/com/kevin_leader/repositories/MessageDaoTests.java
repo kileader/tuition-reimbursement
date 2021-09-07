@@ -35,7 +35,7 @@ public class MessageDaoTests {
     @Test
     public void getAllSuccess() {
         List<Message> messages = mDao.getAll();
-        assertTrue(9 < messages.size() && messages.size() < 13);
+        assertTrue(9 < messages.size());
     }
 
     @Test

@@ -1,205 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="login.js"></script>
+    <script src="request.js"></script>
+    <title>Request a Reimbursement</title>
+  </head>
 
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="styles.css">
-	<script src="login.js"></script>
-	<script src="request.js"></script>
-	<title>Request a Reimbursement</title>
-</head>
+  <body>
+    <div id="login-container" class="container">
+      <header>
+        <h1 class="jumbotron bg-info">TRMS Please Log In</h1>
+      </header>
+      <main>
+        <form>
+          <h2>Please log in to continue</h2>
+          <div class="row">
+            <div class="form-group col-md">
+              <label for="email">Email: </label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+            </div>
+            <div class="form-group col-md">
+              <label for="password">Password: </label>
+              <input type="password" class="form-control" id="password" placeholder="Password" />
+            </div>
+          </div>
+          <h2 id="login-success"></h2>
+          <div class="form-group center">
+            <button type="button" id="login-button" class="btn btn-info" onclick="attemptLogin()">Log In</button>
+          </div>
+        </form>
+      </main>
+    </div>
 
-<body>
-	<div id="login-container" class="container">
-		<header>
-			<h1 class="jumbotron bg-info">TRMS Please Log In</h1>
-		</header>
-		<main>
-			<form>
-				<h2>Please log in to continue</h2>
-				<div class="row">
-					<div class="form-group col-md">
-						<label for="email">Email: </label>
-						<input type="email" class="form-control" id="email" placeholder="name@example.com" />
-					</div>
-					<div class="form-group col-md">
-						<label for="password">Password: </label>
-						<input type="password" class="form-control" id="password" placeholder="Password" />
-					</div>
-				</div>
-				<h2 id="login-success"></h2>
-				<div class="form-group center">
-					<button type="button" id="login-button" class="btn btn-info" onclick="attemptLogin()">Log In</button>
-				</div>
-			</form>
-		</main>
-	</div>
+    <div id="page-container" class="container">
+      <header>
+        <h1 class="jumbotron bg-info">Request a Reimbursement</h1>
+      </header>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a id="index-link" class="navbar-brand" href="index.html">TRMS</a></li>
+          <li class="nav-item"><a class="nav-link" href="request.html">Request a Reimbursement</a></li>
+          <li class="nav-item"><a class="nav-link" href="update.html">Update Your Requests</a></li>
+          <li class="nav-item"><a class="nav-link" href="review.html">Review Others Requests</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="logout()">Log Out</a></li>
+        </ul>
+      </nav>
+      <main>
+        <article>
+          <h2>Request a Reimbursement</h2>
+          <p class="center">
+            <strong><span id="employee-name"></span></strong>... Here you can request a tuition reimbursement. You must
+            either choose an upcoming event already listed or give the following details. After you submit your request,
+            it will go through a series of reviews in order to be approved You must respond to any messages you receive
+            for your request, and you may upload attachments. Once you finish your event, you must update with your
+            grade or a presentation attachment. We hope that you can learn something new and provide more for the
+            company.
+          </p>
+        </article>
 
-	<div id="page-container" class="container">
-		<header>
-			<h1 class="jumbotron bg-info">Request a Reimbursement</h1>
-		</header>
-		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a id="index-link" class="navbar-brand" href="index.html">TRMS</a></li>
-				<li class="nav-item"><a class="nav-link" href="request.html">Request a Reimbursement</a></li>
-				<li class="nav-item"><a class="nav-link" href="update.html">Update Your Requests</a></li>
-				<li class="nav-item"><a class="nav-link" href="review.html">Review Others Requests</a></li>
-				<li class="nav-item"><a class="nav-link" onclick="logout()">Log Out</a></li>
-			</ul>
-		</nav>
-		<main>
+        <form>
+          <h2>Event</h2>
 
-			<article>
-				<h2>Request a Reimbursement</h2>
-				<p class="center">
-					<strong><span id="employee-name"></span></strong>... Here you can request a tuition reimbursement.
-					You must either choose an upcoming event already listed or give the following details.
-					After you submit your request, it will go through a series of reviews in order to be approved
-					You must respond to any messages you receive for your request, and you may upload attachments.
-					Once you finish your event, you must update with your grade or a presentation attachment.
-					We hope that you can learn something new and provide more for the company.
-				</p>
-			</article>
+          <div class="form-group center">
+            <button type="button" id="choose-event" class="btn btn-secondary" onclick="showChooseEvent()">
+              Choose from Events
+            </button>
+            <button type="button" id="create-event" class="btn btn-secondary" onclick="showCreateEvent()">
+              Create a New Event
+            </button>
+          </div>
 
-			<form>
+          <div id="choose-from-events" class="form-group" hidden>
+            <label for="event-select"
+              ><span id="future-events-loading" class="small text-danger">loading... </span>Choose Your Event
+              <span class="small text-danger">(required)</span>:
+            </label>
+            <select id="event-select" class="form-control" disabled>
+              <option disabled selected>Choose an Upcoming Event</option>
+            </select>
+          </div>
 
-				<h2>Event</h2>
+          <div id="create-new-event" hidden>
+            <div class="row">
+              <div class="form-group col-md">
+                <label for="event-name">Event Name <span class="small text-danger">(required)</span>: </label>
+                <input type="text" id="event-name" class="form-control" placeholder="Event Name" />
+              </div>
 
-				<div class="form-group center">
-					<button type="button" id="choose-event" class="btn btn-secondary" onclick="showChooseEvent()">Choose from Events</button>
-					<button type="button" id="create-event" class="btn btn-secondary" onclick="showCreateEvent()">Create a New Event</button>
-				</div>
+              <div class="form-group col-md">
+                <label for="tuition">Cost in USD <span class="small text-danger">(required)</span>: </label>
+                <input type="number" id="tuition" class="form-control" placeholder="000.00" />
+              </div>
+            </div>
 
-				<div id="choose-from-events" class="form-group" hidden>
-					<label for="event-select"><span id="future-events-loading" class="small text-danger">loading... </span>Choose Your Event <span class="small text-danger">(required)</span>: </label>
-					<select id="event-select" class="form-control" disabled>
-						<option disabled selected>Choose an Upcoming Event</option>
-					</select>
-				</div>
+            <row class="row">
+              <div class="form-group col-md">
+                <label for="start-date">Start Date <span class="small text-danger">(required)</span>: </label>
+                <input type="date" id="start-date" class="form-control" />
+              </div>
 
-				<div id="create-new-event" hidden>
+              <div class="form-group col-md">
+                <label for="start-time"
+                  >Start Time <span class="small">(EST, <span class="text-danger">required</span>)</span>:
+                </label>
+                <input type="time" id="start-time" class="form-control" />
+              </div>
+            </row>
 
-					<div class="row">
-						<div class="form-group col-md">
-							<label for="event-name">Event Name <span class="small text-danger">(required)</span>: </label>
-							<input type="text" id="event-name" class="form-control" placeholder="Event Name">
-						</div>
+            <row class="row">
+              <div class="form-group col-md">
+                <label for="end-date">End Date: </label>
+                <input type="date" id="end-date" class="form-control" />
+              </div>
 
-						<div class="form-group col-md">
-							<label for="tuition">Cost in USD <span class="small text-danger">(required)</span>: </label>
-							<input type="number" id="tuition" class="form-control" placeholder="000.00">
-						</div>
-					</div>
+              <div class="form-group col-md">
+                <label for="end-time">End Time <span class="small">(EST)</span>: </label>
+                <input type="time" id="end-time" class="form-control" />
+              </div>
+            </row>
 
-					<row class="row">
-						<div class="form-group col-md">
-							<label for="start-date">Start Date <span class="small text-danger">(required)</span>: </label>
-							<input type="date" id="start-date" class="form-control">
-						</div>
+            <div class="form-group">
+              <label for="location">Location <span class="small text-danger">(required)</span>: </label>
+              <textarea id="location" class="form-control" placeholder="1234 Real Rd. Albuquerque, NM 12345"></textarea>
+            </div>
 
-						<div class="form-group col-md">
-							<label for="start-time">Start Time <span class="small">(EST, <span class="text-danger">required</span>)</span>: </label>
-							<input type="time" id="start-time" class="form-control">
-						</div>
-					</row>
+            <div class="form-group">
+              <label for="event-type"
+                ><span id="event-types-loading" class="small text-danger">loading... </span>Event Type
+                <span class="small text-danger">(required)</span>:
+              </label>
+              <select id="event-type" class="form-control" disabled>
+                <option disabled selected>Choose an Event Type</option>
+              </select>
+            </div>
 
-					<row class="row">
-						<div class="form-group col-md">
-							<label for="end-date">End Date: </label>
-							<input type="date" id="end-date" class="form-control">
-						</div>
+            <hr />
 
-						<div class="form-group col-md">
-							<label for="end-time">End Time <span class="small">(EST)</span>: </label>
-							<input type="time" id="end-time" class="form-control">
-						</div>
-					</row>
+            <h2>Grading Format</h2>
 
-					<div class="form-group">
-						<label for="location">Location <span class="small text-danger">(required)</span>: </label>
-						<textarea id="location" class="form-control" placeholder="1234 Real Rd. Albuquerque, NM 12345"></textarea>
-					</div>
+            <div class="form-group center">
+              <button type="button" id="choose-format" class="btn btn-secondary" onclick="showChooseFormat()">
+                Choose from Grading Formats
+              </button>
+              <button type="button" id="create-format" class="btn btn-secondary" onclick="showCreateFormat()">
+                Create a New Grading Format
+              </button>
+            </div>
 
-					<div class="form-group">
-						<label for="event-type"><span id="event-types-loading" class="small text-danger">loading... </span>Event Type <span class="small text-danger">(required)</span>: </label>
-						<select id="event-type" class="form-control" disabled>
-							<option disabled selected>Choose an Event Type</option>
-						</select>
-					</div>
+            <div class="form-group" id="choose-from-formats" hidden>
+              <label for="format-select"
+                ><span id="grading-formats-loading" class="small text-danger">loading... </span>Choose the Grading
+                Format <span class="small text-danger">(required)</span>:
+              </label>
+              <select id="format-select" class="form-control" disabled>
+                <option disabled selected>Choose a Grading Format</option>
+              </select>
+            </div>
 
-					<hr>
+            <div id="create-new-format" hidden>
+              <div class="row">
+                <div class="form-group col-md">
+                  <label for="format-name"
+                    >Grading Format Name <span class="small text-danger">(required)</span>:
+                  </label>
+                  <input type="text" id="format-name" class="form-control" placeholder="Grading Format Name" />
+                </div>
 
-					<h2>Grading Format</h2>
+                <div class="form-group col-md">
+                  <label for="passing-grade-cutoff"
+                    >Passing Grade Cutoff <span class="small text-danger">(required)</span>:
+                  </label>
+                  <input
+                    type="text"
+                    id="passing-grade-cutoff"
+                    class="form-control"
+                    placeholder="Enter the lowest passing grade possible."
+                  />
+                </div>
+              </div>
 
-					<div class="form-group center">
-						<button type="button" id="choose-format" class="btn btn-secondary" onclick="showChooseFormat()">
-							Choose from Grading Formats
-						</button>
-						<button type="button" id="create-format" class="btn btn-secondary" onclick="showCreateFormat()">
-							Create a New Grading Format
-						</button>
-					</div>
+              <div class="form-group">
+                <label for="format-description"
+                  >Grading Format Description <span class="small text-danger">(required)</span>:
+                </label>
+                <textarea
+                  id="format-description"
+                  class="form-control"
+                  placeholder="Describe your event's grading scale."
+                ></textarea>
+              </div>
+            </div>
+          </div>
 
-					<div class="form-group" id="choose-from-formats" hidden>
-						<label for="format-select"><span id="grading-formats-loading" class="small text-danger">loading... </span>Choose the Grading Format <span class="small text-danger">(required)</span>: </label>
-						<select id="format-select" class="form-control" disabled>
-							<option disabled selected>Choose a Grading Format</option>
-						</select>
-					</div>
+          <hr />
 
-					<div id="create-new-format" hidden>
-						<div class="row">
-							<div class="form-group col-md">
-								<label for="format-name">Grading Format Name <span class="small text-danger">(required)</span>: </label>
-								<input type="text" id="format-name" class="form-control" placeholder="Grading Format Name">
-							</div>
+          <h2>Reimbursement Details</h2>
 
-							<div class="form-group col-md">
-								<label for="passing-grade-cutoff">Passing Grade Cutoff <span class="small text-danger">(required)</span>: </label>
-								<input type="text" id="passing-grade-cutoff" class="form-control" placeholder="Enter the lowest passing grade possible.">
-							</div>
-						</div>
+          <div class="form-group">
+            <label for="description"
+              >Reimbursement Justification <span class="small text-danger">(required)</span>:
+            </label>
+            <textarea
+              id="description"
+              class="form-control"
+              placeholder="Justify why you should receive this reimbursement."
+            ></textarea>
+          </div>
 
-						<div class="form-group">
-							<label for="format-description">Grading Format Description <span class="small text-danger">(required)</span>: </label>
-							<textarea id="format-description" class="form-control" placeholder="Describe your event's grading scale."></textarea>
-						</div>
+          <div class="form-group">
+            <label for="hours-missed">Hours of Work Missed: </label>
+            <input type="number" id="hours-missed" class="form-control" placeholder="000.00" />
+          </div>
 
-					</div>
+          <h2 id="success"></h2>
 
-				</div>
-
-				<hr>
-
-				<h2>Reimbursement Details</h2>
-
-				<div class="form-group">
-					<label for="description">Reimbursement Justification <span class="small text-danger">(required)</span>: </label>
-					<textarea id="description" class="form-control" placeholder="Justify why you should receive this reimbursement."></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="hours-missed">Hours of Work Missed: </label>
-					<input type="number" id="hours-missed" class="form-control" placeholder="000.00">
-				</div>
-
-				<h2 id="success"></h2>
-
-				<div class="form-group center">
-					<button type="button" id="submit" class="btn btn-info" onclick="verifyThenSubmit()">Submit Form</button>
-				</div>
-
-			</form>
-		</main>
-	</div>
-</body>
-
+          <div class="form-group center">
+            <button type="button" id="submit" class="btn btn-info" onclick="verifyThenSubmit()">Submit Form</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>
 
 <script type="text/javascript">
-	initLogin();
-	initRequest();
-	showCreateEvent();
-	showChooseFormat();
+  initLogin();
+  initRequest();
+  showCreateEvent();
+  showChooseFormat();
 </script>

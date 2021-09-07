@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.kevin_leader.webapp.pages.IndexPage;
 import com.kevin_leader.webapp.pages.RequestPage;
+import com.kevin_leader.webapp.pages.UpdatePage;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -17,10 +18,10 @@ import cucumber.api.junit.Cucumber;
         glue = "com.kevin_leader.webapp.steps", strict = true,
         plugin = { "pretty" })
 public class TrmsRunner {
-
     public static WebDriver driver;
     public static IndexPage indexPage;
     public static RequestPage requestPage;
+    public static UpdatePage updatePage;
 
     @BeforeClass
     public static void setUp() {
@@ -30,6 +31,7 @@ public class TrmsRunner {
         driver = new ChromeDriver();
         indexPage = new IndexPage(driver);
         requestPage = new RequestPage(driver);
+        updatePage = new UpdatePage(driver);
     }
 
     @AfterClass

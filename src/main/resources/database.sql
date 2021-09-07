@@ -141,6 +141,7 @@ insert into reimbursements values (default, 10, 3, 'My public speaking needs imp
 insert into reimbursements values (default, 7, 2, 'I heard I need to take this class to be a supervisor.', 1443892100000, null, -1, null, null);              --4 submitted late so rejected
 insert into reimbursements values (default, 29, 4, 'This is seminar is very important for my hard work here.', 1558193400000, 200, -1, null, null);           --5 submitted by terminated
 insert into reimbursements values (default, 2, 5, 'There is a certification that I want to take preparation classes for.', 1627550700000, 40, 0, null, null); --6
+insert into reimbursements values (default, 12, 5, 'I want to try this.', 1627550700000, 40, 2, null, null);                                                   --7
 
 insert into messages values (default, 1, 'Supervisor', 'Approval', 1442768400000, 'Sure thing Pippa, have fun. -Melvyn');                 --1
 insert into messages values (default, 1, 'Benefits Coordinator', 'Approval', 1442768420000, 'Approving again as a ben co. -Melvyn');      --2
@@ -153,6 +154,8 @@ insert into messages values (default, 3, 'Benefits Coordinator', 'Approval', 145
 insert into messages values (default, 4, 'Supervisor', 'Approval', 1443978500000, 'Good -Rozalin');                                       --9
 insert into messages values (default, 4, 'Benefits Coordinator', 'Denial', 1444064900000, 'Rozalin must have missed that the class ended already! -Melvyn');--10
 insert into messages values (default, 5, 'Supervisor', 'Denial', 1558279800000, 'Did you forget you were fired? Go away. -Rozalin');     --11
+insert into messages values (default, 7, 'Supervisor', 'Approval', 1628308800000, 'You got this!');                                      --12
+insert into messages values (default, 3, 'Department Head', 'Approval', 1628395200000, 'Yes!');                                          --13
 
 insert into attachments values (default, 1, 'fakedatabucket.com/ai3214ijojdv2', 'Here is my grade.');         --1
 insert into attachments values (default, 2, 'fakedatabucket.com/fatij124314ij', 'Here is my presentation');   --2
